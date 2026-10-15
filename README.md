@@ -37,23 +37,27 @@ converted using a fixed exchange rate. LiteLLM is a third-party catalogue;
 provider selection does not certify every field against current official docs.
 
 The 2026-10-15 inventory covers **34 enabled sale models and 51 configured IDs**.
-**49/51** have a price card: 47 native exact IDs (including namespace copies),
-plus two explicitly configured endpoint/site aliases. `deepseek-v4.1-flash` and
+**49/51** have a price card: 46 native exact IDs (including namespace copies),
+plus three explicitly configured endpoint/site aliases. `deepseek-v4.1-flash` and
 bare `gpt-image-2.5` have no exact native entry and remain absent. Reseller
 prices and adjacent versions are not substituted. If an exact native entry is
 added later, normal selection imports it automatically. The enabled sale scope
 has 30 exact native cards, two aliases and two unresolved IDs.
 
 `gemini-3.1-pro` remains a configured alias of `gemini-3.1-pro-preview`.
-`codex-auto-review` remains a site alias of `gpt-5.6-luna`, not an independently
-verified official model. Existing per-image retail group prices belong to the
+`codex-auto-review` remains a site alias of `gpt-5.6-luna`; the disabled
+`gpt-5.3-codex-spark` configuration also remains an alias of `gpt-5.3-codex`.
+These aliases are not independently verified official model prices. Existing per-image retail group prices belong to the
 application and are not replaced by per-image-token prices in this catalogue.
 
 Kimi K3's missing cache-write fees are filled from its reviewed international
 [official price page](https://platform.kimi.ai/docs/pricing/chat.md):
 $3/MTok at 5min and $6/MTok at 1h. These are missing-field defaults, so any future
 explicit upstream value (including zero) wins. There is no blanket cache-write
-or cache-TTL inference. Other legacy custom cards only apply without a native
+or cache-TTL inference. For the four configured GLM models and DeepSeek V4
+Flash/Pro, unverified per-token cache-write zeroes are explicitly removed from
+both native and bare cards; free cache storage does not establish a per-token
+write fee. Other legacy custom cards only apply without a native
 match; they are not asserted to be current official prices.
 
 ## Configuration
