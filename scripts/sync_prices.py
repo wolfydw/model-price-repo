@@ -87,21 +87,21 @@ def fetch_upstream(url: str) -> dict:
     log.info("Fetching upstream: %s", url)
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "model-price-repo/1.0"})
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            raw = resp.read()
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            raw = resp.read(4 * 1024 * 1024 + 1)
+            if len(raw) > 4 * 1024 * 1024:
+                raise OSError('LiteLLM source exceeds 4 MiB')
     except (urllib.error.URLError, OSError) as exc:
         log.error("Failed to fetch upstream: %s", exc)
-        sys.exit(1)
+        raise RuntimeError("LiteLLM source unavailable") from exc
 
     try:
         data = json.loads(raw)
     except json.JSONDecodeError as exc:
-        log.error("Upstream JSON is invalid: %s", exc)
-        sys.exit(1)
+        raise RuntimeError("Invalid LiteLLM JSON") from exc
 
     if not isinstance(data, dict):
-        log.error("Upstream JSON is not an object (got %s)", type(data).__name__)
-        sys.exit(1)
+        raise RuntimeError("LiteLLM JSON is not an object")
 
     log.info("Upstream contains %d model entries.", len(data))
     return data
@@ -344,6 +344,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Sync model pricing from upstream.")
     parser.add_argument("--config", default="config.json", help="Path to config.json")
     parser.add_argument("--repo-root", default=".", help="Repository root directory")
+    parser.add_argument("--official-config", help="Official CNY numeric-as-USD policy configuration")
     args = parser.parse_args()
 
     repo_root = os.path.abspath(args.repo_root)
@@ -361,11 +362,17 @@ def main() -> None:
     log.info("Existing output has %d models.", len(existing))
 
     # 3. Fetch upstream
-    upstream = fetch_upstream(config["upstream_url"])
+    try:
+        upstream = fetch_upstream(config["upstream_url"])
+    except (RuntimeError, OSError) as error:
+        if not args.official_config or not existing:
+            raise
+        log.warning("LiteLLM unavailable; preserving existing catalog: %s", error)
+        upstream = {}
 
     # 4. Filter
     filtered = filter_upstream(upstream, config)
-    if not filtered:
+    if not filtered and not (args.official_config and existing):
         raise ValueError("No accepted upstream models; refusing to publish an empty sync")
 
     # 5. Merge
@@ -415,6 +422,14 @@ def main() -> None:
     excluded_count = remove_excluded_model_fields(
         merged, config.get("excluded_model_fields", {})
     )
+
+    if args.official_config:
+        from official_prices import Fetcher, apply_official_prices
+        with open(os.path.join(repo_root, args.official_config), encoding="utf-8") as source:
+            official_config = json.load(source)
+        fetcher = Fetcher(os.path.join(repo_root, ".cache/official-sources"))
+        for warning in apply_official_prices(merged, existing, official_config, fetcher.get):
+            print("::warning::" + warning)
 
     # 10. Write output
     changed, new_hash = write_output(merged, output_path, hash_path, old_hash)

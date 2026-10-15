@@ -1,0 +1,110 @@
+{
+  "policy": "official_cny_numeric_as_usd_no_fx",
+  "calendar": {
+    "timezone": "Asia/Shanghai",
+    "valid_from": "2026-01-01",
+    "valid_until": "2026-12-31",
+    "holiday_ranges": [
+      [
+        "2026-01-01",
+        "2026-01-03"
+      ],
+      [
+        "2026-02-15",
+        "2026-02-23"
+      ],
+      [
+        "2026-04-04",
+        "2026-04-06"
+      ],
+      [
+        "2026-05-01",
+        "2026-05-05"
+      ],
+      [
+        "2026-06-19",
+        "2026-06-21"
+      ],
+      [
+        "2026-09-25",
+        "2026-09-27"
+      ],
+      [
+        "2026-10-01",
+        "2026-10-07"
+      ]
+    ],
+    "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+    "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535"
+  },
+  "models": [
+    {
+      "model": "glm-5.1",
+      "adapter": "glm",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "targets": [
+        "glm-5.1",
+        "zai/glm-5.1"
+      ]
+    },
+    {
+      "model": "glm-5.2",
+      "adapter": "glm",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "targets": [
+        "glm-5.2",
+        "zai/glm-5.2"
+      ]
+    },
+    {
+      "model": "glm-5.3",
+      "adapter": "glm",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "targets": [
+        "glm-5.3",
+        "zai/glm-5.3"
+      ]
+    },
+    {
+      "model": "glm-5.3-flash",
+      "adapter": "glm",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "targets": [
+        "glm-5.3-flash",
+        "zai/glm-5.3-flash"
+      ]
+    },
+    {
+      "model": "kimi-k3",
+      "adapter": "kimi",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "targets": [
+        "kimi-k3",
+        "moonshot/kimi-k3"
+      ]
+    },
+    {
+      "model": "deepseek-flash",
+      "adapter": "deepseek",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "targets": [
+        "deepseek-flash",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-vision-exp",
+        "deepseek-v4.1-flash",
+        "deepseek/deepseek-flash",
+        "deepseek/deepseek-v4-flash",
+        "deepseek/deepseek-v4-flash-vision-exp"
+      ]
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "adapter": "deepseek",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "targets": [
+        "deepseek-v4-pro",
+        "deepseek/deepseek-v4-pro"
+      ]
+    }
+  ]
+}

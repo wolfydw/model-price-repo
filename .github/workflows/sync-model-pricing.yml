@@ -19,55 +19,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Test pricing synchronization
         run: |
-          python3 -m pip install 'PyYAML==6.0.3'
           python3 -m unittest discover -s tests -v
-
-      - name: Restore conditional source cache
+      - name: Restore official source cache
         uses: actions/cache@v4
         with:
-          path: .cache/site-sources
-          key: site-pricing-sources-${{ github.run_id }}
-          restore-keys: site-pricing-sources-
-
-      - name: Run sync script
+          path: .cache/official-sources
+          key: official-pricing-sources-${{ github.run_id }}
+          restore-keys: official-pricing-sources-
+      - name: Sync LiteLLM and official into the compatible USD catalog
         id: sync
-        continue-on-error: true
         run: |
-          output=$(python3 scripts/sync_prices.py --config config.json --repo-root .)
-          echo "$output"
-          changed=$(echo "$output" | grep -oP 'CHANGED=\K(true|false)')
-          hash=$(echo "$output" | grep -oP 'HASH=\K\S+')
-          echo "changed=$changed" >> "$GITHUB_OUTPUT"
-          echo "hash=$hash" >> "$GITHUB_OUTPUT"
-
-      - name: Sync LiteLLM and Dify site-token prices
-        id: site
-        run: |
-          python3 scripts/sync_site_prices.py > site-sync-result.txt
-          cat site-sync-result.txt
-          sed -n 's/^SITE_CHANGED=/changed=/p' site-sync-result.txt >> "$GITHUB_OUTPUT"
-
+          python3 scripts/sync_prices.py --config config.json --repo-root . --official-config official-prices.json > sync-result.txt
+          cat sync-result.txt
+          sed -n 's/^CHANGED=/changed=/p' sync-result.txt >> "$GITHUB_OUTPUT"
       - name: Upload synchronization report
         uses: actions/upload-artifact@v4
         with:
-          name: site-pricing-sync-report
-          path: site-sync-result.txt
+          name: pricing-sync-report
+          path: sync-result.txt
           retention-days: 14
-
       - name: Commit and push
-        if: steps.sync.outputs.changed == 'true' || steps.site.outputs.changed == 'true'
+        if: steps.sync.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          hash_prefix=$(echo "${{ steps.sync.outputs.hash }}" | cut -c1-8)
-          git add model_prices_and_context_window.json model_prices_and_context_window.sha256 ydw-site-prices-v1.json ydw-site-prices-v1.sha256
-          git commit -m "chore: sync model pricing (${hash_prefix})"
+          git add model_prices_and_context_window.json model_prices_and_context_window.sha256
+          git commit -m "chore: sync LiteLLM and official pricing"
           git push

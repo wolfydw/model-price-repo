@@ -137,17 +137,26 @@ The output JSON structure is identical to what litellm produces (model key -> pr
 
 [MIT](LICENSE)
 
-## Cloud site-token price feed
+## Domestic official prices in the compatible USD catalog
 
-`ydw-site-prices-v1.json` is a separate, versioned site-token settlement feed.
-The same ten-minute workflow refreshes native LiteLLM overseas prices and
-RMB/CNY Dify official-plugin cards. Domestic provider documents validate and
-supply missing cache, context, and peak/off-peak fees. Source commits and hashes
-are included; there is no currency conversion. The legacy USD JSON URL remains
-compatible for existing consumers and rollback.
+The same ten-minute workflow fetches overseas native quotes from LiteLLM and
+Chinese-provider prices from the official DeepSeek, GLM and Kimi websites.
+The domestic RMB numerical amounts are normalized to per-token rates and
+published with `currency: USD`, without foreign-exchange conversion. This is
+an explicit site pricing policy, not the providers' official USD quotation.
+The existing output JSON URL and USD accounting integration remain unchanged.
 
-Run `python3 scripts/sync_site_prices.py`; dependencies include PyYAML 6.0.3.
-All source paths and exact aliases live in `site-pricing-config.json`. Missing
-or invalid sources preserve the last complete card and produce workflow warnings.
-No-change runs leave the price file unchanged. The bundle and SHA-256 publish
-in one commit. The holiday calendar is bounded by its explicitly recorded year.
+`official-prices.json` records exact model identities, aliases, source URLs and
+the 2026 government holiday calendar. `pricing_source` retains CNY provenance;
+`pricing_rules` carries context tiers and manufacturer peak periods. Broken
+sources retain the last complete successful official fee card; fresh LiteLLM
+international quotes cannot overwrite it. Equal final output does not commit.
+Unknown source shapes produce warnings rather than guessed rates.
+
+Run `python3 scripts/sync_prices.py --config config.json --repo-root . --official-config official-prices.json`.
+All synchronization and tests use the Python standard library. Individual
+requests time out after twenty seconds; LiteLLM is limited to 4 MiB, official
+documents to 2 MiB each and 8 MiB per batch, with serial downloads and bounded
+conditional caches. The obsolete site-token feed and Dify price adapter are
+not used. The consuming Sub2API customization removes its old DeepSeek price
+constants and reads the optional catalog rules; USD statistics remain intact.
