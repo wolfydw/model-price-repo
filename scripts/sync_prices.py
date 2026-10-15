@@ -384,8 +384,19 @@ def main() -> None:
 
     # 6. Native endpoint cards and bare aliases override historical custom prices.
     native_aliases = apply_native_aliases(merged, filtered, config.get("namespace_aliases", []))
-    protected = (set(filtered) | native_aliases) if config.get("provider_prefixes") else set()
     aliases = config.get("aliases", {})
+    providers = config.get("provider_prefixes", {})
+    previous_native = {
+        key for key, card in existing.items()
+        if isinstance(card, dict) and key not in aliases
+        and card.get("litellm_provider") in providers
+        and key.startswith(tuple(providers[card["litellm_provider"]]))
+    }
+    previous_bare = {
+        key[len(prefix):] for key in previous_native
+        for prefix in config.get("namespace_aliases", []) if key.startswith(prefix)
+    }
+    protected = (set(filtered) | native_aliases | previous_native | previous_bare) if providers else set()
     if aliases:
         merged = apply_aliases(merged, aliases, protected)
 

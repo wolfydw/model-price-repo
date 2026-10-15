@@ -33,7 +33,7 @@
 
 ## 逐模型比对
 
-下表按输入 / 输出 / 缓存读取列示，`—` 为未提供字段。GPT Image 行这里是文本 Token 费率；图像 Token 单独保留于 JSON，不能把缺失文本输出价填成图片输出价或零。前后 JSON 的全部价格字段变化见配套 comparison.json，未只比较基础三项。
+下表按输入 / 输出 / 缓存读取列示，`—` 为未提供字段。GPT Image 行这里是文本 Token 费率；图像 Token 单独保留于 JSON，不能把缺失文本输出价填成图片输出价或零。前后 JSON 的全部价格字段变化见[完整字段比较 JSON](https://github.com/wolfydw/model-price-repo/blob/main/docs/2026-10-15-native-source-comparison.json)，未只比较基础三项。
 
 | 模型 | 在售 | 匹配来源 | 原输入 / 输出 / 命中 | 新输入 / 输出 / 命中 |
 | --- | --- | --- | --- | --- |

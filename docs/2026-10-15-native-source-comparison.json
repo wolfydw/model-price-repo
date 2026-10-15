@@ -1,0 +1,2314 @@
+{
+  "summary": {
+    "inventory_scope": "All model IDs in active, undeleted groups, including disabled allowlists; enabled sale models distinguished. No account wildcard expansion.",
+    "configured_models": 51,
+    "enabled_models": 34,
+    "configured_covered": 49,
+    "enabled_covered": 32,
+    "configured_native_exact_or_namespace": 46,
+    "configured_aliases": [
+      "codex-auto-review",
+      "gemini-3.1-pro",
+      "gpt-5.3-codex-spark"
+    ],
+    "missing": [
+      "deepseek-v4.1-flash",
+      "gpt-image-2.5"
+    ],
+    "entries_before": 335,
+    "entries_after": 540,
+    "removed_existing_ids": [],
+    "litellm_commit": "3fec5075fa3069d4da0bba437ba1e1f2218792ed",
+    "litellm_sha256": "6fc1f38bce2adaf89463e1bb9436de227dd78e5b2f6befc1b005c3cd88deb2cb",
+    "previous_repository_commit": "273c0ab1d08a5cab2d2cad7603054f1493b7c1c2",
+    "new_price_sha256": "ee3e3cab47c29370d68ffbfda88f0480c5d81f5c99205b80d120b696cb128a1e",
+    "verification": "Publication and live cache verification recorded separately."
+  },
+  "models": [
+    {
+      "model": "claude-fable-5",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-fable-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 10.0,
+        "output_cost_per_token": 50.0,
+        "cache_read_input_token_cost": 1.0,
+        "cache_creation_input_token_cost": 12.5,
+        "cache_creation_input_token_cost_above_1hr": 20.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 10.0,
+        "output_cost_per_token": 50.0,
+        "cache_read_input_token_cost": 1.0,
+        "cache_creation_input_token_cost": 12.5,
+        "cache_creation_input_token_cost_above_1hr": 20.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-fable-5",
+        "github_copilot/claude-fable-5",
+        "vertex_ai/claude-fable-5",
+        "deepinfra/anthropic/claude-fable-5",
+        "perplexity/anthropic/claude-fable-5",
+        "aihubmix/claude-fable-5"
+      ]
+    },
+    {
+      "model": "claude-fable-5-1",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "claude-fable-5-1",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 10.0,
+        "output_cost_per_token": 50.0,
+        "cache_read_input_token_cost": 0.25,
+        "cache_creation_input_token_cost": 12.5,
+        "cache_creation_input_token_cost_above_1hr": 20.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 10.0,
+        "output_cost_per_token": 50.0,
+        "cache_read_input_token_cost": 0.25,
+        "cache_creation_input_token_cost": 12.5,
+        "cache_creation_input_token_cost_above_1hr": 20.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-fable-5-1",
+        "vertex_ai/claude-fable-5-1",
+        "perplexity/anthropic/claude-fable-5-1"
+      ]
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.0,
+        "output_cost_per_token": 5.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 1.25,
+        "cache_creation_input_token_cost_above_1hr": 2.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.0,
+        "output_cost_per_token": 5.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 1.25,
+        "cache_creation_input_token_cost_above_1hr": 2.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-haiku-4-5",
+        "perplexity/anthropic/claude-haiku-4-5",
+        "vertex_ai/claude-haiku-4-5",
+        "snowflake/claude-haiku-4-5",
+        "deepinfra/anthropic/claude-haiku-4-5",
+        "aihubmix/claude-haiku-4-5"
+      ]
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "official_source_url": null,
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.0,
+        "output_cost_per_token": 5.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 1.25,
+        "cache_creation_input_token_cost_above_1hr": 2.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.0,
+        "output_cost_per_token": 5.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 1.25,
+        "cache_creation_input_token_cost_above_1hr": 2.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": []
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "claude-haiku-5-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.09999999999999999,
+        "output_cost_per_token": 0.5,
+        "cache_read_input_token_cost": 0.01,
+        "cache_creation_input_token_cost": 0.125,
+        "cache_creation_input_token_cost_above_1hr": 0.19999999999999998,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.09999999999999999,
+        "output_cost_per_token": 0.5,
+        "cache_read_input_token_cost": 0.01,
+        "cache_creation_input_token_cost": 0.125,
+        "cache_creation_input_token_cost_above_1hr": 0.19999999999999998,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-haiku-5-5",
+        "perplexity/anthropic/claude-haiku-5-5",
+        "vertex_ai/claude-haiku-5-5"
+      ]
+    },
+    {
+      "model": "claude-opus-4-5-20251101",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-opus-4-5-20251101",
+      "provider": "anthropic",
+      "official_source_url": null,
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-opus-4-6",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-opus-4-6",
+        "perplexity/anthropic/claude-opus-4-6",
+        "vertex_ai/claude-opus-4-6"
+      ]
+    },
+    {
+      "model": "claude-opus-4-7",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-opus-4-7",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-opus-4-7",
+        "perplexity/anthropic/claude-opus-4-7",
+        "vertex_ai/claude-opus-4-7",
+        "deepinfra/anthropic/claude-opus-4-7"
+      ]
+    },
+    {
+      "model": "claude-opus-4-8",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-opus-4-8",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-opus-4-8",
+        "vertex_ai/claude-opus-4-8",
+        "deepinfra/anthropic/claude-opus-4-8",
+        "perplexity/anthropic/claude-opus-4-8"
+      ]
+    },
+    {
+      "model": "claude-opus-5",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-opus-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 25.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": 10.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-opus-5",
+        "github_copilot/claude-opus-5",
+        "vertex_ai/claude-opus-5",
+        "deepinfra/anthropic/claude-opus-5",
+        "perplexity/anthropic/claude-opus-5",
+        "aihubmix/claude-opus-5"
+      ]
+    },
+    {
+      "model": "claude-opus-5-5",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "claude-opus-5-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 4.0,
+        "output_cost_per_token": 20.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 5.0,
+        "cache_creation_input_token_cost_above_1hr": 8.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 4.0,
+        "output_cost_per_token": 20.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 5.0,
+        "cache_creation_input_token_cost_above_1hr": 8.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-opus-5-5",
+        "vertex_ai/claude-opus-5-5",
+        "perplexity/anthropic/claude-opus-5-5"
+      ]
+    },
+    {
+      "model": "claude-sonnet-4-5-20250929",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-sonnet-4-5-20250929",
+      "provider": "anthropic",
+      "official_source_url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 3.0,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": 3.75,
+        "cache_creation_input_token_cost_above_1hr": 6.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 3.0,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": 3.75,
+        "cache_creation_input_token_cost_above_1hr": 6.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost_above_1hr_above_200k_tokens": {
+          "before": 1.2e-05,
+          "after": null
+        },
+        "cache_creation_input_token_cost_above_200k_tokens": {
+          "before": 7.5e-06,
+          "after": null
+        },
+        "cache_creation_input_token_cost_above_200k_tokens_batches": {
+          "before": 3.75e-06,
+          "after": null
+        },
+        "cache_read_input_token_cost_above_200k_tokens": {
+          "before": 6e-07,
+          "after": null
+        },
+        "cache_read_input_token_cost_above_200k_tokens_batches": {
+          "before": 3e-07,
+          "after": null
+        },
+        "input_cost_per_token_above_200k_tokens": {
+          "before": 6e-06,
+          "after": null
+        },
+        "input_cost_per_token_above_200k_tokens_batches": {
+          "before": 3e-06,
+          "after": null
+        },
+        "output_cost_per_token_above_200k_tokens": {
+          "before": 2.25e-05,
+          "after": null
+        },
+        "output_cost_per_token_above_200k_tokens_batches": {
+          "before": 1.125e-05,
+          "after": null
+        }
+      },
+      "alternative_channel_keys": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 3.0,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": 3.75,
+        "cache_creation_input_token_cost_above_1hr": 6.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 3.0,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": 3.75,
+        "cache_creation_input_token_cost_above_1hr": 6.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-sonnet-4-6",
+        "vertex_ai/claude-sonnet-4-6",
+        "snowflake/claude-sonnet-4-6",
+        "deepinfra/anthropic/claude-sonnet-4-6",
+        "perplexity/anthropic/claude-sonnet-4-6"
+      ]
+    },
+    {
+      "model": "claude-sonnet-5",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "claude-sonnet-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": 4.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": 4.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/claude-sonnet-5",
+        "github_copilot/claude-sonnet-5",
+        "vertex_ai/claude-sonnet-5",
+        "deepinfra/anthropic/claude-sonnet-5",
+        "perplexity/anthropic/claude-sonnet-5",
+        "aihubmix/claude-sonnet-5"
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "claude-sonnet-5-5",
+      "provider": "anthropic",
+      "official_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": 4.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": 4.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_read_input_token_cost": {
+          "before": 2e-07,
+          "after": 1e-07
+        },
+        "cache_read_input_token_cost_batches": {
+          "before": 1e-07,
+          "after": 5e-08
+        }
+      },
+      "alternative_channel_keys": [
+        "azure_ai/claude-sonnet-5-5",
+        "perplexity/anthropic/claude-sonnet-5-5",
+        "vertex_ai/claude-sonnet-5-5"
+      ]
+    },
+    {
+      "model": "codex-auto-review",
+      "enabled": true,
+      "match_kind": "configured_alias",
+      "source_model": "gpt-5.6-luna",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.19999999999999998,
+        "output_cost_per_token": 1.2,
+        "cache_read_input_token_cost": 0.02,
+        "cache_creation_input_token_cost": 0.25,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.19999999999999998,
+        "output_cost_per_token": 1.2,
+        "cache_read_input_token_cost": 0.02,
+        "cache_creation_input_token_cost": 0.25,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": []
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "deepseek/deepseek-v4-flash",
+      "provider": "deepseek",
+      "official_source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.44,
+        "output_cost_per_token": 1.32,
+        "cache_read_input_token_cost": 0.014,
+        "cache_creation_input_token_cost": 0.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.3,
+        "output_cost_per_token": 1.2,
+        "cache_read_input_token_cost": 0.006,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 0.0,
+          "after": null
+        },
+        "cache_read_input_token_cost": {
+          "before": 1.4e-08,
+          "after": 6e-09
+        },
+        "input_cost_per_token": {
+          "before": 4.4e-07,
+          "after": 3e-07
+        },
+        "input_cost_per_token_cache_hit": {
+          "before": 1.4e-08,
+          "after": 6e-09
+        },
+        "output_cost_per_token": {
+          "before": 1.32e-06,
+          "after": 1.2e-06
+        }
+      },
+      "alternative_channel_keys": [
+        "azure_ai/deepseek-v4-flash",
+        "dashscope/deepseek-v4-flash",
+        "qwencloud/deepseek-v4-flash",
+        "qwen_ai_platform/deepseek-v4-flash",
+        "fireworks_ai/accounts/fireworks/models/deepseek-v4-flash",
+        "fireworks_ai/deepseek-v4-flash",
+        "libertai/deepseek-v4-flash",
+        "deepseek-v4-flash",
+        "tencent/deepseek-v4-flash",
+        "pinstripes/ps/deepseek-v4-flash",
+        "novita/deepseek/deepseek-v4-flash",
+        "aihubmix/deepseek-v4-flash",
+        "prism/deepseek-v4-flash"
+      ]
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "deepseek/deepseek-v4-pro",
+      "provider": "deepseek",
+      "official_source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.32,
+        "output_cost_per_token": 3.9600000000000004,
+        "cache_read_input_token_cost": 0.044,
+        "cache_creation_input_token_cost": 0.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.32,
+        "output_cost_per_token": 3.9600000000000004,
+        "cache_read_input_token_cost": 0.044,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 0.0,
+          "after": null
+        }
+      },
+      "alternative_channel_keys": [
+        "azure_ai/deepseek-v4-pro",
+        "dashscope/deepseek-v4-pro",
+        "qwencloud/deepseek-v4-pro",
+        "qwen_ai_platform/deepseek-v4-pro",
+        "deepseek-v4-pro",
+        "tencent/deepseek-v4-pro",
+        "novita/deepseek/deepseek-v4-pro",
+        "aihubmix/deepseek-v4-pro",
+        "fireworks_ai/accounts/fireworks/models/deepseek-v4-pro"
+      ]
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "enabled": true,
+      "match_kind": "unresolved",
+      "source_model": null,
+      "provider": null,
+      "official_source_url": null,
+      "before_present": false,
+      "after_present": false,
+      "before_usd_per_million": {
+        "input_cost_per_token": null,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": null,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": null,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": null,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "coralbricks/deepseek-v4.1-flash",
+        "tencent/deepseek-v4.1-flash",
+        "azure_ai/deepseek-v4.1-flash",
+        "prism/deepseek-v4.1-flash"
+      ]
+    },
+    {
+      "model": "gemini-3.1-pro",
+      "enabled": true,
+      "match_kind": "configured_alias",
+      "source_model": "gemini/gemini-3.1-pro-preview",
+      "provider": "gemini",
+      "official_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 12.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 12.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 2e-06,
+          "after": null
+        },
+        "cache_creation_input_token_cost_above_200k_tokens": {
+          "before": 4e-06,
+          "after": null
+        },
+        "cache_creation_input_token_cost_above_200k_tokens_priority": {
+          "before": 7.2e-06,
+          "after": null
+        },
+        "cache_creation_input_token_cost_priority": {
+          "before": 3.6e-06,
+          "after": null
+        },
+        "cache_read_input_token_cost_batches": {
+          "before": null,
+          "after": 2e-07
+        },
+        "output_cost_per_image": {
+          "before": 0.00012,
+          "after": null
+        }
+      },
+      "alternative_channel_keys": [
+        "deepinfra/google/gemini-3.1-pro"
+      ]
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "gemini/gemini-3.6-flash",
+      "provider": "gemini",
+      "official_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 3.75,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 3.75,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "vertex_ai/gemini-3.6-flash",
+        "gemini-3.6-flash",
+        "perplexity/google/gemini-3.6-flash"
+      ]
+    },
+    {
+      "model": "gemini-3.7-flash",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "gemini/gemini-3.7-flash",
+      "provider": "gemini",
+      "official_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 3.75,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 3.75,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "vertex_ai/gemini-3.7-flash",
+        "gemini-3.7-flash",
+        "github_copilot/gemini-3.7-flash",
+        "deepinfra/google/gemini-3.7-flash",
+        "perplexity/google/gemini-3.7-flash",
+        "aihubmix/gemini-3.7-flash"
+      ]
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "gemini/gemini-3.8-flash",
+      "provider": "gemini",
+      "official_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 3.75,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 3.75,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "vertex_ai/gemini-3.8-flash",
+        "gemini-3.8-flash",
+        "github_copilot/gemini-3.8-flash",
+        "perplexity/google/gemini-3.8-flash"
+      ]
+    },
+    {
+      "model": "gemini-4-argon",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "gemini/gemini-4-argon",
+      "provider": "gemini",
+      "official_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "vertex_ai/gemini-4-argon",
+        "github_copilot/gemini-4-argon"
+      ]
+    },
+    {
+      "model": "glm-5.1",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "zai/glm-5.1",
+      "provider": "zai",
+      "official_source_url": "https://docs.z.ai/guides/overview/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.4,
+        "output_cost_per_token": 4.4,
+        "cache_read_input_token_cost": 0.28,
+        "cache_creation_input_token_cost": 1.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.4,
+        "output_cost_per_token": 4.4,
+        "cache_read_input_token_cost": 0.26,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 1e-06,
+          "after": null
+        },
+        "cache_read_input_token_cost": {
+          "before": 2.8e-07,
+          "after": 2.6e-07
+        }
+      },
+      "alternative_channel_keys": [
+        "dashscope/glm-5.1",
+        "qwencloud/glm-5.1",
+        "qwen_ai_platform/glm-5.1",
+        "novita/zai-org/glm-5.1"
+      ]
+    },
+    {
+      "model": "glm-5.2",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "zai/glm-5.2",
+      "provider": "zai",
+      "official_source_url": "https://docs.z.ai/guides/overview/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.1792279005321267,
+        "output_cost_per_token": 4.127297651862444,
+        "cache_read_input_token_cost": 0.29480697513303167,
+        "cache_creation_input_token_cost": 1.1792279005321267,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.4,
+        "output_cost_per_token": 4.4,
+        "cache_read_input_token_cost": 0.26,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 1.1792279005321267e-06,
+          "after": null
+        },
+        "cache_read_input_token_cost": {
+          "before": 2.948069751330317e-07,
+          "after": 2.6e-07
+        },
+        "input_cost_per_token": {
+          "before": 1.1792279005321267e-06,
+          "after": 1.4e-06
+        },
+        "output_cost_per_token": {
+          "before": 4.127297651862443e-06,
+          "after": 4.4e-06
+        }
+      },
+      "alternative_channel_keys": [
+        "cloudflare/@cf/zai-org/glm-5.2",
+        "dashscope/glm-5.2",
+        "qwencloud/glm-5.2",
+        "qwen_ai_platform/glm-5.2",
+        "perplexity/perplexity/glm-5.2",
+        "tencent/glm-5.2",
+        "novita/zai-org/glm-5.2",
+        "scaleway/glm-5.2"
+      ]
+    },
+    {
+      "model": "glm-5.3",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "zai/glm-5.3",
+      "provider": "zai",
+      "official_source_url": "https://docs.z.ai/guides/overview/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.4,
+        "output_cost_per_token": 4.4,
+        "cache_read_input_token_cost": 0.26,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.4,
+        "output_cost_per_token": 4.4,
+        "cache_read_input_token_cost": 0.26,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "coralbricks/glm-5.3",
+        "tencent/glm-5.3",
+        "novita/zai-org/glm-5.3",
+        "perplexity/perplexity/glm-5.3",
+        "aihubmix/glm-5.3"
+      ]
+    },
+    {
+      "model": "glm-5.3-flash",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "zai/glm-5.3-flash",
+      "provider": "zai",
+      "official_source_url": "https://docs.z.ai/guides/overview/pricing",
+      "before_present": false,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": null,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": null,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.15,
+        "output_cost_per_token": 0.5,
+        "cache_read_input_token_cost": 0.03,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_read_input_token_cost": {
+          "before": null,
+          "after": 3e-08
+        },
+        "input_cost_per_token": {
+          "before": null,
+          "after": 1.5e-07
+        },
+        "output_cost_per_token": {
+          "before": null,
+          "after": 5e-07
+        }
+      },
+      "alternative_channel_keys": [
+        "tencent/glm-5.3-flash",
+        "perplexity/perplexity/glm-5.3-flash",
+        "aihubmix/glm-5.3-flash"
+      ]
+    },
+    {
+      "model": "gpt-5.2",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.2",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.75,
+        "output_cost_per_token": 14.0,
+        "cache_read_input_token_cost": 0.175,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.75,
+        "output_cost_per_token": 14.0,
+        "cache_read_input_token_cost": 0.175,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-5.2",
+        "chatgpt/gpt-5.2",
+        "gmi/openai/gpt-5.2",
+        "perplexity/openai/gpt-5.2",
+        "azure/eu/gpt-5.2",
+        "azure/us/gpt-5.2"
+      ]
+    },
+    {
+      "model": "gpt-5.3-codex-spark",
+      "enabled": false,
+      "match_kind": "configured_alias",
+      "source_model": "gpt-5.3-codex",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 1.75,
+        "output_cost_per_token": 14.0,
+        "cache_read_input_token_cost": 0.175,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 1.75,
+        "output_cost_per_token": 14.0,
+        "cache_read_input_token_cost": 0.175,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "chatgpt/gpt-5.3-codex-spark"
+      ]
+    },
+    {
+      "model": "gpt-5.4",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.4",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.5,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.5,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/gpt-5.4",
+        "azure/gpt-5.4",
+        "azure/us/gpt-5.4",
+        "azure/eu/gpt-5.4",
+        "github_copilot/gpt-5.4",
+        "chatgpt/gpt-5.4",
+        "perplexity/openai/gpt-5.4"
+      ]
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.4-mini",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 4.5,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.75,
+        "output_cost_per_token": 4.5,
+        "cache_read_input_token_cost": 0.075,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/gpt-5.4-mini",
+        "azure/gpt-5.4-mini",
+        "github_copilot/gpt-5.4-mini",
+        "perplexity/openai/gpt-5.4-mini",
+        "azure/eu/gpt-5.4-mini",
+        "azure/us/gpt-5.4-mini",
+        "aihubmix/gpt-5.4-mini"
+      ]
+    },
+    {
+      "model": "gpt-5.5",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.5",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 30.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 30.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_read_input_token_cost_priority": {
+          "before": 1e-06,
+          "after": 1.25e-06
+        },
+        "input_cost_per_token_priority": {
+          "before": 1e-05,
+          "after": 1.25e-05
+        },
+        "output_cost_per_token_priority": {
+          "before": 6e-05,
+          "after": 7.5e-05
+        }
+      },
+      "alternative_channel_keys": [
+        "azure_ai/gpt-5.5",
+        "azure/gpt-5.5",
+        "azure/us/gpt-5.5",
+        "azure/eu/gpt-5.5",
+        "github_copilot/gpt-5.5",
+        "chatgpt/gpt-5.5",
+        "perplexity/openai/gpt-5.5",
+        "aihubmix/gpt-5.5"
+      ]
+    },
+    {
+      "model": "gpt-5.6",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.6",
+      "provider": "openai",
+      "official_source_url": null,
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 4.0,
+        "output_cost_per_token": 20.0,
+        "cache_read_input_token_cost": 0.39999999999999997,
+        "cache_creation_input_token_cost": 5.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 4.0,
+        "output_cost_per_token": 20.0,
+        "cache_read_input_token_cost": 0.39999999999999997,
+        "cache_creation_input_token_cost": 5.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-5.6",
+        "azure/us/gpt-5.6",
+        "azure/eu/gpt-5.6"
+      ]
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.6-luna",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.19999999999999998,
+        "output_cost_per_token": 1.2,
+        "cache_read_input_token_cost": 0.02,
+        "cache_creation_input_token_cost": 0.25,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.19999999999999998,
+        "output_cost_per_token": 1.2,
+        "cache_read_input_token_cost": 0.02,
+        "cache_creation_input_token_cost": 0.25,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-5.6-luna",
+        "azure/us/gpt-5.6-luna",
+        "azure/eu/gpt-5.6-luna",
+        "github_copilot/gpt-5.6-luna",
+        "chatgpt/gpt-5.6-luna",
+        "perplexity/openai/gpt-5.6-luna",
+        "aihubmix/gpt-5.6-luna"
+      ]
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.6-sol",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 30.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": 6.25,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 4.0,
+        "output_cost_per_token": 20.0,
+        "cache_read_input_token_cost": 0.39999999999999997,
+        "cache_creation_input_token_cost": 5.0,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 6.25e-06,
+          "after": 5e-06
+        },
+        "cache_creation_input_token_cost_above_272k_tokens": {
+          "before": 1.25e-05,
+          "after": 1e-05
+        },
+        "cache_creation_input_token_cost_above_272k_tokens_flex": {
+          "before": 6.25e-06,
+          "after": 5e-06
+        },
+        "cache_creation_input_token_cost_above_272k_tokens_priority": {
+          "before": 2.5e-05,
+          "after": 2e-05
+        },
+        "cache_creation_input_token_cost_flex": {
+          "before": 3.125e-06,
+          "after": 2.5e-06
+        },
+        "cache_creation_input_token_cost_priority": {
+          "before": 1.25e-05,
+          "after": 1e-05
+        },
+        "cache_read_input_token_cost": {
+          "before": 5e-07,
+          "after": 4e-07
+        },
+        "cache_read_input_token_cost_above_272k_tokens": {
+          "before": 1e-06,
+          "after": 8e-07
+        },
+        "cache_read_input_token_cost_above_272k_tokens_flex": {
+          "before": 5e-07,
+          "after": 4e-07
+        },
+        "cache_read_input_token_cost_above_272k_tokens_priority": {
+          "before": 2e-06,
+          "after": 1.6e-06
+        },
+        "cache_read_input_token_cost_flex": {
+          "before": 2.5e-07,
+          "after": 2e-07
+        },
+        "cache_read_input_token_cost_priority": {
+          "before": 1e-06,
+          "after": 8e-07
+        },
+        "input_cost_per_token": {
+          "before": 5e-06,
+          "after": 4e-06
+        },
+        "input_cost_per_token_above_272k_tokens": {
+          "before": 1e-05,
+          "after": 8e-06
+        },
+        "input_cost_per_token_above_272k_tokens_flex": {
+          "before": 5e-06,
+          "after": 4e-06
+        },
+        "input_cost_per_token_above_272k_tokens_priority": {
+          "before": 2e-05,
+          "after": 1.6e-05
+        },
+        "input_cost_per_token_batches": {
+          "before": 2.5e-06,
+          "after": 2e-06
+        },
+        "input_cost_per_token_flex": {
+          "before": 2.5e-06,
+          "after": 2e-06
+        },
+        "input_cost_per_token_priority": {
+          "before": 1e-05,
+          "after": 8e-06
+        },
+        "output_cost_per_token": {
+          "before": 3e-05,
+          "after": 2e-05
+        },
+        "output_cost_per_token_above_272k_tokens": {
+          "before": 4.5e-05,
+          "after": 3e-05
+        },
+        "output_cost_per_token_above_272k_tokens_flex": {
+          "before": 2.25e-05,
+          "after": 1.5e-05
+        },
+        "output_cost_per_token_above_272k_tokens_priority": {
+          "before": 9e-05,
+          "after": 6e-05
+        },
+        "output_cost_per_token_batches": {
+          "before": 1.5e-05,
+          "after": 1e-05
+        },
+        "output_cost_per_token_flex": {
+          "before": 1.5e-05,
+          "after": 1e-05
+        },
+        "output_cost_per_token_priority": {
+          "before": 6e-05,
+          "after": 4e-05
+        }
+      },
+      "alternative_channel_keys": [
+        "azure/gpt-5.6-sol",
+        "azure/us/gpt-5.6-sol",
+        "azure/eu/gpt-5.6-sol",
+        "github_copilot/gpt-5.6-sol",
+        "chatgpt/gpt-5.6-sol",
+        "perplexity/openai/gpt-5.6-sol"
+      ]
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-5.6-terra",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 12.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 12.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-5.6-terra",
+        "azure/us/gpt-5.6-terra",
+        "azure/eu/gpt-5.6-terra",
+        "github_copilot/gpt-5.6-terra",
+        "chatgpt/gpt-5.6-terra",
+        "perplexity/openai/gpt-5.6-terra",
+        "aihubmix/gpt-5.6-terra"
+      ]
+    },
+    {
+      "model": "gpt-6-astra",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-6-astra",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 10.0,
+        "output_cost_per_token": 50.0,
+        "cache_read_input_token_cost": 1.0,
+        "cache_creation_input_token_cost": 12.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 10.0,
+        "output_cost_per_token": 50.0,
+        "cache_read_input_token_cost": 1.0,
+        "cache_creation_input_token_cost": 12.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/gpt-6-astra",
+        "azure/gpt-6-astra",
+        "azure/us/gpt-6-astra",
+        "github_copilot/gpt-6-astra",
+        "chatgpt/gpt-6-astra",
+        "azure/eu/gpt-6-astra",
+        "perplexity/openai/gpt-6-astra"
+      ]
+    },
+    {
+      "model": "gpt-6-luna",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-6-luna",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 0.09999999999999999,
+        "output_cost_per_token": 0.5,
+        "cache_read_input_token_cost": 0.01,
+        "cache_creation_input_token_cost": 0.125,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 0.09999999999999999,
+        "output_cost_per_token": 0.5,
+        "cache_read_input_token_cost": 0.01,
+        "cache_creation_input_token_cost": 0.125,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/gpt-6-luna",
+        "azure/gpt-6-luna",
+        "azure/us/gpt-6-luna",
+        "github_copilot/gpt-6-luna",
+        "chatgpt/gpt-6-luna",
+        "azure/eu/gpt-6-luna",
+        "perplexity/openai/gpt-6-luna"
+      ]
+    },
+    {
+      "model": "gpt-6-sol",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-6-sol",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.19999999999999998,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/gpt-6-sol",
+        "azure/gpt-6-sol",
+        "azure/us/gpt-6-sol",
+        "github_copilot/gpt-6-sol",
+        "chatgpt/gpt-6-sol",
+        "azure/eu/gpt-6-sol",
+        "perplexity/openai/gpt-6-sol"
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-6.1-sol",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 0.09999999999999999,
+        "cache_creation_input_token_cost": 2.5,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure_ai/gpt-6.1-sol",
+        "azure/gpt-6.1-sol",
+        "azure/us/gpt-6.1-sol",
+        "azure/eu/gpt-6.1-sol",
+        "azure/apac/gpt-6.1-sol",
+        "github_copilot/gpt-6.1-sol",
+        "chatgpt/gpt-6.1-sol",
+        "perplexity/openai/gpt-6.1-sol"
+      ]
+    },
+    {
+      "model": "gpt-image-1",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "gpt-image-1",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 10.0,
+        "output_cost_per_image_token": 40.0,
+        "cache_read_input_image_token_cost": 2.5
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 10.0,
+        "output_cost_per_image_token": 40.0,
+        "cache_read_input_image_token_cost": 2.5
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-image-1",
+        "azure/high/1024-x-1024/gpt-image-1",
+        "azure/high/1024-x-1536/gpt-image-1",
+        "azure/high/1536-x-1024/gpt-image-1",
+        "azure/low/1024-x-1024/gpt-image-1",
+        "azure/low/1024-x-1536/gpt-image-1",
+        "azure/low/1536-x-1024/gpt-image-1",
+        "azure/medium/1024-x-1024/gpt-image-1",
+        "azure/medium/1024-x-1536/gpt-image-1",
+        "azure/medium/1536-x-1024/gpt-image-1",
+        "high/1024-x-1024/gpt-image-1",
+        "high/1024-x-1536/gpt-image-1",
+        "high/1536-x-1024/gpt-image-1",
+        "low/1024-x-1024/gpt-image-1",
+        "low/1024-x-1536/gpt-image-1",
+        "low/1536-x-1024/gpt-image-1",
+        "medium/1024-x-1024/gpt-image-1",
+        "medium/1024-x-1536/gpt-image-1",
+        "medium/1536-x-1024/gpt-image-1"
+      ]
+    },
+    {
+      "model": "gpt-image-1.5",
+      "enabled": false,
+      "match_kind": "native_exact",
+      "source_model": "gpt-image-1.5",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 32.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 32.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-image-1.5",
+        "low/1024-x-1024/gpt-image-1.5",
+        "low/1024-x-1536/gpt-image-1.5",
+        "low/1536-x-1024/gpt-image-1.5",
+        "medium/1024-x-1024/gpt-image-1.5",
+        "medium/1024-x-1536/gpt-image-1.5",
+        "medium/1536-x-1024/gpt-image-1.5",
+        "high/1024-x-1024/gpt-image-1.5",
+        "high/1024-x-1536/gpt-image-1.5",
+        "high/1536-x-1024/gpt-image-1.5",
+        "standard/1024-x-1024/gpt-image-1.5",
+        "standard/1024-x-1536/gpt-image-1.5",
+        "standard/1536-x-1024/gpt-image-1.5",
+        "1024-x-1024/gpt-image-1.5",
+        "1024-x-1536/gpt-image-1.5",
+        "1536-x-1024/gpt-image-1.5"
+      ]
+    },
+    {
+      "model": "gpt-image-2",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-image-2",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": 10.0,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 30.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 30.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "price_field_changes": {
+        "output_cost_per_token": {
+          "before": 1e-05,
+          "after": null
+        }
+      },
+      "alternative_channel_keys": [
+        "aiml/openai/gpt-image-2",
+        "azure_ai/gpt-image-2",
+        "azure/gpt-image-2",
+        "fal_ai/openai/gpt-image-2",
+        "fal_ai/low/1024-x-768/openai/gpt-image-2",
+        "fal_ai/low/1024-x-1024/openai/gpt-image-2",
+        "fal_ai/low/1024-x-1536/openai/gpt-image-2",
+        "fal_ai/low/1920-x-1080/openai/gpt-image-2",
+        "fal_ai/low/2560-x-1440/openai/gpt-image-2",
+        "fal_ai/low/3840-x-2160/openai/gpt-image-2",
+        "fal_ai/medium/1024-x-768/openai/gpt-image-2",
+        "fal_ai/medium/1024-x-1024/openai/gpt-image-2",
+        "fal_ai/medium/1024-x-1536/openai/gpt-image-2",
+        "fal_ai/medium/1920-x-1080/openai/gpt-image-2",
+        "fal_ai/medium/2560-x-1440/openai/gpt-image-2",
+        "fal_ai/medium/3840-x-2160/openai/gpt-image-2",
+        "fal_ai/high/1024-x-768/openai/gpt-image-2",
+        "fal_ai/high/1024-x-1024/openai/gpt-image-2",
+        "fal_ai/high/1024-x-1536/openai/gpt-image-2",
+        "fal_ai/high/1920-x-1080/openai/gpt-image-2",
+        "fal_ai/high/2560-x-1440/openai/gpt-image-2",
+        "fal_ai/high/3840-x-2160/openai/gpt-image-2",
+        "fal_ai/gpt-image-2",
+        "fal_ai/low/1024-x-768/gpt-image-2",
+        "fal_ai/low/1024-x-1024/gpt-image-2",
+        "fal_ai/low/1024-x-1536/gpt-image-2",
+        "fal_ai/low/1920-x-1080/gpt-image-2",
+        "fal_ai/low/2560-x-1440/gpt-image-2",
+        "fal_ai/low/3840-x-2160/gpt-image-2",
+        "fal_ai/medium/1024-x-768/gpt-image-2",
+        "fal_ai/medium/1024-x-1024/gpt-image-2",
+        "fal_ai/medium/1024-x-1536/gpt-image-2",
+        "fal_ai/medium/1920-x-1080/gpt-image-2",
+        "fal_ai/medium/2560-x-1440/gpt-image-2",
+        "fal_ai/medium/3840-x-2160/gpt-image-2",
+        "fal_ai/high/1024-x-768/gpt-image-2",
+        "fal_ai/high/1024-x-1024/gpt-image-2",
+        "fal_ai/high/1024-x-1536/gpt-image-2",
+        "fal_ai/high/1920-x-1080/gpt-image-2",
+        "fal_ai/high/2560-x-1440/gpt-image-2",
+        "fal_ai/high/3840-x-2160/gpt-image-2"
+      ]
+    },
+    {
+      "model": "gpt-image-2.5",
+      "enabled": true,
+      "match_kind": "unresolved",
+      "source_model": null,
+      "provider": null,
+      "official_source_url": null,
+      "before_present": false,
+      "after_present": false,
+      "before_usd_per_million": {
+        "input_cost_per_token": null,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": null,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": null,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": null,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": []
+    },
+    {
+      "model": "gpt-image-2.5-flare",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-image-2.5-flare",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 30.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 30.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-image-2.5-flare"
+      ]
+    },
+    {
+      "model": "gpt-image-2.5-sunburst",
+      "enabled": true,
+      "match_kind": "native_exact",
+      "source_model": "gpt-image-2.5-sunburst",
+      "provider": "openai",
+      "official_source_url": "https://developers.openai.com/api/docs/pricing",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 30.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 5.0,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": 1.25,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 8.0,
+        "output_cost_per_image_token": 30.0,
+        "cache_read_input_image_token_cost": 2.0
+      },
+      "price_field_changes": {},
+      "alternative_channel_keys": [
+        "azure/gpt-image-2.5-sunburst"
+      ]
+    },
+    {
+      "model": "grok-4.5",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "xai/grok-4.5",
+      "provider": "xai",
+      "official_source_url": "https://api.x.ai/v1/language-models",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 6.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 6.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 2.0,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "input_cost_per_image_token": {
+          "before": null,
+          "after": 2e-06
+        }
+      },
+      "alternative_channel_keys": [
+        "perplexity/xai/grok-4.5"
+      ]
+    },
+    {
+      "model": "grok-4.6",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "xai/grok-4.6",
+      "provider": "xai",
+      "official_source_url": "https://api.x.ai/v1/language-models",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 6.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 6.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 2.0,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "input_cost_per_image_token": {
+          "before": null,
+          "after": 2e-06
+        }
+      },
+      "alternative_channel_keys": [
+        "azure_ai/grok-4.6",
+        "vertex_ai/xai/grok-4.6",
+        "perplexity/xai/grok-4.6",
+        "aihubmix/grok-4.6"
+      ]
+    },
+    {
+      "model": "grok-4.7",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "xai/grok-4.7",
+      "provider": "xai",
+      "official_source_url": "https://api.x.ai/v1/language-models",
+      "before_present": false,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": null,
+        "output_cost_per_token": null,
+        "cache_read_input_token_cost": null,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 2.0,
+        "output_cost_per_token": 6.0,
+        "cache_read_input_token_cost": 0.5,
+        "cache_creation_input_token_cost": null,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": 2.0,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_read_input_token_cost": {
+          "before": null,
+          "after": 5e-07
+        },
+        "cache_read_input_token_cost_above_200k_tokens": {
+          "before": null,
+          "after": 1e-06
+        },
+        "input_cost_per_image_token": {
+          "before": null,
+          "after": 2e-06
+        },
+        "input_cost_per_token": {
+          "before": null,
+          "after": 2e-06
+        },
+        "input_cost_per_token_above_200k_tokens": {
+          "before": null,
+          "after": 4e-06
+        },
+        "output_cost_per_token": {
+          "before": null,
+          "after": 6e-06
+        },
+        "output_cost_per_token_above_200k_tokens": {
+          "before": null,
+          "after": 1.2e-05
+        }
+      },
+      "alternative_channel_keys": [
+        "perplexity/xai/grok-4.7",
+        "vertex_ai/xai/grok-4.7",
+        "azure_ai/grok-4.7"
+      ]
+    },
+    {
+      "model": "kimi-k3",
+      "enabled": true,
+      "match_kind": "native_namespace_alias",
+      "source_model": "moonshot/kimi-k3",
+      "provider": "moonshot",
+      "official_source_url": "https://platform.kimi.ai/docs/pricing/chat-k3",
+      "before_present": true,
+      "after_present": true,
+      "before_usd_per_million": {
+        "input_cost_per_token": 2.9480697513303165,
+        "output_cost_per_token": 14.740348756651583,
+        "cache_read_input_token_cost": 0.29480697513303167,
+        "cache_creation_input_token_cost": 2.9480697513303165,
+        "cache_creation_input_token_cost_above_1hr": null,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "after_usd_per_million": {
+        "input_cost_per_token": 3.0,
+        "output_cost_per_token": 15.0,
+        "cache_read_input_token_cost": 0.3,
+        "cache_creation_input_token_cost": 3.0,
+        "cache_creation_input_token_cost_above_1hr": 6.0,
+        "input_cost_per_image_token": null,
+        "output_cost_per_image_token": null,
+        "cache_read_input_image_token_cost": null
+      },
+      "price_field_changes": {
+        "cache_creation_input_token_cost": {
+          "before": 2.9480697513303164e-06,
+          "after": 3e-06
+        },
+        "cache_creation_input_token_cost_above_1hr": {
+          "before": null,
+          "after": 6e-06
+        },
+        "cache_read_input_token_cost": {
+          "before": 2.948069751330317e-07,
+          "after": 3e-07
+        },
+        "input_cost_per_token": {
+          "before": 2.9480697513303164e-06,
+          "after": 3e-06
+        },
+        "output_cost_per_token": {
+          "before": 1.4740348756651584e-05,
+          "after": 1.5e-05
+        }
+      },
+      "alternative_channel_keys": [
+        "github_copilot/kimi-k3",
+        "perplexity/perplexity/kimi-k3",
+        "tencent/kimi-k3",
+        "fireworks_ai/accounts/fireworks/models/kimi-k3",
+        "fireworks_ai/kimi-k3",
+        "novita/moonshotai/kimi-k3",
+        "aihubmix/kimi-k3"
+      ]
+    }
+  ]
+}

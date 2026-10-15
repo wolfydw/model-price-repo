@@ -194,7 +194,8 @@ class NativePolicyTests(unittest.TestCase):
             original = {"legacy-grok": {"input_cost_per_token": 77e-6}}
             output.write_text(json.dumps(original), encoding="utf-8")
             card = {"litellm_provider": "xai", "input_cost_per_token": 2e-6, "cache_read_input_token_cost": 0.5e-6}
-            with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: {"xai/grok-4.7": copy.deepcopy(card)}), \
+            upstream = {"xai/grok-4.7": card}
+            with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy(upstream)), \
                     patch.object(sync_prices.sys, "argv", ["sync_prices.py", "--repo-root", temporary]), \
                     patch("builtins.print"):
                 sync_prices.main()
@@ -208,6 +209,10 @@ class NativePolicyTests(unittest.TestCase):
                 self.assertEqual(original["legacy-grok"], published["legacy-grok"])
                 raw = output.read_bytes()
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), (root / config["hash_file"]).read_text().strip())
+                upstream.clear()
+                upstream["gpt-other"] = {"litellm_provider": "openai", "input_cost_per_token": 1e-6}
+                sync_prices.main()
+                self.assertEqual(card, json.loads(output.read_text())["grok-4.7"])
 
     def test_unknown_native_models_do_not_borrow_reseller_or_adjacent_model_prices(self):
         upstream = {

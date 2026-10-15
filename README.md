@@ -60,6 +60,10 @@ both native and bare cards; free cache storage does not establish a per-token
 write fee. Other legacy custom cards only apply without a native
 match; they are not asserted to be current official prices.
 
+The complete [51-model source review](docs/2026-10-15-native-source-review.md)
+and [field comparison JSON](docs/2026-10-15-native-source-comparison.json) record
+the initial migration and its limits.
+
 ## Configuration
 
 All settings live in [`config.json`](config.json):
