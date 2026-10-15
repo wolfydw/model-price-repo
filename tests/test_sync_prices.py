@@ -1,4 +1,4 @@
-"""Offline regressions for namespaced Gemini pricing and published output."""
+"""Offline regressions for model pricing policies and published output."""
 
 import copy
 import hashlib
@@ -99,6 +99,91 @@ class GeminiPricingTests(unittest.TestCase):
                 self.assertEqual(first, output.read_bytes())
                 self.assertEqual(hash_file.read_text().strip(), write.call_args.args[-1])
                 report.assert_any_call("CHANGED=false")
+
+
+class FlatSolPricingTests(unittest.TestCase):
+    def setUp(self):
+        self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        fields = (
+            "input_cost_per_token", "cache_read_input_token_cost",
+            "cache_creation_input_token_cost", "output_cost_per_token",
+        )
+        tiers = {
+            "": (2e-6, 1e-7, 2.5e-6, 1e-5),
+            "_batches": (1e-6, 5e-8, 1.25e-6, 5e-6),
+            "_flex": (1e-6, 5e-8, 1.25e-6, 5e-6),
+            "_priority": (4e-6, 2e-7, 5e-6, 2e-5),
+            "_ultrafast": (1.2e-5, 6e-7, 1.5e-5, 6e-5),
+        }
+        self.base = {field + tier: rate for tier, rates in tiers.items()
+                     for field, rate in zip(fields, rates)}
+        self.premiums = {
+            field + "_above_272k_tokens" + tier: 99e-6
+            for tier in tiers for field in fields
+        }
+
+    def test_exclusions_keep_base_prices_time_fields_and_other_models(self):
+        expected = {
+            **self.base,
+            "cache_creation_input_token_cost_above_1hr": 4e-6,
+            "max_input_tokens": 922000,
+        }
+        other = {**self.base, **self.premiums}
+        data = {
+            "gpt-6.1-sol": {**expected, **self.premiums},
+            "gpt-other": copy.deepcopy(other),
+        }
+        removed = sync_prices.remove_excluded_model_fields(
+            data, self.config["excluded_model_fields"]
+        )
+        self.assertEqual(20, removed)
+        self.assertEqual(expected, data["gpt-6.1-sol"])
+        self.assertEqual(other, data["gpt-other"])
+
+    def test_repeated_sync_cannot_restore_upstream_or_custom_surcharges(self):
+        upstream = {
+            "gpt-6.1-sol": {**self.base, **self.premiums, "max_input_tokens": 922000},
+            "gpt-other": {**self.base, **self.premiums},
+        }
+        for mode in ("additive", "full"):
+            with self.subTest(sync_mode=mode), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                config = copy.deepcopy(self.config)
+                config["sync_mode"] = mode
+                config["aliases"] = {}
+                config["custom_models"] = {
+                    "gpt-6.1-sol": {"input_cost_per_token_above_272k_tokens": 88e-6}
+                }
+                (root / "config.json").write_text(json.dumps(config), encoding="utf-8")
+                output = root / config["output_file"]
+                output.write_text(json.dumps(upstream), encoding="utf-8")
+                hash_file = root / config["hash_file"]
+                hash_file.write_text(hashlib.sha256(output.read_bytes()).hexdigest() + "\n")
+                arguments = ["sync_prices.py", "--repo-root", temporary]
+                with patch.object(sync_prices, "fetch_upstream",
+                                  side_effect=lambda url: copy.deepcopy(upstream)), \
+                        patch.object(sync_prices.sys, "argv", arguments), \
+                        patch("builtins.print") as report:
+                    sync_prices.main()
+                    first = output.read_bytes()
+                    published = json.loads(first)
+                    self.assertEqual({**self.base, "max_input_tokens": 922000},
+                                     published["gpt-6.1-sol"])
+                    self.assertEqual(upstream["gpt-other"], published["gpt-other"])
+                    self.assertEqual(hashlib.sha256(first).hexdigest(),
+                                     hash_file.read_text().strip())
+                    sync_prices.main()
+                    self.assertEqual(first, output.read_bytes())
+                    report.assert_any_call("CHANGED=false")
+
+    def test_published_sol_prices_and_hash(self):
+        raw = (ROOT / self.config["output_file"]).read_bytes()
+        entry = json.loads(raw)["gpt-6.1-sol"]
+        for field, price in self.base.items():
+            self.assertEqual(price, entry[field], field)
+        self.assertFalse(any("_above_272k_tokens" in field for field in entry))
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         (ROOT / self.config["hash_file"]).read_text().strip())
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ Usage:
 import argparse
 import copy
 from decimal import Decimal
+from fnmatch import fnmatchcase
 import hashlib
 import json
 import logging
@@ -213,6 +214,23 @@ def apply_custom_models(data: dict, custom: dict) -> dict:
     return data
 
 
+def remove_excluded_model_fields(data: dict, exclusions: dict) -> int:
+    """Remove configured fields after merging upstream, aliases, and overrides."""
+    count = 0
+    for model, patterns in exclusions.items():
+        pricing = data.get(model)
+        if not isinstance(pricing, dict):
+            continue
+        fields = [field for field in pricing
+                  if any(fnmatchcase(field, pattern) for pattern in patterns)]
+        for field in fields:
+            del pricing[field]
+        if fields:
+            log.info("Model '%s': excluded %d field(s): %s", model, len(fields), fields)
+        count += len(fields)
+    return count
+
+
 def fill_cache_1hr_pricing(data: dict, config: dict) -> int:
     """Auto-fill missing cache_creation_input_token_cost_above_1hr for matching models.
 
@@ -336,10 +354,15 @@ def main() -> None:
     if custom:
         merged = apply_custom_models(merged, custom)
 
-    # 9. Write output
+    # 9. Apply field exclusions last so upstream and overrides cannot restore them
+    excluded_count = remove_excluded_model_fields(
+        merged, config.get("excluded_model_fields", {})
+    )
+
+    # 10. Write output
     changed, new_hash = write_output(merged, output_path, hash_path, old_hash)
 
-    # 10. Report
+    # 11. Report
     log.info("--- Sync Report ---")
     log.info("Total models in output: %d", len(merged))
     log.info("Added:     %d", stats["added"])
@@ -348,6 +371,7 @@ def main() -> None:
     log.info("Aliases:   %d", len(aliases))
     log.info("Cache 1hr auto-filled: %d", cache_1hr_count)
     log.info("Custom:    %d", len(custom))
+    log.info("Excluded fields: %d", excluded_count)
 
     # Machine-readable output for CI
     print(f"CHANGED={str(changed).lower()}")

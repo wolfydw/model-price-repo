@@ -10,7 +10,8 @@ A GitHub Actions workflow runs every 10 minutes (and on manual trigger):
 2. Filters models by the prefix rules in `config.json`
 3. Merges new models into the existing output (additive — never removes)
 4. Applies alias mappings and custom model definitions
-5. Writes the output JSON + SHA-256 hash, commits only if content changed
+5. Removes explicitly excluded model fields after all merges and overrides
+6. Writes the output JSON + SHA-256 hash, commits only if content changed
 
 ## Configuration
 
@@ -25,6 +26,7 @@ All settings live in [`config.json`](config.json):
 | `update_existing` | Whether to update pricing data for models already in the output |
 | `prefix_filters` | List of prefixes — a model key must start with one to be included |
 | `exclude_patterns` | Substring patterns to exclude (applied before prefix matching) |
+| `excluded_model_fields` | Map exact model keys to field-name glob patterns removed after all merges and overrides |
 | `aliases` | Map alias model keys to existing source models (deep copy pricing) |
 | `custom_models` | Manually defined pricing objects, always injected |
 
@@ -78,6 +80,18 @@ separate review of the configuration or data.
 The synchronization workflow runs the offline regression tests before fetching
 and publishing data. GitHub scheduled runs can be delayed; after creating a
 fork, enable its Actions workflow and trigger the first run manually.
+
+### GPT-6.1 Sol pricing policy
+
+This fork intentionally uses the same per-token rates for `gpt-6.1-sol` at all
+input lengths. Its `excluded_model_fields` rule removes every
+`*_above_272k_tokens*` field, including Standard, Batch, Flex, Priority, and
+Ultrafast input, output, cache-read, and cache-write surcharges. Base prices,
+context limits, and other models remain unchanged. This is a local pricing
+override; it does not change the provider's charges.
+
+Exclusions run after upstream merging, aliases, and custom definitions, so
+scheduled synchronization cannot restore these fields.
 
 ## Running locally
 

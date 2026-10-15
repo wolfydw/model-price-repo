@@ -18,6 +18,11 @@
   "exclude_patterns": [
     "sample_spec"
   ],
+  "excluded_model_fields": {
+    "gpt-6.1-sol": [
+      "*_above_272k_tokens*"
+    ]
+  },
   "aliases": {
     "gemini-4-argon": {
       "source": "gemini/gemini-4-argon",
