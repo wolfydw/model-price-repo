@@ -60,7 +60,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -112,7 +112,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -162,7 +162,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "source": "https://platform.claude.com/docs/en/about-claude/pricing",
@@ -197,7 +197,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_assistant_prefill": true,
@@ -244,7 +244,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
       },
       "search_context_cost_per_query": {
@@ -297,7 +297,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -348,7 +348,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -397,7 +397,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
       },
       "search_context_cost_per_query": {
@@ -444,7 +444,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -486,7 +486,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "search_context_cost_per_query": {
@@ -531,7 +531,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -582,7 +582,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "search_context_cost_per_query": {
@@ -631,7 +631,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -682,7 +682,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -734,7 +734,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "search_context_cost_per_query": {
@@ -785,7 +785,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -840,7 +840,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -895,7 +895,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -948,7 +948,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -989,7 +989,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.anthropic.com/en/docs/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -1033,7 +1033,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -1083,7 +1083,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -1135,7 +1135,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "search_context_cost_per_query": {
@@ -1207,7 +1207,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -1261,7 +1261,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -1305,7 +1305,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -1351,7 +1351,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/models/deep-research-pro-preview-12-2025"
       },
       "rpm": 1000.0,
@@ -1641,7 +1641,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/pricing"
       },
       "rpm": 10,
@@ -1672,7 +1672,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -1723,7 +1723,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 100000,
@@ -1784,7 +1784,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 100000,
@@ -1853,7 +1853,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -1908,7 +1908,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -1943,7 +1943,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -1979,7 +1979,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -2020,7 +2020,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -2064,7 +2064,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -2119,7 +2119,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10000,
@@ -2174,7 +2174,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -2243,7 +2243,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -2306,7 +2306,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -2361,7 +2361,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -2411,7 +2411,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -2461,7 +2461,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -2523,7 +2523,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -2582,7 +2582,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -2638,7 +2638,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -2700,7 +2700,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -2743,7 +2743,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -2786,7 +2786,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -2856,7 +2856,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -2926,7 +2926,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -2996,7 +2996,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3066,7 +3066,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3133,7 +3133,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3199,7 +3199,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -3255,7 +3255,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -3290,7 +3290,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3322,7 +3322,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -3365,7 +3365,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3432,7 +3432,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3500,7 +3500,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -3566,7 +3566,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -3598,7 +3598,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -3623,7 +3623,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -3652,7 +3652,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -3690,7 +3690,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000.0,
@@ -3745,7 +3745,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/embeddings#model-versions"
       },
       "rpm": 10000,
@@ -3771,7 +3771,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10000,
@@ -3800,7 +3800,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10000,
@@ -3828,7 +3828,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/pricing"
       },
       "rpm": 1000,
@@ -3858,7 +3858,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/pricing"
       },
       "rpm": 1000,
@@ -3894,7 +3894,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -3959,7 +3959,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -4012,7 +4012,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
       },
       "rpm": 10,
@@ -4033,7 +4033,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
       },
       "rpm": 10,
@@ -4058,7 +4058,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 100000,
@@ -4111,7 +4111,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000.0,
@@ -4161,7 +4161,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -4202,7 +4202,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -4256,7 +4256,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -4314,7 +4314,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -4366,7 +4366,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -4409,7 +4409,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -4453,7 +4453,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -4499,7 +4499,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/models/deep-research-pro-preview-12-2025"
       },
       "rpm": 1000.0,
@@ -4546,7 +4546,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/pricing"
       },
       "rpm": 10,
@@ -4577,7 +4577,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -4628,7 +4628,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 100000,
@@ -4689,7 +4689,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 100000,
@@ -4758,7 +4758,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -4813,7 +4813,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -4848,7 +4848,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -4884,7 +4884,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -4925,7 +4925,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -4969,7 +4969,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -5024,7 +5024,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10000,
@@ -5079,7 +5079,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -5142,7 +5142,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -5197,7 +5197,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -5247,7 +5247,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000.0,
@@ -5298,7 +5298,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -5360,7 +5360,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -5419,7 +5419,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -5475,7 +5475,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -5537,7 +5537,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -5580,7 +5580,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -5623,7 +5623,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -5693,7 +5693,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -5760,7 +5760,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -5826,7 +5826,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -5882,7 +5882,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -5917,7 +5917,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -5949,7 +5949,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -5992,7 +5992,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -6059,7 +6059,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -6127,7 +6127,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -6193,7 +6193,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -6225,7 +6225,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -6250,7 +6250,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -6279,7 +6279,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10,
@@ -6317,7 +6317,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000.0,
@@ -6372,7 +6372,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/embeddings#model-versions"
       },
       "rpm": 10000,
@@ -6398,7 +6398,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10000,
@@ -6427,7 +6427,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 10000,
@@ -6455,7 +6455,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/pricing"
       },
       "rpm": 1000,
@@ -6485,7 +6485,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/pricing"
       },
       "rpm": 1000,
@@ -6521,7 +6521,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -6586,7 +6586,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 15,
@@ -6639,7 +6639,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
       },
       "rpm": 10,
@@ -6660,7 +6660,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
       },
       "rpm": 10,
@@ -6685,7 +6685,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 100000,
@@ -6738,7 +6738,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000.0,
@@ -6788,7 +6788,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -6829,7 +6829,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -6883,7 +6883,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 2000,
@@ -6941,7 +6941,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -6993,7 +6993,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -7046,7 +7046,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://aistudio.google.com"
       },
       "source": "https://aistudio.google.com",
@@ -7069,7 +7069,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7092,7 +7092,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7111,7 +7111,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
       },
       "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
@@ -7124,7 +7124,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
       },
       "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
@@ -7153,7 +7153,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://aistudio.google.com"
       },
       "source": "https://aistudio.google.com",
@@ -7177,7 +7177,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7209,7 +7209,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7241,7 +7241,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7273,7 +7273,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7305,7 +7305,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7337,7 +7337,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp"
       },
       "source": "https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp",
@@ -7377,7 +7377,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -7421,7 +7421,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7445,7 +7445,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7467,7 +7467,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7490,7 +7490,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7513,7 +7513,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/video"
       },
       "source": "https://ai.google.dev/gemini-api/docs/video",
@@ -7548,7 +7548,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://aistudio.google.com"
       },
       "source": "https://aistudio.google.com",
@@ -7571,7 +7571,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7594,7 +7594,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -7727,7 +7727,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -7751,7 +7751,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -7776,7 +7776,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -7799,7 +7799,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_prompt_caching": true,
@@ -7819,7 +7819,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_function_calling": true,
@@ -7842,7 +7842,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -7864,7 +7864,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_function_calling": true,
@@ -7886,7 +7886,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_function_calling": true,
@@ -7912,7 +7912,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -7942,7 +7942,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -7978,6 +7978,7 @@
       "cache_read_input_token_cost": 5e-07,
       "cache_read_input_token_cost_priority": 8.75e-07,
       "currency": "USD",
+      "deprecation_date": "2027-01-14",
       "input_cost_per_token": 2e-06,
       "input_cost_per_token_batches": 1e-06,
       "input_cost_per_token_priority": 3.5e-06,
@@ -7992,7 +7993,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8042,7 +8043,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8078,6 +8079,7 @@
       "cache_read_input_token_cost": 1e-07,
       "cache_read_input_token_cost_priority": 1.75e-07,
       "currency": "USD",
+      "deprecation_date": "2027-01-14",
       "input_cost_per_token": 4e-07,
       "input_cost_per_token_batches": 2e-07,
       "input_cost_per_token_priority": 7e-07,
@@ -8092,7 +8094,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8143,7 +8145,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8188,7 +8190,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8232,7 +8234,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8262,7 +8264,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8278,6 +8280,7 @@
       "cache_read_input_token_cost": 1.25e-06,
       "cache_read_input_token_cost_priority": 2.125e-06,
       "currency": "USD",
+      "deprecation_date": "2027-01-14",
       "input_cost_per_token": 2.5e-06,
       "input_cost_per_token_batches": 1.25e-06,
       "input_cost_per_token_priority": 4.25e-06,
@@ -8292,7 +8295,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8309,6 +8312,7 @@
       "cache_read_input_token_cost": 1.25e-06,
       "cache_read_input_token_cost_priority": 2.125e-06,
       "currency": "USD",
+      "deprecation_date": "2027-01-14",
       "input_cost_per_token": 2.5e-06,
       "input_cost_per_token_batches": 1.25e-06,
       "input_cost_per_token_priority": 4.25e-06,
@@ -8323,7 +8327,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8351,7 +8355,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_audio_input": true,
@@ -8376,7 +8380,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_audio_input": true,
@@ -8404,7 +8408,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8426,6 +8430,7 @@
       "cache_read_input_token_cost": 7.5e-08,
       "cache_read_input_token_cost_priority": 1.25e-07,
       "currency": "USD",
+      "deprecation_date": "2027-01-14",
       "input_cost_per_token": 1.5e-07,
       "input_cost_per_token_batches": 7.5e-08,
       "input_cost_per_token_priority": 2.5e-07,
@@ -8440,7 +8445,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8473,7 +8478,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_audio_input": true,
@@ -8500,7 +8505,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supports_audio_input": true,
@@ -8525,7 +8530,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "search_context_cost_per_query": {
@@ -8559,7 +8564,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-search-preview"
       },
       "search_context_cost_per_query": {
@@ -8592,7 +8597,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8614,7 +8619,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8635,7 +8640,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8654,7 +8659,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8681,7 +8686,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-tts"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-tts",
@@ -8708,7 +8713,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8738,7 +8743,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "search_context_cost_per_query": {
@@ -8772,7 +8777,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-4o-search-preview"
       },
       "search_context_cost_per_query": {
@@ -8805,7 +8810,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8827,7 +8832,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -8857,7 +8862,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8916,7 +8921,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -8966,7 +8971,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "supported_endpoints": [
@@ -9009,7 +9014,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5-chat-latest"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5-chat-latest",
@@ -9048,7 +9053,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5-codex"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5-codex",
@@ -9095,7 +9100,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9154,7 +9159,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9210,7 +9215,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9267,7 +9272,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9317,7 +9322,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9367,7 +9372,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9415,7 +9420,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9450,7 +9455,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9495,7 +9500,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9554,7 +9559,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9604,7 +9609,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.1-chat-latest"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.1-chat-latest",
@@ -9643,7 +9648,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex",
@@ -9682,7 +9687,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-max"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-max",
@@ -9721,7 +9726,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-mini"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.1-codex-mini",
@@ -9768,7 +9773,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9829,7 +9834,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -9881,7 +9886,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.2-chat-latest"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.2-chat-latest",
@@ -9920,7 +9925,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.2-codex"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.2-codex",
@@ -9959,7 +9964,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -10008,7 +10013,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -10057,7 +10062,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-5.3-chat-latest"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-5.3-chat-latest",
@@ -10099,7 +10104,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -10151,7 +10156,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -10218,7 +10223,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10283,7 +10288,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10339,7 +10344,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10401,7 +10406,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10461,7 +10466,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10519,7 +10524,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10579,7 +10584,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10639,7 +10644,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10708,7 +10713,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10778,7 +10783,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10827,7 +10832,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -10853,7 +10858,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10912,7 +10917,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -10993,7 +10998,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11050,7 +11055,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -11120,7 +11125,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11202,7 +11207,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11285,7 +11290,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11375,7 +11380,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11467,7 +11472,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11552,7 +11557,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11624,7 +11629,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -11681,7 +11686,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -11725,7 +11730,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -11767,7 +11772,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -11812,7 +11817,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -11857,7 +11862,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-audio-mini"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-audio-mini",
@@ -11902,7 +11907,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -11950,7 +11955,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-daybreak-blue-latest"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-daybreak-blue-latest",
@@ -11995,7 +12000,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/gpt-daybreak-red-latest"
       },
       "source": "https://developers.openai.com/api/docs/models/gpt-daybreak-red-latest",
@@ -12038,7 +12043,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12063,7 +12068,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12090,7 +12095,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12118,7 +12123,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12143,7 +12148,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12166,7 +12171,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12192,7 +12197,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12215,7 +12220,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12241,7 +12246,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12264,7 +12269,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12283,7 +12288,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12307,7 +12312,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12344,7 +12349,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12386,7 +12391,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12428,7 +12433,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12470,7 +12475,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -12514,7 +12519,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "regional_processing_uplift_multiplier_eu": 1.1,
@@ -12559,7 +12564,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12602,7 +12607,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12645,7 +12650,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12679,7 +12684,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12701,7 +12706,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12727,7 +12732,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing"
@@ -12742,7 +12747,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing"
@@ -12755,7 +12760,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -12795,7 +12800,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -12830,7 +12835,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -12865,7 +12870,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -12899,7 +12904,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -12928,7 +12933,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -12957,7 +12962,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -12986,7 +12991,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13014,7 +13019,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13043,7 +13048,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13072,7 +13077,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13100,7 +13105,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13129,7 +13134,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13157,7 +13162,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13186,7 +13191,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13215,7 +13220,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13243,7 +13248,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13272,7 +13277,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13301,7 +13306,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13329,7 +13334,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13364,7 +13369,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13402,7 +13407,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13434,7 +13439,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13466,7 +13471,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13498,7 +13503,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13530,7 +13535,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13568,7 +13573,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13606,7 +13611,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13634,7 +13639,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13668,7 +13673,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13702,7 +13707,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13731,7 +13736,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13766,7 +13771,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13801,7 +13806,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13836,7 +13841,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13865,7 +13870,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13894,7 +13899,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13923,7 +13928,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13952,7 +13957,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -13981,7 +13986,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -14009,7 +14014,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -14038,7 +14043,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -14066,7 +14071,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -14094,7 +14099,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -14113,7 +14118,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14136,7 +14141,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14159,7 +14164,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14182,7 +14187,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14206,7 +14211,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14230,7 +14235,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14254,7 +14259,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -14280,7 +14285,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video",
@@ -14305,7 +14310,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5",
@@ -14330,7 +14335,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5",
@@ -14355,7 +14360,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -14379,7 +14384,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5",
@@ -14395,12 +14400,13 @@
     "grok-voice-2.0": {
       "currency": "USD",
       "input_cost_per_second": 0.001333333333333,
+      "input_cost_per_text_message": 0.004,
       "litellm_provider": "xai",
       "mode": "realtime",
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -14422,12 +14428,13 @@
     "grok-voice-3.0": {
       "currency": "USD",
       "input_cost_per_second": 0.001333333333333,
+      "input_cost_per_text_message": 0.004,
       "litellm_provider": "xai",
       "mode": "realtime",
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -14449,12 +14456,13 @@
     "grok-voice-latest": {
       "currency": "USD",
       "input_cost_per_second": 0.001333333333333,
+      "input_cost_per_text_message": 0.004,
       "litellm_provider": "xai",
       "mode": "realtime",
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -14487,7 +14495,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -14508,7 +14516,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -14524,7 +14532,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
       },
       "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
@@ -14537,7 +14545,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
       },
       "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
@@ -14595,7 +14603,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://aistudio.google.com"
       },
       "source": "https://aistudio.google.com",
@@ -14619,7 +14627,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -14651,7 +14659,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -14683,7 +14691,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -14715,7 +14723,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -14747,7 +14755,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -14779,7 +14787,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp"
       },
       "source": "https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp",
@@ -14848,7 +14856,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "rpm": 1000,
@@ -14896,7 +14904,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -14925,7 +14933,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -14966,7 +14974,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -15013,7 +15021,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -15067,7 +15075,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -15113,7 +15121,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/o3-deep-research"
       },
       "source": "https://developers.openai.com/api/docs/models/o3-deep-research",
@@ -15152,7 +15160,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/o3-deep-research"
       },
       "source": "https://developers.openai.com/api/docs/models/o3-deep-research",
@@ -15193,7 +15201,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -15221,7 +15229,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "source": "https://developers.openai.com/api/docs/pricing",
@@ -15247,7 +15255,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -15292,7 +15300,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -15344,7 +15352,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -15385,7 +15393,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/pricing"
       },
       "search_context_cost_per_query": {
@@ -15418,7 +15426,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research"
       },
       "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research",
@@ -15457,7 +15465,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research"
       },
       "source": "https://developers.openai.com/api/docs/models/o4-mini-deep-research",
@@ -15494,7 +15502,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -15518,7 +15526,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -15540,7 +15548,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -15563,7 +15571,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
@@ -15586,7 +15594,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://ai.google.dev/gemini-api/docs/video"
       },
       "source": "https://ai.google.dev/gemini-api/docs/video",
@@ -15620,7 +15628,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15655,7 +15663,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15690,7 +15698,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15724,7 +15732,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15753,7 +15761,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15782,7 +15790,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15811,7 +15819,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15839,7 +15847,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15868,7 +15876,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15897,7 +15905,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15925,7 +15933,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15954,7 +15962,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -15982,7 +15990,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16011,7 +16019,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16040,7 +16048,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16068,7 +16076,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16097,7 +16105,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16126,7 +16134,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16154,7 +16162,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16189,7 +16197,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16227,7 +16235,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16259,7 +16267,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16291,7 +16299,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16323,7 +16331,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16355,7 +16363,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16393,7 +16401,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16431,7 +16439,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16459,7 +16467,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16493,7 +16501,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16527,7 +16535,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16556,7 +16564,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16591,7 +16599,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16626,7 +16634,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16661,7 +16669,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16690,7 +16698,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16719,7 +16727,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16748,7 +16756,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16777,7 +16785,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16806,7 +16814,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16834,7 +16842,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16863,7 +16871,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16891,7 +16899,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16919,7 +16927,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://api.x.ai/v1/language-models"
       },
       "source": "https://api.x.ai/v1/language-models",
@@ -16938,7 +16946,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -16961,7 +16969,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -16984,7 +16992,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -17007,7 +17015,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -17031,7 +17039,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -17055,7 +17063,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -17079,7 +17087,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models"
       },
       "source": "https://docs.x.ai/docs/models",
@@ -17105,7 +17113,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video",
@@ -17130,7 +17138,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5",
@@ -17155,7 +17163,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5",
@@ -17180,7 +17188,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -17204,7 +17212,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5"
       },
       "source": "https://docs.x.ai/docs/models/grok-imagine-video-1.5",
@@ -17220,12 +17228,13 @@
     "xai/grok-voice-2.0": {
       "currency": "USD",
       "input_cost_per_second": 0.001333333333333,
+      "input_cost_per_text_message": 0.004,
       "litellm_provider": "xai",
       "mode": "realtime",
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -17247,12 +17256,13 @@
     "xai/grok-voice-3.0": {
       "currency": "USD",
       "input_cost_per_second": 0.001333333333333,
+      "input_cost_per_text_message": 0.004,
       "litellm_provider": "xai",
       "mode": "realtime",
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -17274,12 +17284,13 @@
     "xai/grok-voice-latest": {
       "currency": "USD",
       "input_cost_per_second": 0.001333333333333,
+      "input_cost_per_text_message": 0.004,
       "litellm_provider": "xai",
       "mode": "realtime",
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -17312,7 +17323,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -17333,7 +17344,7 @@
       "reference": {
         "project": "litellm",
         "quote_unit": "USD_per_token",
-        "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f",
+        "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e",
         "source": "https://docs.x.ai/developers/pricing"
       },
       "source": "https://docs.x.ai/developers/pricing",
@@ -17458,7 +17469,7 @@
       "commit": "f2d7811364193f8d7069f24a299ee465c5519d3c"
     },
     "litellm": {
-      "sha256": "2d1f8e517294aeaf94e711b904f22bb7945d85b230057477d616b05d62f82d6f"
+      "sha256": "e81298776d384afec9998741f82d3b6b1de62e1526a16fcf91bd37eb1efde97e"
     }
   }
 }
