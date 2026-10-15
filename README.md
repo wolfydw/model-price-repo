@@ -4,14 +4,57 @@ Filtered model pricing data for CRS and sub2api projects. Syncs from the upstrea
 
 ## How it works
 
-A GitHub Actions workflow runs every 10 minutes (and on manual trigger):
+A GitHub Actions workflow runs every 10 minutes, offset to minutes 7/17/27/37/47/57
+(and on a push to main or manual trigger). GitHub can delay scheduled runs.
 
-1. Downloads the full `model_prices_and_context_window.json` from litellm
-2. Filters models by the prefix rules in `config.json`
-3. Merges new models into the existing output (additive — never removes)
-4. Applies alias mappings and custom model definitions
-5. Removes explicitly excluded model fields after all merges and overrides
-6. Writes the output JSON + SHA-256 hash, commits only if content changed
+1. Download LiteLLM's public pricing file once.
+2. Select both the model-key prefix and the native `litellm_provider`.
+3. Replace matching cards completely, including changed prices and removed fields.
+4. Copy native namespace cards to bare model IDs.
+5. Apply remaining legacy aliases/custom definitions only when no native card exists.
+6. Fill documented missing official fields, then apply explicit site pricing exclusions.
+7. Publish JSON and SHA-256 together, committing only when content changes.
+
+## Source policy
+
+| Family | Accepted provider | Native keys | Bare IDs |
+|---|---|---|---|
+| OpenAI | `openai` | `gpt-`, `o1-`, `o3`, `o4-` | Native keys already bare |
+| Anthropic | `anthropic` | `claude-` | Native keys already bare |
+| Gemini Developer API | `gemini` | `gemini/` | Automatically strip namespace |
+| xAI | `xai` | `xai/` | Automatically strip namespace |
+| DeepSeek international | `deepseek` | `deepseek/` | Automatically strip namespace |
+| Z.AI international | `zai` | `zai/` | Automatically strip namespace |
+| Kimi international | `moonshot` | `moonshot/` | Automatically strip namespace |
+
+Vertex, Bedrock, Azure, OpenRouter, and other reseller channels are never used as
+native replacement prices. In particular, LiteLLM's bare Gemini keys can be
+Vertex entries; Gemini aliases here come from `gemini/` instead. Native Grok,
+GLM and Kimi aliases include all source fields, such as cache and context tiers.
+
+All published rates follow LiteLLM's USD units. Domestic CNY prices are not
+converted using a fixed exchange rate. LiteLLM is a third-party catalogue;
+provider selection does not certify every field against current official docs.
+
+The 2026-10-15 inventory covers **34 enabled sale models and 51 configured IDs**.
+**49/51** have a price card: 47 native exact IDs (including namespace copies),
+plus two explicitly configured endpoint/site aliases. `deepseek-v4.1-flash` and
+bare `gpt-image-2.5` have no exact native entry and remain absent. Reseller
+prices and adjacent versions are not substituted. If an exact native entry is
+added later, normal selection imports it automatically. The enabled sale scope
+has 30 exact native cards, two aliases and two unresolved IDs.
+
+`gemini-3.1-pro` remains a configured alias of `gemini-3.1-pro-preview`.
+`codex-auto-review` remains a site alias of `gpt-5.6-luna`, not an independently
+verified official model. Existing per-image retail group prices belong to the
+application and are not replaced by per-image-token prices in this catalogue.
+
+Kimi K3's missing cache-write fees are filled from its reviewed international
+[official price page](https://platform.kimi.ai/docs/pricing/chat.md):
+$3/MTok at 5min and $6/MTok at 1h. These are missing-field defaults, so any future
+explicit upstream value (including zero) wins. There is no blanket cache-write
+or cache-TTL inference. Other legacy custom cards only apply without a native
+match; they are not asserted to be current official prices.
 
 ## Configuration
 
@@ -19,67 +62,27 @@ All settings live in [`config.json`](config.json):
 
 | Field | Description |
 |---|---|
-| `upstream_url` | URL to the upstream litellm pricing JSON |
-| `output_file` | Output filename (default: `model_prices_and_context_window.json`) |
-| `hash_file` | SHA-256 hash filename for change detection |
-| `sync_mode` | `"additive"` (only add new) or `"full"` (replace each run) |
-| `update_existing` | Whether to update pricing data for models already in the output |
-| `prefix_filters` | List of prefixes — a model key must start with one to be included |
-| `exclude_patterns` | Substring patterns to exclude (applied before prefix matching) |
-| `excluded_model_fields` | Map exact model keys to field-name glob patterns removed after all merges and overrides |
-| `aliases` | Map alias model keys to existing source models (deep copy pricing) |
-| `custom_models` | Manually defined pricing objects, always injected |
+| `upstream_url` | LiteLLM public pricing JSON |
+| `output_file`, `hash_file` | Published JSON and matching SHA-256 |
+| `sync_mode` | `additive` retains unmatched legacy IDs; `full` removes them |
+| `update_existing` | `true`: replace accepted existing cards on every sync |
+| `prefix_filters` | Initial key-prefix filter |
+| `provider_prefixes` | Required provider-to-native-prefix mapping |
+| `namespace_aliases` | Prefixes removed when copying native cards to bare IDs |
+| `exclude_patterns` | Excluded key substrings |
+| `aliases` | Explicit remaining endpoint/site aliases; native exact cards win |
+| `custom_models` | Legacy fallback cards; native cards win |
+| `official_field_defaults` | Reviewed missing fees, with official URL/date |
+| `excluded_model_fields` | Explicit site exceptions applied after all other rules |
 
-### Adding new model prefixes
+An upstream fetch/parse failure or empty selection aborts without publishing.
+If individual native IDs disappear, additive mode retains their last published
+card; retention is not proof of current availability or pricing. Publishing
+JSON and SHA-256 in one commit keeps readers on a matching version.
 
-Edit the `prefix_filters` array in `config.json`:
-
-```json
-{
-  "prefix_filters": [
-    "claude-",
-    "gpt-",
-    "your-new-prefix/"
-  ]
-}
-```
-
-### Adding aliases
-
-Aliases create copies of an existing model's pricing under a new key:
-
-```json
-{
-  "aliases": {
-    "claude-opus-4-6-thinking": {
-      "source": "claude-opus-4-6",
-      "description": "Thinking variant, same pricing"
-    }
-  }
-}
-```
-
-If the source model doesn't exist in the filtered data, the alias is skipped with a warning.
-
-### Gemini Developer API keys
-
-This fork includes both legacy `gemini-` keys and Gemini Developer API keys
-under `gemini/`. Prefix filters match the complete upstream key, so `gemini-`
-alone does not include `gemini/gemini-4-argon` or future namespaced models.
-An explicit `gemini-4-argon` alias copies the complete
-`gemini/gemini-4-argon` entry for consumers that use the bare model ID.
-Vertex AI and GitHub Copilot entries are separate channels and are not selected
-by this prefix.
-
-The existing additive policy remains in effect: `update_existing: false`
-preserves existing field values while accepting new models and missing fields.
-Scheduled synchronization does not guarantee that every price is current or
-verified against provider documentation. Changes to existing prices require a
-separate review of the configuration or data.
-
-The synchronization workflow runs the offline regression tests before fetching
-and publishing data. GitHub scheduled runs can be delayed; after creating a
-fork, enable its Actions workflow and trigger the first run manually.
+Offline tests run before every synchronization and cover provider separation,
+price changes, removed fields, aliases, legacy override precedence, missing
+models, explicit zero, verified cache gaps, idempotence, and SHA-256 output.
 
 ### GPT-6.1 Sol pricing policy
 

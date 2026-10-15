@@ -116,6 +116,7 @@ def filter_upstream(data: dict, config: dict) -> dict:
     """Apply prefix_filters and exclude_patterns to upstream data."""
     prefixes = tuple(config.get("prefix_filters", []))
     excludes = config.get("exclude_patterns", [])
+    providers = config.get("provider_prefixes", {})
 
     filtered = {}
     for key, value in data.items():
@@ -125,6 +126,12 @@ def filter_upstream(data: dict, config: dict) -> dict:
         # Then check prefix match
         if prefixes and not key.startswith(prefixes):
             continue
+        if providers:
+            if not isinstance(value, dict):
+                continue
+            native_prefixes = providers.get(value.get("litellm_provider"), [])
+            if not native_prefixes or not key.startswith(tuple(native_prefixes)):
+                continue
         filtered[key] = value
 
     log.info("Filtered to %d models (from %d upstream).", len(filtered), len(data))
@@ -186,9 +193,11 @@ def merge_models(
 # ---------------------------------------------------------------------------
 
 
-def apply_aliases(data: dict, aliases: dict) -> dict:
+def apply_aliases(data: dict, aliases: dict, protected_models=()) -> dict:
     """Deep-copy source model data into alias keys."""
     for alias_key, alias_cfg in aliases.items():
+        if alias_key in protected_models:
+            continue
         source = alias_cfg.get("source", "")
         if source not in data:
             log.warning(
@@ -202,9 +211,28 @@ def apply_aliases(data: dict, aliases: dict) -> dict:
     return data
 
 
-def apply_custom_models(data: dict, custom: dict) -> dict:
+def apply_native_aliases(data: dict, filtered: dict, prefixes: list) -> set:
+    """Copy accepted native cards to bare IDs, never from a different channel."""
+    targets = set()
+    for key, value in list(filtered.items()):
+        for prefix in prefixes:
+            if key.startswith(prefix):
+                target = key[len(prefix):]
+                if target and "/" not in target:
+                    if target in filtered:
+                        raise ValueError(f"Ambiguous native pricing for {target}: {key}")
+                    data[target] = copy.deepcopy(value)
+                    targets.add(target)
+                break
+    return targets
+
+
+def apply_custom_models(data: dict, custom: dict, protected_models=()) -> dict:
     """Inject custom model definitions (deep merge for existing, full set for new)."""
     for key, value in custom.items():
+        if key in protected_models:
+            log.info("Native pricing takes precedence over legacy custom model '%s'.", key)
+            continue
         if key in data and isinstance(data[key], dict) and isinstance(value, dict):
             data[key].update(value)
             log.info("Custom model '%s' merged (deep).", key)
@@ -212,6 +240,17 @@ def apply_custom_models(data: dict, custom: dict) -> dict:
             data[key] = value
             log.info("Custom model '%s' injected.", key)
     return data
+
+
+def fill_official_fields(data: dict, defaults: dict, protected_models: set) -> None:
+    """Fill only reviewed missing fees, leaving future upstream values authoritative."""
+    for key, rule in defaults.items():
+        if key not in protected_models or key not in data:
+            continue
+        if not rule.get("source"):
+            raise ValueError(f"Official field defaults require a source URL: {key}")
+        for field, value in rule.get("fields", {}).items():
+            data[key].setdefault(field, copy.deepcopy(value))
 
 
 def remove_excluded_model_fields(data: dict, exclusions: dict) -> int:
@@ -326,6 +365,8 @@ def main() -> None:
 
     # 4. Filter
     filtered = filter_upstream(upstream, config)
+    if not filtered:
+        raise ValueError("No accepted upstream models; refusing to publish an empty sync")
 
     # 5. Merge
     merged, stats = merge_models(
@@ -341,10 +382,12 @@ def main() -> None:
         stats["unchanged"],
     )
 
-    # 6. Aliases
+    # 6. Native endpoint cards and bare aliases override historical custom prices.
+    native_aliases = apply_native_aliases(merged, filtered, config.get("namespace_aliases", []))
+    protected = (set(filtered) | native_aliases) if config.get("provider_prefixes") else set()
     aliases = config.get("aliases", {})
     if aliases:
-        merged = apply_aliases(merged, aliases)
+        merged = apply_aliases(merged, aliases, protected)
 
     # 7. Auto-fill cache 1hr pricing
     cache_1hr_count = fill_cache_1hr_pricing(merged, config)
@@ -352,7 +395,10 @@ def main() -> None:
     # 8. Custom models
     custom = config.get("custom_models", {})
     if custom:
-        merged = apply_custom_models(merged, custom)
+        merged = apply_custom_models(merged, custom, protected)
+
+    # Reviewed gaps are defaults, never a frozen replacement for live native fees.
+    fill_official_fields(merged, config.get("official_field_defaults", {}), protected)
 
     # 9. Apply field exclusions last so upstream and overrides cannot restore them
     excluded_count = remove_excluded_model_fields(

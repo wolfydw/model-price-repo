@@ -28,20 +28,19 @@ class GeminiPricingTests(unittest.TestCase):
             "supported_endpoints": ["/v1beta/models"],
         }
 
-    def test_filter_includes_namespaced_and_legacy_gemini(self):
+    def test_filter_keeps_native_channels_and_rejects_vertex_bare_ids(self):
         keys = {
             "gemini/gemini-4-argon",
             "gemini/gemini-future-only",
-            "gemini-3.1-pro-preview",
-            "claude-test",
-            "gpt-test",
         }
         rejected = {
             "vertex_ai/gemini-4-argon",
             "github_copilot/gemini-4-argon",
             "gemini/sample_spec",
+            "gemini-3.1-pro-preview",
         }
         upstream = {key: copy.deepcopy(self.source) for key in keys | rejected}
+        upstream["gemini-3.1-pro-preview"]["litellm_provider"] = "vertex_ai-language-models"
         filtered = sync_prices.filter_upstream(upstream, self.config)
         self.assertEqual(keys, set(filtered))
 
@@ -54,10 +53,10 @@ class GeminiPricingTests(unittest.TestCase):
         data["gemini-4-argon"]["supported_endpoints"].append("alias-only")
         self.assertEqual(["/v1beta/models"], data[developer]["supported_endpoints"])
 
-    def test_additive_sync_preserves_existing_prices_and_accepts_new_fields(self):
+    def test_native_updates_replace_stale_prices_and_removed_fields(self):
         self.assertEqual("additive", self.config["sync_mode"])
-        self.assertFalse(self.config["update_existing"])
-        existing = {"gemini-legacy": {"input_cost_per_token": 7e-6}}
+        self.assertTrue(self.config["update_existing"])
+        existing = {"gemini-legacy": {"input_cost_per_token": 7e-6, "removed_fee": 1}}
         upstream = {
             "gemini-legacy": {"input_cost_per_token": 9e-6, "max_input_tokens": 12345},
             "gemini/gemini-4-argon": copy.deepcopy(self.source),
@@ -65,7 +64,8 @@ class GeminiPricingTests(unittest.TestCase):
         result, _ = sync_prices.merge_models(
             existing, upstream, self.config["sync_mode"], self.config["update_existing"]
         )
-        self.assertEqual(7e-6, result["gemini-legacy"]["input_cost_per_token"])
+        self.assertEqual(9e-6, result["gemini-legacy"]["input_cost_per_token"])
+        self.assertNotIn("removed_fee", result["gemini-legacy"])
         self.assertEqual(12345, result["gemini-legacy"]["max_input_tokens"])
         self.assertEqual(self.source, result["gemini/gemini-4-argon"])
 
@@ -99,6 +99,143 @@ class GeminiPricingTests(unittest.TestCase):
                 self.assertEqual(first, output.read_bytes())
                 self.assertEqual(hash_file.read_text().strip(), write.call_args.args[-1])
                 report.assert_any_call("CHANGED=false")
+
+
+class XaiPricingTests(unittest.TestCase):
+    def setUp(self):
+        self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.source = {
+            "input_cost_per_token": 2e-6,
+            "output_cost_per_token": 6e-6,
+            "cache_read_input_token_cost": 0.5e-6,
+            "input_cost_per_token_above_200k_tokens": 4e-6,
+            "output_cost_per_token_above_200k_tokens": 12e-6,
+            "cache_read_input_token_cost_above_200k_tokens": 1e-6,
+            "input_cost_per_image_token": 2e-6,
+            "litellm_provider": "xai",
+            "supported_endpoints": ["/v1/chat/completions"],
+        }
+
+    def test_filter_selects_xai_namespace_without_other_providers(self):
+        included = {"xai/grok-4.7", "xai/grok-future"}
+        excluded = {"openrouter/x-ai/grok-4.7", "azure_ai/grok-4.7", "xai/sample_spec"}
+        upstream = {key: copy.deepcopy(self.source) for key in included | excluded}
+        self.assertEqual(included, set(sync_prices.filter_upstream(upstream, self.config)))
+
+    def test_bare_alias_copies_complete_exact_card_independently(self):
+        data = {"xai/grok-4.7": copy.deepcopy(self.source)}
+        sync_prices.apply_aliases(data, {"grok-4.7": self.config["aliases"]["grok-4.7"]})
+        self.assertEqual(self.source, data["grok-4.7"])
+        data["grok-4.7"]["supported_endpoints"].append("alias-only")
+        self.assertEqual(self.source, data["xai/grok-4.7"])
+
+    def test_sync_keeps_existing_prices_and_publishes_alias_with_valid_hash(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = copy.deepcopy(self.config)
+            config["aliases"] = {"grok-4.7": config["aliases"]["grok-4.7"]}
+            config["custom_models"] = {}
+            (root / "config.json").write_text(json.dumps(config), encoding="utf-8")
+            existing = {"grok-4.6": {"input_cost_per_token": 7e-6}}
+            output = root / config["output_file"]
+            output.write_text(json.dumps(existing), encoding="utf-8")
+            hash_file = root / config["hash_file"]
+            hash_file.write_text(hashlib.sha256(output.read_bytes()).hexdigest() + "\n")
+            upstream = {
+                "xai/grok-4.7": self.source,
+                "azure_ai/grok-4.7": {"input_cost_per_token": 99e-6},
+            }
+            with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy(upstream)), \
+                    patch.object(sync_prices.sys, "argv", ["sync_prices.py", "--repo-root", temporary]), \
+                    patch("builtins.print") as report:
+                sync_prices.main()
+                first = output.read_bytes()
+                published = json.loads(first)
+                self.assertEqual({**existing, "xai/grok-4.7": self.source, "grok-4.7": self.source}, published)
+                self.assertEqual(hashlib.sha256(first).hexdigest(), hash_file.read_text().strip())
+                sync_prices.main()
+                self.assertEqual(first, output.read_bytes())
+                report.assert_any_call("CHANGED=false")
+
+
+class NativePolicyTests(unittest.TestCase):
+    def setUp(self):
+        self.config = sync_prices.load_config(str(ROOT / "config.json"))
+
+    def test_all_seven_native_providers_are_selected_without_reseller_prices(self):
+        cards = {
+            "gpt-new": {"litellm_provider": "openai"},
+            "claude-new": {"litellm_provider": "anthropic"},
+            "gemini/gemini-new": {"litellm_provider": "gemini"},
+            "xai/grok-new": {"litellm_provider": "xai"},
+            "deepseek/deepseek-new": {"litellm_provider": "deepseek"},
+            "zai/glm-new": {"litellm_provider": "zai"},
+            "moonshot/kimi-new": {"litellm_provider": "moonshot"},
+        }
+        wrong = {
+            "gpt-reseller": {"litellm_provider": "azure"},
+            "gemini/gemini-reseller": {"litellm_provider": "vertex_ai"},
+            "xai/grok-reseller": {"litellm_provider": "openrouter"},
+            "zai/glm-no-provider": {},
+        }
+        filtered = sync_prices.filter_upstream({**cards, **wrong}, self.config)
+        self.assertEqual(cards, filtered)
+        aliases = sync_prices.apply_native_aliases(filtered, copy.deepcopy(cards), self.config["namespace_aliases"])
+        self.assertEqual({"gemini-new", "grok-new", "deepseek-new", "glm-new", "kimi-new"}, aliases)
+
+    def test_live_repricing_removes_stale_fees_and_beats_legacy_overrides(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = copy.deepcopy(self.config)
+            config["aliases"] = {"grok-4.7": {"source": "legacy-grok"}}
+            config["custom_models"] = {"grok-4.7": {"input_cost_per_token": 99e-6}}
+            (root / "config.json").write_text(json.dumps(config), encoding="utf-8")
+            output = root / config["output_file"]
+            original = {"legacy-grok": {"input_cost_per_token": 77e-6}}
+            output.write_text(json.dumps(original), encoding="utf-8")
+            card = {"litellm_provider": "xai", "input_cost_per_token": 2e-6, "cache_read_input_token_cost": 0.5e-6}
+            with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: {"xai/grok-4.7": copy.deepcopy(card)}), \
+                    patch.object(sync_prices.sys, "argv", ["sync_prices.py", "--repo-root", temporary]), \
+                    patch("builtins.print"):
+                sync_prices.main()
+                self.assertEqual(card, json.loads(output.read_text())["grok-4.7"])
+                card["input_cost_per_token"] = 3e-6
+                del card["cache_read_input_token_cost"]
+                sync_prices.main()
+                published = json.loads(output.read_text())
+                self.assertEqual(card, published["grok-4.7"])
+                self.assertEqual(card, published["xai/grok-4.7"])
+                self.assertEqual(original["legacy-grok"], published["legacy-grok"])
+                raw = output.read_bytes()
+                self.assertEqual(hashlib.sha256(raw).hexdigest(), (root / config["hash_file"]).read_text().strip())
+
+    def test_unknown_native_models_do_not_borrow_reseller_or_adjacent_model_prices(self):
+        upstream = {
+            "together_ai/deepseek-ai/DeepSeek-V4.1-Flash": {"litellm_provider": "together_ai", "input_cost_per_token": 9e-6},
+            "deepseek/deepseek-v4-flash": {"litellm_provider": "deepseek", "input_cost_per_token": 0.3e-6},
+            "gpt-image-2.5-flare": {"litellm_provider": "openai", "input_cost_per_image_token": 8e-6},
+        }
+        filtered = sync_prices.filter_upstream(upstream, self.config)
+        sync_prices.apply_native_aliases(filtered, copy.deepcopy(filtered), self.config["namespace_aliases"])
+        sync_prices.apply_aliases(filtered, self.config["aliases"], set(filtered))
+        self.assertNotIn("deepseek-v4.1-flash", filtered)
+        self.assertNotIn("gpt-image-2.5", filtered)
+
+    def test_verified_missing_kimi_fees_yield_to_future_upstream_values(self):
+        data = {"kimi-k3": {"cache_creation_input_token_cost": 0.0}}
+        sync_prices.fill_official_fields(data, self.config["official_field_defaults"], {"kimi-k3"})
+        self.assertEqual(0.0, data["kimi-k3"]["cache_creation_input_token_cost"])
+        self.assertEqual(6e-6, data["kimi-k3"]["cache_creation_input_token_cost_above_1hr"])
+        data["kimi-k3"]["cache_creation_input_token_cost_above_1hr"] = 9e-6
+        sync_prices.fill_official_fields(data, self.config["official_field_defaults"], {"kimi-k3"})
+        self.assertEqual(9e-6, data["kimi-k3"]["cache_creation_input_token_cost_above_1hr"])
+
+    def test_missing_source_keeps_last_good_card_without_reseller_fallback(self):
+        existing = {"grok-4.7": {"input_cost_per_token": 2e-6}}
+        filtered = sync_prices.filter_upstream({"azure_ai/grok-4.7": {"litellm_provider": "azure_ai", "input_cost_per_token": 99e-6}}, self.config)
+        merged, _ = sync_prices.merge_models(existing, filtered, self.config["sync_mode"], self.config["update_existing"])
+        sync_prices.apply_native_aliases(merged, filtered, self.config["namespace_aliases"])
+        self.assertEqual(existing, merged)
 
 
 class FlatSolPricingTests(unittest.TestCase):
@@ -150,6 +287,8 @@ class FlatSolPricingTests(unittest.TestCase):
                 root = Path(temporary)
                 config = copy.deepcopy(self.config)
                 config["sync_mode"] = mode
+                config["provider_prefixes"] = {}
+                config["namespace_aliases"] = []
                 config["aliases"] = {}
                 config["custom_models"] = {
                     "gpt-6.1-sol": {"input_cost_per_token_above_272k_tokens": 88e-6}

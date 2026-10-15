@@ -3,17 +3,19 @@
   "output_file": "model_prices_and_context_window.json",
   "hash_file": "model_prices_and_context_window.sha256",
   "sync_mode": "additive",
-  "update_existing": false,
+  "update_existing": true,
   "prefix_filters": [
-    "claude-",
     "gpt-",
-    "gemini-",
-    "gemini/",
     "o1-",
     "o3-",
     "o3",
     "o4-",
-    "deepseek-"
+    "claude-",
+    "gemini/",
+    "xai/",
+    "deepseek/",
+    "zai/",
+    "moonshot/"
   ],
   "exclude_patterns": [
     "sample_spec"
@@ -24,6 +26,10 @@
     ]
   },
   "aliases": {
+    "grok-4.7": {
+      "source": "xai/grok-4.7",
+      "description": "xAI API pricing alias for the unprefixed model ID"
+    },
     "gemini-4-argon": {
       "source": "gemini/gemini-4-argon",
       "description": "Gemini Developer API pricing alias for the unprefixed model ID"
@@ -64,10 +70,6 @@
       "source": "gpt-5.6-luna",
       "description": "Alias for gpt-5.6-luna with auto-review enabled"
     }
-  },
-  "cache_1hr_auto_fill": {
-    "model_prefix": "claude-",
-    "ratio": 1.6
   },
   "custom_models": {
     "claude-sonnet-5": {
@@ -466,9 +468,9 @@
     },
     "glm-5": {
       "_comment": "BigModel China public API pricing converted at the Ccode fixed rate 1 USD = 6.7841 CNY. The provider lists cache storage as temporarily free; that time-limited storage promotion is not encoded as a permanent token price.",
-      "input_cost_per_token": 5.896139502660633e-07,
+      "input_cost_per_token": 5.896139502660634e-07,
       "output_cost_per_token": 2.653262776197285e-06,
-      "cache_creation_input_token_cost": 5.896139502660633e-07,
+      "cache_creation_input_token_cost": 5.896139502660634e-07,
       "cache_read_input_token_cost": 1.474034875665158e-07,
       "long_context_input_token_threshold": 32000,
       "long_context_threshold_inclusive": true,
@@ -481,9 +483,9 @@
             0,
             32000
           ],
-          "input_cost_per_token": 5.896139502660633e-07,
+          "input_cost_per_token": 5.896139502660634e-07,
           "output_cost_per_token": 2.653262776197285e-06,
-          "cache_creation_input_token_cost": 5.896139502660633e-07,
+          "cache_creation_input_token_cost": 5.896139502660634e-07,
           "cache_read_input_token_cost": 1.474034875665158e-07
         },
         {
@@ -866,6 +868,58 @@
     "gemini-3.1-pro-preview-customtools": {
       "cache_creation_input_token_cost": 2e-06,
       "cache_creation_input_token_cost_above_200k_tokens": 4e-06
+    }
+  },
+  "provider_prefixes": {
+    "openai": [
+      "gpt-",
+      "o1-",
+      "o3-",
+      "o3",
+      "o4-"
+    ],
+    "anthropic": [
+      "claude-"
+    ],
+    "gemini": [
+      "gemini/"
+    ],
+    "xai": [
+      "xai/"
+    ],
+    "deepseek": [
+      "deepseek/"
+    ],
+    "zai": [
+      "zai/"
+    ],
+    "moonshot": [
+      "moonshot/"
+    ]
+  },
+  "namespace_aliases": [
+    "gemini/",
+    "xai/",
+    "deepseek/",
+    "zai/",
+    "moonshot/"
+  ],
+  "official_field_defaults": {
+    "kimi-k3": {
+      "source": "https://platform.kimi.ai/docs/pricing/chat.md",
+      "reviewed_on": "2026-10-15",
+      "fields": {
+        "cache_creation_input_token_cost": 3e-06,
+        "cache_creation_input_token_cost_above_1hr": 6e-06
+      }
+    },
+    "moonshot/kimi-k3": {
+      "source": "https://platform.kimi.ai/docs/pricing/chat.md",
+      "reviewed_on": "2026-10-15",
+      "fields": {
+        "cache_creation_input_token_cost": 3e-06,
+        "cache_creation_input_token_cost_above_1hr": 6e-06
+      }
     }
   }
 }
