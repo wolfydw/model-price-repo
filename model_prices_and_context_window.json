@@ -8249,7 +8249,7 @@
         {
           "cache_read_input_token_cost": 2e-06,
           "input_cost_per_token": 8e-06,
-          "min_tokens": 32768,
+          "min_tokens": 32000,
           "output_cost_per_token": 2.8e-05
         }
       ]
@@ -16790,7 +16790,7 @@
         {
           "cache_read_input_token_cost": 2e-06,
           "input_cost_per_token": 8e-06,
-          "min_tokens": 32768,
+          "min_tokens": 32000,
           "output_cost_per_token": 2.8e-05
         }
       ]
