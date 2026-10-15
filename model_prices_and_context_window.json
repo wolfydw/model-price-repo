@@ -1474,43 +1474,78 @@
     "supports_tool_choice": true
   },
   "deepseek-flash": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -1614,43 +1649,78 @@
     "supports_tool_choice": true
   },
   "deepseek-v4-flash": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -1667,43 +1737,78 @@
     "supports_vision": true
   },
   "deepseek-v4-flash-vision-exp": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -1720,43 +1825,78 @@
     "supports_vision": true
   },
   "deepseek-v4-pro": {
-    "cache_read_input_token_cost": 4.4e-08,
-    "input_cost_per_token": 1.32e-06,
-    "input_cost_per_token_cache_hit": 4.4e-08,
+    "cache_read_input_token_cost": 1.5e-07,
+    "currency": "USD",
+    "input_cost_per_token": 4.5e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 2.2e-08,
-      "input_cost_per_token": 6.6e-07,
-      "output_cost_per_token": 1.98e-06,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 1.35e-05,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 3.96e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -1773,43 +1913,78 @@
     "supports_vision": false
   },
   "deepseek-v4.1-flash": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -1866,43 +2041,78 @@
     "supports_tool_choice": true
   },
   "deepseek/deepseek-flash": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -1992,43 +2202,78 @@
     "supports_tool_choice": true
   },
   "deepseek/deepseek-v4-flash": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -2045,43 +2290,78 @@
     "supports_vision": true
   },
   "deepseek/deepseek-v4-flash-vision-exp": {
-    "cache_read_input_token_cost": 6e-09,
-    "input_cost_per_token": 3e-07,
-    "input_cost_per_token_cache_hit": 6e-09,
+    "cache_read_input_token_cost": 2e-08,
+    "currency": "USD",
+    "input_cost_per_token": 1e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 3e-09,
-      "input_cost_per_token": 1.5e-07,
-      "output_cost_per_token": 6e-07,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 4e-06,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 1.2e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -2098,43 +2378,78 @@
     "supports_vision": true
   },
   "deepseek/deepseek-v4-pro": {
-    "cache_read_input_token_cost": 4.4e-08,
-    "input_cost_per_token": 1.32e-06,
-    "input_cost_per_token_cache_hit": 4.4e-08,
+    "cache_read_input_token_cost": 1.5e-07,
+    "currency": "USD",
+    "input_cost_per_token": 4.5e-06,
     "litellm_provider": "deepseek",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
     "max_tokens": 393216,
     "mode": "chat",
-    "off_peak_pricing": {
-      "cache_read_input_token_cost": 2.2e-08,
-      "input_cost_per_token": 6.6e-07,
-      "output_cost_per_token": 1.98e-06,
-      "windows": [
-        {
-          "hours_utc": [
-            "00:00-01:00",
-            "04:00-06:00",
-            "10:00-00:00"
+    "output_cost_per_token": 1.35e-05,
+    "pricing_rules": {
+      "calendar": {
+        "holiday_ranges": [
+          [
+            "2026-01-01",
+            "2026-01-03"
           ],
-          "weekdays": [
-            1,
-            2,
-            3,
-            4,
-            5
+          [
+            "2026-02-15",
+            "2026-02-23"
+          ],
+          [
+            "2026-04-04",
+            "2026-04-06"
+          ],
+          [
+            "2026-05-01",
+            "2026-05-05"
+          ],
+          [
+            "2026-06-19",
+            "2026-06-21"
+          ],
+          [
+            "2026-09-25",
+            "2026-09-27"
+          ],
+          [
+            "2026-10-01",
+            "2026-10-07"
           ]
-        },
-        {
-          "hours_utc": "00:00-00:00",
-          "weekdays": [
-            6,
-            7
-          ]
-        }
-      ]
+        ],
+        "source": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+        "source_sha256": "0b9d4b2b07360bc0915ff929709a738f1297abf3d11d3a606861faee7e9be535",
+        "timezone": "Asia/Shanghai",
+        "valid_from": "2026-01-01",
+        "valid_until": "2026-12-31"
+      },
+      "time_pricing": {
+        "periods": [
+          {
+            "end_time": "12:00",
+            "multiplier": 2.0,
+            "start_time": "09:00"
+          },
+          {
+            "end_time": "18:00",
+            "multiplier": 2.0,
+            "start_time": "14:00"
+          }
+        ],
+        "timezone": "Asia/Shanghai",
+        "weekdays_only": true
+      }
     },
-    "output_cost_per_token": 3.96e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "source_currency": "CNY"
+    },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
       "/v1/chat/completions"
@@ -7921,13 +8236,32 @@
     ]
   },
   "glm-5.1": {
-    "cache_read_input_token_cost": 2.6e-07,
-    "input_cost_per_token": 1.4e-06,
+    "cache_read_input_token_cost": 1.3e-06,
+    "currency": "USD",
+    "input_cost_per_token": 6e-06,
     "litellm_provider": "zai",
     "max_input_tokens": 200000,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 4.4e-06,
+    "output_cost_per_token": 2.4e-05,
+    "pricing_rules": {
+      "context_tiers": [
+        {
+          "cache_read_input_token_cost": 2e-06,
+          "input_cost_per_token": 8e-06,
+          "min_tokens": 32768,
+          "output_cost_per_token": 2.8e-05
+        }
+      ]
+    },
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -7935,13 +8269,22 @@
     "supports_tool_choice": true
   },
   "glm-5.2": {
-    "cache_read_input_token_cost": 2.6e-07,
-    "input_cost_per_token": 1.4e-06,
+    "cache_read_input_token_cost": 2e-06,
+    "currency": "USD",
+    "input_cost_per_token": 8e-06,
     "litellm_provider": "zai",
     "max_input_tokens": 1000000,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 4.4e-06,
+    "output_cost_per_token": 2.8e-05,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -7949,13 +8292,22 @@
     "supports_tool_choice": true
   },
   "glm-5.3": {
-    "cache_read_input_token_cost": 2.6e-07,
-    "input_cost_per_token": 1.4e-06,
+    "cache_read_input_token_cost": 2e-06,
+    "currency": "USD",
+    "input_cost_per_token": 8e-06,
     "litellm_provider": "zai",
     "max_input_tokens": 1000000,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 4.4e-06,
+    "output_cost_per_token": 2.8e-05,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -7963,13 +8315,22 @@
     "supports_tool_choice": true
   },
   "glm-5.3-flash": {
-    "cache_read_input_token_cost": 3e-08,
-    "input_cost_per_token": 1.5e-07,
+    "cache_read_input_token_cost": 2.3000000000000002e-07,
+    "currency": "USD",
+    "input_cost_per_token": 8.000000000000001e-07,
     "litellm_provider": "zai",
     "max_input_tokens": 1048576,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 5e-07,
+    "output_cost_per_token": 2.8e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -13804,16 +14165,25 @@
     "supports_vision": true
   },
   "kimi-k3": {
-    "cache_creation_input_token_cost": 3e-06,
-    "cache_creation_input_token_cost_above_1hr": 6e-06,
-    "cache_read_input_token_cost": 3e-07,
-    "input_cost_per_token": 3e-06,
+    "cache_creation_input_token_cost": 2e-05,
+    "cache_creation_input_token_cost_above_1hr": 4e-05,
+    "cache_read_input_token_cost": 2e-06,
+    "currency": "USD",
+    "input_cost_per_token": 2e-05,
     "litellm_provider": "moonshot",
     "max_input_tokens": 1048576,
     "max_output_tokens": 1048576,
     "max_tokens": 1048576,
     "mode": "chat",
-    "output_cost_per_token": 1.5e-05,
+    "output_cost_per_token": 0.0001,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "ad2616ec6f3d647e5b353b638de8c461e3c5c1bd4b2f97c9b052abb2af6f5f47",
+      "source": "https://platform.kimi.com/docs/pricing/chat.md",
+      "source_currency": "CNY"
+    },
     "reasoning_effort_levels": [
       "low",
       "high",
@@ -14177,16 +14547,25 @@
     "supports_vision": true
   },
   "moonshot/kimi-k3": {
-    "cache_creation_input_token_cost": 3e-06,
-    "cache_creation_input_token_cost_above_1hr": 6e-06,
-    "cache_read_input_token_cost": 3e-07,
-    "input_cost_per_token": 3e-06,
+    "cache_creation_input_token_cost": 2e-05,
+    "cache_creation_input_token_cost_above_1hr": 4e-05,
+    "cache_read_input_token_cost": 2e-06,
+    "currency": "USD",
+    "input_cost_per_token": 2e-05,
     "litellm_provider": "moonshot",
     "max_input_tokens": 1048576,
     "max_output_tokens": 1048576,
     "max_tokens": 1048576,
     "mode": "chat",
-    "output_cost_per_token": 1.5e-05,
+    "output_cost_per_token": 0.0001,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "ad2616ec6f3d647e5b353b638de8c461e3c5c1bd4b2f97c9b052abb2af6f5f47",
+      "source": "https://platform.kimi.com/docs/pricing/chat.md",
+      "source_currency": "CNY"
+    },
     "reasoning_effort_levels": [
       "low",
       "high",
@@ -16398,13 +16777,32 @@
     "supports_tool_choice": true
   },
   "zai/glm-5.1": {
-    "cache_read_input_token_cost": 2.6e-07,
-    "input_cost_per_token": 1.4e-06,
+    "cache_read_input_token_cost": 1.3e-06,
+    "currency": "USD",
+    "input_cost_per_token": 6e-06,
     "litellm_provider": "zai",
     "max_input_tokens": 200000,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 4.4e-06,
+    "output_cost_per_token": 2.4e-05,
+    "pricing_rules": {
+      "context_tiers": [
+        {
+          "cache_read_input_token_cost": 2e-06,
+          "input_cost_per_token": 8e-06,
+          "min_tokens": 32768,
+          "output_cost_per_token": 2.8e-05
+        }
+      ]
+    },
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -16412,13 +16810,22 @@
     "supports_tool_choice": true
   },
   "zai/glm-5.2": {
-    "cache_read_input_token_cost": 2.6e-07,
-    "input_cost_per_token": 1.4e-06,
+    "cache_read_input_token_cost": 2e-06,
+    "currency": "USD",
+    "input_cost_per_token": 8e-06,
     "litellm_provider": "zai",
     "max_input_tokens": 1000000,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 4.4e-06,
+    "output_cost_per_token": 2.8e-05,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -16426,13 +16833,22 @@
     "supports_tool_choice": true
   },
   "zai/glm-5.3": {
-    "cache_read_input_token_cost": 2.6e-07,
-    "input_cost_per_token": 1.4e-06,
+    "cache_read_input_token_cost": 2e-06,
+    "currency": "USD",
+    "input_cost_per_token": 8e-06,
     "litellm_provider": "zai",
     "max_input_tokens": 1000000,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 4.4e-06,
+    "output_cost_per_token": 2.8e-05,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
@@ -16440,13 +16856,22 @@
     "supports_tool_choice": true
   },
   "zai/glm-5.3-flash": {
-    "cache_read_input_token_cost": 3e-08,
-    "input_cost_per_token": 1.5e-07,
+    "cache_read_input_token_cost": 2.3000000000000002e-07,
+    "currency": "USD",
+    "input_cost_per_token": 8.000000000000001e-07,
     "litellm_provider": "zai",
     "max_input_tokens": 1048576,
     "max_output_tokens": 128000,
     "mode": "chat",
-    "output_cost_per_token": 5e-07,
+    "output_cost_per_token": 2.8e-06,
+    "pricing_source": {
+      "policy": "official_cny_numeric_as_usd_no_fx",
+      "project": "official",
+      "published_currency": "USD",
+      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "source_currency": "CNY"
+    },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
