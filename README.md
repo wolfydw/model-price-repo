@@ -136,3 +136,18 @@ The output JSON structure is identical to what litellm produces (model key -> pr
 ## License
 
 [MIT](LICENSE)
+
+## Cloud site-token price feed
+
+`ydw-site-prices-v1.json` is a separate, versioned site-token settlement feed.
+The same ten-minute workflow refreshes native LiteLLM overseas prices and
+RMB/CNY Dify official-plugin cards. Domestic provider documents validate and
+supply missing cache, context, and peak/off-peak fees. Source commits and hashes
+are included; there is no currency conversion. The legacy USD JSON URL remains
+compatible for existing consumers and rollback.
+
+Run `python3 scripts/sync_site_prices.py`; dependencies include PyYAML 6.0.3.
+All source paths and exact aliases live in `site-pricing-config.json`. Missing
+or invalid sources preserve the last complete card and produce workflow warnings.
+No-change runs leave the price file unchanged. The bundle and SHA-256 publish
+in one commit. The holiday calendar is bounded by its explicitly recorded year.
