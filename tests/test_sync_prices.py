@@ -72,7 +72,11 @@ class GeminiPricingTests(unittest.TestCase):
     def test_sync_publishes_matching_hash_and_is_idempotent(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root / "config.json").write_text(json.dumps(self.config), encoding="utf-8")
+            # Keep unrelated custom-model aliases out of this two-model fixture.
+            config = copy.deepcopy(self.config)
+            config["aliases"] = {"gemini-4-argon": config["aliases"]["gemini-4-argon"]}
+            config["custom_models"] = {}
+            (root / "config.json").write_text(json.dumps(config), encoding="utf-8")
             upstream = {
                 "gemini/gemini-4-argon": copy.deepcopy(self.source),
                 "vertex_ai/gemini-4-argon": {"input_cost_per_token": 99e-6},
@@ -80,7 +84,7 @@ class GeminiPricingTests(unittest.TestCase):
             arguments = ["sync_prices.py", "--repo-root", temporary]
             with patch.object(sync_prices, "fetch_upstream", return_value=upstream), \
                     patch.object(sync_prices.sys, "argv", arguments), \
-                    patch("builtins.print"):
+                    patch("builtins.print") as report:
                 sync_prices.main()
                 output = root / self.config["output_file"]
                 hash_file = root / self.config["hash_file"]
@@ -94,6 +98,7 @@ class GeminiPricingTests(unittest.TestCase):
                     sync_prices.main()
                 self.assertEqual(first, output.read_bytes())
                 self.assertEqual(hash_file.read_text().strip(), write.call_args.args[-1])
+                report.assert_any_call("CHANGED=false")
 
 
 if __name__ == "__main__":
