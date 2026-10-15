@@ -37,12 +37,22 @@ converted using a fixed exchange rate. LiteLLM is a third-party catalogue;
 provider selection does not certify every field against current official docs.
 
 The 2026-10-15 inventory covers **34 enabled sale models and 51 configured IDs**.
-**49/51** have a price card: 46 native exact IDs (including namespace copies),
-plus three explicitly configured endpoint/site aliases. `deepseek-v4.1-flash` and
-bare `gpt-image-2.5` have no exact native entry and remain absent. Reseller
-prices and adjacent versions are not substituted. If an exact native entry is
-added later, normal selection imports it automatically. The enabled sale scope
-has 30 exact native cards, two aliases and two unresolved IDs.
+**50/51** have a price card: 46 native exact IDs (including namespace copies),
+one officially documented model-identity alias and three configured endpoint/site
+aliases. Only bare `gpt-image-2.5` remains unresolved. Reseller prices and adjacent
+versions are not substituted. If an exact native entry is added later, normal
+selection imports it automatically. The enabled sale scope has 30 exact native
+cards, one official identity alias, two configured aliases and one unresolved ID.
+
+The [DeepSeek official price page](https://api-docs.deepseek.com/quick_start/pricing/)
+identifies `deepseek-flash` as **DeepSeek-V4.1-Flash**. Accordingly,
+`deepseek-v4.1-flash` copies the complete `deepseek/deepseek-flash` card, including
+`off_peak_pricing`. The old `deepseek-v4-flash` and
+`deepseek-v4-flash-vision-exp` names are also officially served by V4.1 Flash;
+their native LiteLLM cards have the same rates. `deepseek-v4-pro` remains the
+separate **DeepSeek-V4-Pro-0813** card, never a Flash price alias. The initial
+review's missing-price conclusion for V4.1 Flash was corrected after checking
+the official identity mapping, not by borrowing an adjacent version's price.
 
 `gemini-3.1-pro` remains a configured alias of `gemini-3.1-pro-preview`.
 `codex-auto-review` remains a site alias of `gpt-5.6-luna`; the disabled
@@ -55,8 +65,9 @@ Kimi K3's missing cache-write fees are filled from its reviewed international
 $3/MTok at 5min and $6/MTok at 1h. These are missing-field defaults, so any future
 explicit upstream value (including zero) wins. There is no blanket cache-write
 or cache-TTL inference. For the four configured GLM models and DeepSeek V4
-Flash/Pro, unverified per-token cache-write zeroes are explicitly removed from
-both native and bare cards; free cache storage does not establish a per-token
+Flash/Pro (including the canonical Flash endpoint and its aliases), unverified
+per-token cache-write zeroes are explicitly removed from native and bare cards;
+free cache storage does not establish a per-token
 write fee. Other legacy custom cards only apply without a native
 match; they are not asserted to be current official prices.
 

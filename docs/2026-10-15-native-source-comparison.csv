@@ -17,7 +17,7 @@ claude-sonnet-5-5,True,native_exact,claude-sonnet-5-5,anthropic,2.0,10.0,0.19999
 codex-auto-review,True,configured_alias,gpt-5.6-luna,openai,0.19999999999999998,1.2,0.02,0.19999999999999998,1.2,0.02
 deepseek-v4-flash,True,native_namespace_alias,deepseek/deepseek-v4-flash,deepseek,0.44,1.32,0.014,0.3,1.2,0.006
 deepseek-v4-pro,True,native_namespace_alias,deepseek/deepseek-v4-pro,deepseek,1.32,3.9600000000000004,0.044,1.32,3.9600000000000004,0.044
-deepseek-v4.1-flash,True,unresolved,,,,,,,,
+deepseek-v4.1-flash,True,official_model_alias,deepseek/deepseek-flash,deepseek,,,,0.3,1.2,0.006
 gemini-3.1-pro,True,configured_alias,gemini/gemini-3.1-pro-preview,gemini,2.0,12.0,0.19999999999999998,2.0,12.0,0.19999999999999998
 gemini-3.6-flash,True,native_namespace_alias,gemini/gemini-3.6-flash,gemini,0.75,3.75,0.075,0.75,3.75,0.075
 gemini-3.7-flash,True,native_namespace_alias,gemini/gemini-3.7-flash,gemini,0.75,3.75,0.075,0.75,3.75,0.075

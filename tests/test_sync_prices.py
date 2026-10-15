@@ -243,6 +243,92 @@ class NativePolicyTests(unittest.TestCase):
         self.assertEqual(existing, merged)
 
 
+class DeepSeekOfficialMappingTests(unittest.TestCase):
+    def setUp(self):
+        self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.source = {
+            "litellm_provider": "deepseek",
+            "source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "input_cost_per_token": 0.3e-6,
+            "output_cost_per_token": 1.2e-6,
+            "cache_read_input_token_cost": 0.006e-6,
+            "cache_creation_input_token_cost": 0.0,
+            "off_peak_pricing": {
+                "input_cost_per_token": 0.15e-6,
+                "output_cost_per_token": 0.6e-6,
+                "cache_read_input_token_cost": 0.003e-6,
+                "windows": [{"hours_utc": ["00:00-01:00"], "weekdays": [1, 2, 3, 4, 5]}],
+            },
+            "max_input_tokens": 1000000,
+            "supports_vision": True,
+        }
+
+    def test_official_flash_mapping_tracks_complete_card_and_preserves_pro(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = copy.deepcopy(self.config)
+            config["aliases"] = {"deepseek-v4.1-flash": config["aliases"]["deepseek-v4.1-flash"]}
+            config["custom_models"] = {}
+            (root / "config.json").write_text(json.dumps(config))
+            upstream = {
+                "deepseek/deepseek-flash": copy.deepcopy(self.source),
+                "deepseek/deepseek-v4-pro": {"litellm_provider": "deepseek", "input_cost_per_token": 1.32e-6},
+            }
+            with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy(upstream)), \
+                    patch.object(sync_prices.sys, "argv", ["sync_prices.py", "--repo-root", temporary]), \
+                    patch("builtins.print") as report:
+                sync_prices.main()
+                output = root / config["output_file"]
+                published = json.loads(output.read_text())
+                expected = copy.deepcopy(self.source)
+                del expected["cache_creation_input_token_cost"]
+                self.assertEqual(expected, published["deepseek-v4.1-flash"])
+                self.assertEqual(expected, published["deepseek/deepseek-flash"])
+                self.assertEqual(expected, published["deepseek-flash"])
+                self.assertEqual(1.32e-6, published["deepseek-v4-pro"]["input_cost_per_token"])
+                first = output.read_bytes()
+                sync_prices.main()
+                self.assertEqual(first, output.read_bytes())
+                report.assert_any_call("CHANGED=false")
+                upstream["deepseek/deepseek-flash"]["off_peak_pricing"]["input_cost_per_token"] = 0.12e-6
+                del upstream["deepseek/deepseek-flash"]["supports_vision"]
+                sync_prices.main()
+                changed = json.loads(output.read_text())["deepseek-v4.1-flash"]
+                self.assertEqual(0.12e-6, changed["off_peak_pricing"]["input_cost_per_token"])
+                self.assertNotIn("supports_vision", changed)
+                del upstream["deepseek/deepseek-flash"]
+                sync_prices.main()
+                self.assertEqual(changed, json.loads(output.read_text())["deepseek-v4.1-flash"])
+                self.assertEqual(hashlib.sha256(output.read_bytes()).hexdigest(),
+                                 (root / config["hash_file"]).read_text().strip())
+
+    def test_future_exact_native_card_wins_over_official_endpoint_alias(self):
+        filtered = {
+            "deepseek/deepseek-flash": self.source,
+            "deepseek/deepseek-v4.1-flash": {"litellm_provider": "deepseek", "input_cost_per_token": 0.2e-6},
+        }
+        data = copy.deepcopy(filtered)
+        bare = sync_prices.apply_native_aliases(data, filtered, self.config["namespace_aliases"])
+        sync_prices.apply_aliases(data, self.config["aliases"], set(filtered) | bare)
+        self.assertEqual(filtered["deepseek/deepseek-v4.1-flash"], data["deepseek-v4.1-flash"])
+
+    def test_published_flash_family_and_pro_match_official_rates(self):
+        cards = json.loads((ROOT / self.config["output_file"]).read_text())
+        for key in ["deepseek/deepseek-flash", "deepseek-flash", "deepseek-v4.1-flash",
+                    "deepseek/deepseek-v4-flash", "deepseek-v4-flash",
+                    "deepseek/deepseek-v4-flash-vision-exp", "deepseek-v4-flash-vision-exp"]:
+            self.assertEqual(0.3e-6, cards[key]["input_cost_per_token"], key)
+            self.assertEqual(1.2e-6, cards[key]["output_cost_per_token"], key)
+            self.assertEqual(0.006e-6, cards[key]["cache_read_input_token_cost"], key)
+            self.assertEqual(0.15e-6, cards[key]["off_peak_pricing"]["input_cost_per_token"], key)
+            self.assertNotIn("cache_creation_input_token_cost", cards[key], key)
+        pro = cards["deepseek-v4-pro"]
+        self.assertEqual(1.32e-6, pro["input_cost_per_token"])
+        self.assertEqual(3.96e-6, pro["output_cost_per_token"])
+        self.assertEqual(0.044e-6, pro["cache_read_input_token_cost"])
+        self.assertEqual(0.66e-6, pro["off_peak_pricing"]["input_cost_per_token"])
+
+
 class FlatSolPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))

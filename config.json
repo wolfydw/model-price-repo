@@ -59,9 +59,30 @@
     ],
     "deepseek-v4-pro": [
       "cache_creation_input_token_cost"
+    ],
+    "deepseek/deepseek-flash": [
+      "cache_creation_input_token_cost"
+    ],
+    "deepseek-flash": [
+      "cache_creation_input_token_cost"
+    ],
+    "deepseek-v4.1-flash": [
+      "cache_creation_input_token_cost"
+    ],
+    "deepseek/deepseek-v4-flash-vision-exp": [
+      "cache_creation_input_token_cost"
+    ],
+    "deepseek-v4-flash-vision-exp": [
+      "cache_creation_input_token_cost"
     ]
   },
   "aliases": {
+    "deepseek-v4.1-flash": {
+      "source": "deepseek/deepseek-flash",
+      "description": "Official model identity: deepseek-flash is DeepSeek-V4.1-Flash; legacy V4 Flash names are also served by V4.1 Flash. Pro remains DeepSeek-V4-Pro-0813.",
+      "official_source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "verified_at": "2026-10-15"
+    },
     "grok-4.7": {
       "source": "xai/grok-4.7",
       "description": "xAI API pricing alias for the unprefixed model ID"

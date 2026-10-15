@@ -3,8 +3,8 @@
     "inventory_scope": "All model IDs in active, undeleted groups, including disabled allowlists; enabled sale models distinguished. No account wildcard expansion.",
     "configured_models": 51,
     "enabled_models": 34,
-    "configured_covered": 49,
-    "enabled_covered": 32,
+    "configured_covered": 50,
+    "enabled_covered": 33,
     "configured_native_exact_or_namespace": 46,
     "configured_aliases": [
       "codex-auto-review",
@@ -12,17 +12,20 @@
       "gpt-5.3-codex-spark"
     ],
     "missing": [
-      "deepseek-v4.1-flash",
       "gpt-image-2.5"
     ],
     "entries_before": 335,
-    "entries_after": 540,
+    "entries_after": 541,
     "removed_existing_ids": [],
     "litellm_commit": "3fec5075fa3069d4da0bba437ba1e1f2218792ed",
     "litellm_sha256": "6fc1f38bce2adaf89463e1bb9436de227dd78e5b2f6befc1b005c3cd88deb2cb",
     "previous_repository_commit": "273c0ab1d08a5cab2d2cad7603054f1493b7c1c2",
-    "new_price_sha256": "ee3e3cab47c29370d68ffbfda88f0480c5d81f5c99205b80d120b696cb128a1e",
-    "verification": "Publication and live cache verification recorded separately."
+    "new_price_sha256": "0b797094c810c8490c47777e30d1b1387b652ab3d0d852ab0095d59ce3b2e869",
+    "verification": "Publication and live cache verification recorded separately.",
+    "configured_official_identity_aliases": [
+      "deepseek-v4.1-flash"
+    ],
+    "correction": "DeepSeek official identity mapping: deepseek-flash is V4.1 Flash; Pro is V4 Pro 0813. Same-name-only gap conclusion corrected."
   },
   "models": [
     {
@@ -712,7 +715,8 @@
         "novita/deepseek/deepseek-v4-flash",
         "aihubmix/deepseek-v4-flash",
         "prism/deepseek-v4-flash"
-      ]
+      ],
+      "official_identity": "Legacy endpoint now served by DeepSeek-V4.1-Flash"
     },
     {
       "model": "deepseek-v4-pro",
@@ -759,17 +763,18 @@
         "novita/deepseek/deepseek-v4-pro",
         "aihubmix/deepseek-v4-pro",
         "fireworks_ai/accounts/fireworks/models/deepseek-v4-pro"
-      ]
+      ],
+      "official_identity": "DeepSeek-V4-Pro-0813; independent Pro rates"
     },
     {
       "model": "deepseek-v4.1-flash",
       "enabled": true,
-      "match_kind": "unresolved",
-      "source_model": null,
-      "provider": null,
-      "official_source_url": null,
+      "match_kind": "official_model_alias",
+      "source_model": "deepseek/deepseek-flash",
+      "provider": "deepseek",
+      "official_source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
       "before_present": false,
-      "after_present": false,
+      "after_present": true,
       "before_usd_per_million": {
         "input_cost_per_token": null,
         "output_cost_per_token": null,
@@ -781,22 +786,72 @@
         "cache_read_input_image_token_cost": null
       },
       "after_usd_per_million": {
-        "input_cost_per_token": null,
-        "output_cost_per_token": null,
-        "cache_read_input_token_cost": null,
+        "input_cost_per_token": 0.3,
+        "output_cost_per_token": 1.2,
+        "cache_read_input_token_cost": 0.006,
         "cache_creation_input_token_cost": null,
         "cache_creation_input_token_cost_above_1hr": null,
         "input_cost_per_image_token": null,
         "output_cost_per_image_token": null,
         "cache_read_input_image_token_cost": null
       },
-      "price_field_changes": {},
+      "price_field_changes": {
+        "cache_read_input_token_cost": {
+          "before": null,
+          "after": 6e-09
+        },
+        "input_cost_per_token": {
+          "before": null,
+          "after": 3e-07
+        },
+        "input_cost_per_token_cache_hit": {
+          "before": null,
+          "after": 6e-09
+        },
+        "off_peak_pricing": {
+          "before": null,
+          "after": {
+            "cache_read_input_token_cost": 3e-09,
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 6e-07,
+            "windows": [
+              {
+                "hours_utc": [
+                  "00:00-01:00",
+                  "04:00-06:00",
+                  "10:00-00:00"
+                ],
+                "weekdays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "hours_utc": "00:00-00:00",
+                "weekdays": [
+                  6,
+                  7
+                ]
+              }
+            ]
+          }
+        },
+        "output_cost_per_token": {
+          "before": null,
+          "after": 1.2e-06
+        }
+      },
       "alternative_channel_keys": [
         "coralbricks/deepseek-v4.1-flash",
         "tencent/deepseek-v4.1-flash",
         "azure_ai/deepseek-v4.1-flash",
         "prism/deepseek-v4.1-flash"
-      ]
+      ],
+      "official_identity": "DeepSeek-V4.1-Flash",
+      "official_mapping_verified_at": "2026-10-15"
     },
     {
       "model": "gemini-3.1-pro",
