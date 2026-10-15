@@ -1,162 +1,89 @@
 # model-price-repo
 
-Filtered model pricing data for CRS and sub2api projects. Syncs from the upstream [litellm](https://github.com/BerriAI/litellm) pricing file on a schedule, applying configurable prefix filters to keep only the models you actually use.
+A filtered model-price catalog compatible with the existing CRS/Sub2API USD
+pricing JSON. One GitHub Actions workflow checks every ten minutes, at minutes
+7/17/27/37/47/57, and on pushes or manual triggers. Scheduled runs may be delayed.
 
-## How it works
+## Pricing policy
 
-A GitHub Actions workflow runs every 10 minutes, offset to minutes 7/17/27/37/47/57
-(and on a push to main or manual trigger). GitHub can delay scheduled runs.
+- Overseas models: native OpenAI, Anthropic, Gemini Developer API and xAI quotes
+  from LiteLLM, selected by both provider and model-key prefix. Reseller prices
+  do not replace native prices.
+- Configured domestic models: direct DeepSeek, GLM and Kimi official websites.
+  Preserve the official **CNY numerical amounts**, normalize the model-token
+  measurement unit, and publish them as `currency: USD`. There is no FX step.
+  This is the site's pricing policy, not a claim about the provider's official
+  dollar quotation. For example, CNY 8 per million becomes USD-labeled 8 per
+  million (`input_cost_per_token: 0.000008`).
+- LiteLLM still supplies capabilities and model metadata. Domestic official fees
+  are applied last, so international prices and legacy custom overrides cannot
+  overwrite them. Missing official fee dimensions stay absent; they are not
+  inferred from cache-storage promotions or an exchange rate.
 
-1. Download LiteLLM's public pricing file once.
-2. Select both the model-key prefix and the native `litellm_provider`.
-3. Replace matching cards completely, including changed prices and removed fields.
-4. Copy native namespace cards to bare model IDs.
-5. Apply remaining legacy aliases/custom definitions only when no native card exists.
-6. Fill documented missing official fields, then apply explicit site pricing exclusions.
-7. Publish JSON and SHA-256 together, committing only when content changes.
+The existing `model_prices_and_context_window.json` URL and matching `.sha256`
+remain the publishing interface. Per-model `pricing_source` records the official
+URL, CNY provenance, numeric-preservation policy and document hash. Optional
+`pricing_rules` records exact context tiers and manufacturer peak periods.
+The consuming Sub2API customization reads those rules and removes its former
+DeepSeek fixed rates, Pro-as-Flash rule and family-price fallback. Its USD
+accounting, quotas and existing operator overrides remain intact.
 
-## Source policy
+DeepSeek Flash names explicitly share the current `deepseek-flash` price card;
+Pro has an independent card. GLM-5.1 carries both context tiers, while Kimi K3
+includes separate five-minute and one-hour cache-creation fees. The government
+holiday calendar currently covers **2026** and must be updated for later years.
+Provider model IDs and aliases are exact entries, not guesses from family names.
+New catalog models do not change the application's sale allowlists.
 
-| Family | Accepted provider | Native keys | Bare IDs |
-|---|---|---|---|
-| OpenAI | `openai` | `gpt-`, `o1-`, `o3`, `o4-` | Native keys already bare |
-| Anthropic | `anthropic` | `claude-` | Native keys already bare |
-| Gemini Developer API | `gemini` | `gemini/` | Automatically strip namespace |
-| xAI | `xai` | `xai/` | Automatically strip namespace |
-| DeepSeek international | `deepseek` | `deepseek/` | Automatically strip namespace |
-| Z.AI international | `zai` | `zai/` | Automatically strip namespace |
-| Kimi international | `moonshot` | `moonshot/` | Automatically strip namespace |
+## Synchronization and failures
 
-Vertex, Bedrock, Azure, OpenRouter, and other reseller channels are never used as
-native replacement prices. In particular, LiteLLM's bare Gemini keys can be
-Vertex entries; Gemini aliases here come from `gemini/` instead. Native Grok,
-GLM and Kimi aliases include all source fields, such as cache and context tiers.
+1. Fetch LiteLLM and apply native selection, namespace aliases, legacy defaults
+   and existing site exclusions.
+2. Fetch the three domestic official documents serially and parse their exact
+   model entries and supported fee dimensions.
+3. Replace the domestic fee set and copy it to all explicitly configured aliases.
+   Keep unaffected model metadata and overseas prices.
+4. Compare the **final** JSON with the previous output; publish JSON and SHA-256
+   in one commit only when content changes.
 
-All published rates follow LiteLLM's USD units. Domestic CNY prices are not
-converted using a fixed exchange rate. LiteLLM is a third-party catalogue;
-provider selection does not certify every field against current official docs.
+A failed or changed official document retains that model's last complete
+successful official fee card. It cannot fall back silently to international
+rates. Other sources may still update. A failed LiteLLM download preserves the
+existing catalog while allowing valid official updates. Unknown source shapes
+produce workflow warnings; an initial run without usable catalog data fails.
 
-The 2026-10-15 inventory covers **34 enabled sale models and 51 configured IDs**.
-**50/51** have a price card: 46 native exact IDs (including namespace copies),
-one officially documented model-identity alias and three configured endpoint/site
-aliases. Only bare `gpt-image-2.5` remains unresolved. Reseller prices and adjacent
-versions are not substituted. If an exact native entry is added later, normal
-selection imports it automatically. The enabled sale scope has 30 exact native
-cards, one official identity alias, two configured aliases and one unresolved ID.
+Requests use twenty-second timeouts. LiteLLM is capped at 4 MiB; each official
+document at 2 MiB, with an 8 MiB official batch limit. Conditional source caches
+are bounded. No additional hosted service or local collection daemon is needed.
+Dify and the withdrawn site-token feed are not part of this pipeline.
 
-The [DeepSeek official price page](https://api-docs.deepseek.com/quick_start/pricing/)
-identifies `deepseek-flash` as **DeepSeek-V4.1-Flash**. Accordingly,
-`deepseek-v4.1-flash` copies the complete `deepseek/deepseek-flash` card, including
-`off_peak_pricing`. The old `deepseek-v4-flash` and
-`deepseek-v4-flash-vision-exp` names are also officially served by V4.1 Flash;
-their native LiteLLM cards have the same rates. `deepseek-v4-pro` remains the
-separate **DeepSeek-V4-Pro-0813** card, never a Flash price alias. The initial
-review's missing-price conclusion for V4.1 Flash was corrected after checking
-the official identity mapping, not by borrowing an adjacent version's price.
+## Configuration and local use
 
-`gemini-3.1-pro` remains a configured alias of `gemini-3.1-pro-preview`.
-`codex-auto-review` remains a site alias of `gpt-5.6-luna`; the disabled
-`gpt-5.3-codex-spark` configuration also remains an alias of `gpt-5.3-codex`.
-These aliases are not independently verified official model prices. Existing per-image retail group prices belong to the
-application and are not replaced by per-image-token prices in this catalogue.
-
-Kimi K3's missing cache-write fees are filled from its reviewed international
-[official price page](https://platform.kimi.ai/docs/pricing/chat.md):
-$3/MTok at 5min and $6/MTok at 1h. These are missing-field defaults, so any future
-explicit upstream value (including zero) wins. There is no blanket cache-write
-or cache-TTL inference. For the four configured GLM models and DeepSeek V4
-Flash/Pro (including the canonical Flash endpoint and its aliases), unverified
-per-token cache-write zeroes are explicitly removed from native and bare cards;
-free cache storage does not establish a per-token
-write fee. Other legacy custom cards only apply without a native
-match; they are not asserted to be current official prices.
-
-The complete [51-model source review](docs/2026-10-15-native-source-review.md)
-and [field comparison JSON](docs/2026-10-15-native-source-comparison.json) record
-the initial migration and its limits.
-
-## Configuration
-
-All settings live in [`config.json`](config.json):
-
-| Field | Description |
-|---|---|
-| `upstream_url` | LiteLLM public pricing JSON |
-| `output_file`, `hash_file` | Published JSON and matching SHA-256 |
-| `sync_mode` | `additive` retains unmatched legacy IDs; `full` removes them |
-| `update_existing` | `true`: replace accepted existing cards on every sync |
-| `prefix_filters` | Initial key-prefix filter |
-| `provider_prefixes` | Required provider-to-native-prefix mapping |
-| `namespace_aliases` | Prefixes removed when copying native cards to bare IDs |
-| `exclude_patterns` | Excluded key substrings |
-| `aliases` | Explicit remaining endpoint/site aliases; native exact cards win |
-| `custom_models` | Legacy fallback cards; native cards win |
-| `official_field_defaults` | Reviewed missing fees, with official URL/date |
-| `excluded_model_fields` | Explicit site exceptions applied after all other rules |
-
-An upstream fetch/parse failure or empty selection aborts without publishing.
-If individual native IDs disappear, additive mode retains their last published
-card; retention is not proof of current availability or pricing. Publishing
-JSON and SHA-256 in one commit keeps readers on a matching version.
-
-Offline tests run before every synchronization and cover provider separation,
-price changes, removed fields, aliases, legacy override precedence, missing
-models, explicit zero, verified cache gaps, idempotence, and SHA-256 output.
-
-### GPT-6.1 Sol pricing policy
-
-This fork intentionally uses the same per-token rates for `gpt-6.1-sol` at all
-input lengths. Its `excluded_model_fields` rule removes every
-`*_above_272k_tokens*` field, including Standard, Batch, Flex, Priority, and
-Ultrafast input, output, cache-read, and cache-write surcharges. Base prices,
-context limits, and other models remain unchanged. This is a local pricing
-override; it does not change the provider's charges.
-
-Exclusions run after upstream merging, aliases, and custom definitions, so
-scheduled synchronization cannot restore these fields.
-
-## Running locally
+[`config.json`](config.json) controls the compatible LiteLLM filter, native
+providers, aliases, legacy defaults, output paths and site exclusions.
+[`official-prices.json`](official-prices.json) controls the domestic official
+URLs, parsers, exact aliases, pricing policy and government holiday calendar.
 
 ```bash
-python3 scripts/sync_prices.py --config config.json --repo-root .
+python3 scripts/sync_prices.py --config config.json --repo-root . --official-config official-prices.json
 ```
 
-No pip dependencies — uses Python standard library only.
+Synchronization and offline tests use only the Python standard library. CI runs
+all tests before publishing, including source fixtures, provider separation,
+repricing, alias copying, source failures, absent fee fields, final-output
+idempotence and matching hashes. Historical source reviews are under `docs/`.
 
-## CRS integration
+## Existing site exceptions
 
-Point CRS to the raw output file from this repo:
+GPT-6.1 Sol retains a flat context price: `*_above_272k_tokens*` fields are
+removed for Standard, Batch, Flex, Priority and Ultrafast. This is a site policy,
+not a statement that the provider removed its surcharge. Other models and
+base prices are unaffected.
 
-```
-MODEL_PRICES_URL=https://raw.githubusercontent.com/<owner>/model-price-repo/main/model_prices_and_context_window.json
-```
-
-The output JSON structure is identical to what litellm produces (model key -> pricing object), so CRS `pricingService.js` works without changes.
+Configured endpoint/site aliases such as `codex-auto-review` keep their existing
+meaning. Bare `gpt-image-2.5` remains unresolved in the catalog; the application's
+independent per-image retail group prices are not replaced by token prices.
 
 ## License
 
 [MIT](LICENSE)
-
-## Domestic official prices in the compatible USD catalog
-
-The same ten-minute workflow fetches overseas native quotes from LiteLLM and
-Chinese-provider prices from the official DeepSeek, GLM and Kimi websites.
-The domestic RMB numerical amounts are normalized to per-token rates and
-published with `currency: USD`, without foreign-exchange conversion. This is
-an explicit site pricing policy, not the providers' official USD quotation.
-The existing output JSON URL and USD accounting integration remain unchanged.
-
-`official-prices.json` records exact model identities, aliases, source URLs and
-the 2026 government holiday calendar. `pricing_source` retains CNY provenance;
-`pricing_rules` carries context tiers and manufacturer peak periods. Broken
-sources retain the last complete successful official fee card; fresh LiteLLM
-international quotes cannot overwrite it. Equal final output does not commit.
-Unknown source shapes produce warnings rather than guessed rates.
-
-Run `python3 scripts/sync_prices.py --config config.json --repo-root . --official-config official-prices.json`.
-All synchronization and tests use the Python standard library. Individual
-requests time out after twenty seconds; LiteLLM is limited to 4 MiB, official
-documents to 2 MiB each and 8 MiB per batch, with serial downloads and bounded
-conditional caches. The obsolete site-token feed and Dify price adapter are
-not used. The consuming Sub2API customization removes its old DeepSeek price
-constants and reads the optional catalog rules; USD statistics remain intact.
