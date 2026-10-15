@@ -67,6 +67,9 @@ class OfficialPricingTests(unittest.TestCase):
     def test_unknown_official_shape_is_not_a_new_price(self):
         for kind, model, changed in [
                 ('glm', 'glm-5.1', self.bodies['glm'].replace(b'32K', b'64K')),
+                ('glm', 'glm-5.3', self.bodies['glm'].replace('元/百万 Tokens'.encode(), '元/千 Tokens'.encode())),
+                ('deepseek', 'deepseek-v4-pro', self.bodies['deepseek'].replace('百万tokens'.encode(), '千tokens'.encode())),
+                ('deepseek', 'deepseek-v4-pro', self.bodies['deepseek'].replace('缓存未命中'.encode(), '缓存命中'.encode())),
                 ('deepseek', 'deepseek-v4-pro', b'unknown table'),
                 ('kimi', 'kimi-k3', b'unknown table')]:
             with self.assertRaises(ValueError):

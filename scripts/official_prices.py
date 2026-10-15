@@ -61,6 +61,9 @@ class Fetcher:
 def official_card(kind, model, body, calendar):
     text = body.decode('utf-8')
     if kind == 'glm':
+        for label in ('输入单价（元/百万 Tokens）', '输出单价（元/百万 Tokens）', '缓存命中（元/百万 Tokens）'):
+            if label not in text:
+                raise ValueError('GLM official fee unit changed')
         rows, labels = [], []
         for line in text.splitlines():
             cells = [x.strip() for x in line.split('|')[1:-1]]
@@ -97,15 +100,21 @@ def official_card(kind, model, body, calendar):
         schedule = re.search(r'北京时间周一至周五（不含中国法定节假日）\s*(\d+:\d+)\s*-\s*(\d+:\d+)、(\d+:\d+)\s*-\s*(\d+:\d+)', plain)
         if not schedule:
             raise ValueError('DeepSeek official time rule changed')
-        rows = []
+        rows, row_labels = [], []
         for row in re.findall(r'<tr\b[^>]*>.*?</tr>', text, re.S):
             vals = re.findall(r'([0-9]+(?:\.[0-9]+)?)\s*元', unescape(re.sub('<[^>]+>', ' ', row)))
             if vals:
                 if len(vals) != 2:
                     raise ValueError('DeepSeek official fee columns changed')
                 rows.append([float(number(v)) / 1e6 for v in vals])
+                row_labels.append(re.sub(r'\s+', '', unescape(re.sub('<[^>]+>', ' ', row))))
         if len(rows) != 6:
             raise ValueError('DeepSeek official fee rows changed')
+        expected_labels = [('百万tokens输入', '缓存命中', '空闲时段'), ('高峰时段',),
+                           ('百万tokens输入', '缓存未命中', '空闲时段'), ('高峰时段',),
+                           ('百万tokens输出', '空闲时段'), ('高峰时段',)]
+        if any(any(label not in row for label in expected) for row, expected in zip(row_labels, expected_labels)):
+            raise ValueError('DeepSeek official fee labels or units changed')
         col = 1 if model == 'deepseek-v4-pro' else 0
         ratios = [rows[b + 1][col] / rows[b][col] for b in (0, 2, 4)]
         if any(abs(r - ratios[0]) > 1e-10 for r in ratios) or ratios[0] < 1:
