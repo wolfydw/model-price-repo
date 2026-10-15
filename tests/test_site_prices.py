@@ -68,3 +68,14 @@ class SitePricingTests(unittest.TestCase):
         self.assertGreaterEqual(bundle['models']['kimi-k3']['cache_creation_input_token_cost_above_1hr'],
                                 bundle['models']['kimi-k3']['cache_creation_input_token_cost'])
         self.assertEqual(32768, bundle['models']['glm-5.1']['site_context_tiers'][0]['min_tokens'])
+        self.assertTrue(bundle['models']['glm-5.3']['site_cache_creation_as_input'])
+
+    def test_unknown_official_rules_are_rejected(self):
+        glm = ('| GLM-5.1 | 输入长度 \\[0, 32K) | 6 | 24 | 限时免费 | 1.3 |\n'
+               '| GLM-5.1 | 输入长度 ≥32K | 8 | 28 | 限时免费 | 2 |\n')
+        self.assertEqual(32768, site.official_card('glm', 'glm-5.1', glm.encode())['site_context_tiers'][0]['min_tokens'])
+        for changed in [glm.replace('32K', '64K'), glm.replace('限时免费', '1')]:
+            with self.assertRaises(ValueError):
+                site.official_card('glm', 'glm-5.1', changed.encode())
+        with self.assertRaises(ValueError):
+            site.official_card('deepseek', 'deepseek-v4-pro', b'<table>unknown identity</table>')

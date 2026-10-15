@@ -55,12 +55,13 @@ class Fetcher:
             headers['If-None-Match'] = old['etag']
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as r:
-                body = r.read(8 * 1024 * 1024 + 1)
-                if len(body) > 8 * 1024 * 1024:
-                    raise ValueError('source exceeds 8 MiB')
+                limit = (4 if '/BerriAI/litellm/' in url else 2) * 1024 * 1024
+                body = r.read(limit + 1)
+                if len(body) > limit:
+                    raise ValueError('source exceeds bounded download limit')
                 self.total += len(body)
-                if self.total > 16 * 1024 * 1024:
-                    raise ValueError('sync exceeds 16 MiB')
+                if self.total > 8 * 1024 * 1024:
+                    raise ValueError('sync exceeds 8 MiB')
                 data.write_bytes(body)
                 old = {'etag': r.headers.get('ETag'), 'checked': now}
         except urllib.error.HTTPError as error:
@@ -94,13 +95,19 @@ def official_card(kind, model, body):
     text = body.decode('utf-8')
     if kind == 'glm':
         rows = []
+        labels = []
         for line in text.splitlines():
             cells = [x.strip() for x in line.split('|')[1:-1]]
             if cells and cells[0].lower() == model:
+                if len(cells) < 6 or cells[4] != '限时免费':
+                    raise ValueError('unsupported GLM fee dimensions')
+                labels.append(cells[1].replace('\\', ''))
                 vals = [float(number(cells[i])) / 1e6 for i in (2, 3, 5)]
                 rows.append(dict(zip(('input_cost_per_token', 'output_cost_per_token', 'cache_read_input_token_cost'), vals)))
         if len(rows) != (2 if model == 'glm-5.1' else 1):
             raise ValueError('official GLM table shape changed')
+        if model == 'glm-5.1' and labels != ['输入长度 [0, 32K)', '输入长度 ≥32K']:
+            raise ValueError('official GLM context boundary changed')
         result = rows[0]
         if len(rows) == 2:
             result['site_context_tiers'] = [{'min_tokens': 32768, **rows[1]}]
@@ -116,6 +123,11 @@ def official_card(kind, model, body):
                          'cache_read_input_token_cost', 'input_cost_per_token', 'output_cost_per_token'),
                         (float(number(v)) / 1e6 for v in vals)))
     if kind == 'deepseek':
+        plain_doc = unescape(re.sub('<[^>]+>', ' ', text))
+        if not re.search(r'模型\s+deepseek-flash\s*(?:\(1\))?\s+deepseek-v4-pro', plain_doc):
+            raise ValueError('official DeepSeek model columns changed')
+        if not re.search(r'北京时间周一至周五（不含中国法定节假日）\s*9:00\s*-\s*12:00、14:00\s*-\s*18:00', plain_doc):
+            raise ValueError('official DeepSeek peak schedule changed')
         rows = []
         for row in re.findall(r'<tr\b[^>]*>.*?</tr>', text, re.S):
             plain = unescape(re.sub('<[^>]+>', ' ', row))
@@ -205,6 +217,8 @@ def generate(config, previous, fetch):
             official_body = fetch(official_url, 3600)
             official = official_card(spec['adapter'], name, official_body)
             card = reconcile(base, official)
+            if spec['adapter'] in {'glm', 'deepseek'}:
+                card['site_cache_creation_as_input'] = True
             card.update(litellm_provider=spec['provider'], mode='chat', currency='CNY',
                         supports_prompt_caching=True,
                         max_input_tokens=metadata.get('model_properties', {}).get('context_size', 0))
@@ -213,6 +227,11 @@ def generate(config, previous, fetch):
                                  'official_sha256': digest(official_body),
                                  'official_fields': sorted(official),
                                  'verified_at': previous.get('models', {}).get(name, {}).get('reference', {}).get('verified_at')}
+            corrections = {key: {'dify': base[key], 'official': value}
+                           for key, value in official.items()
+                           if key in base and base[key] != value}
+            if corrections:
+                card['reference']['dify_corrections'] = corrections
             # Verification time only changes when the checked source content changes.
             prior = previous.get('models', {}).get(name, {}).get('reference', {})
             if prior.get('official_sha256') != digest(official_body) or not card['reference']['verified_at']:

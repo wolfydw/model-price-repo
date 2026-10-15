@@ -1408,6 +1408,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1435,6 +1436,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1462,6 +1464,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1489,6 +1492,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.645557+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1516,6 +1520,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1543,6 +1548,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1570,6 +1576,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1597,6 +1604,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.628066+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -1624,6 +1632,7 @@
         "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
         "verified_at": "2026-10-15T15:10:02.645557+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_peak_multiplier": 2,
       "supports_prompt_caching": true
     },
@@ -7629,6 +7638,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.466921+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_context_tiers": [
         {
           "cache_read_input_token_cost": 2e-06,
@@ -7662,6 +7672,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.764860+00:00"
       },
+      "site_cache_creation_as_input": true,
       "supports_prompt_caching": true
     },
     "glm-5.3": {
@@ -7687,6 +7698,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.881096+00:00"
       },
+      "site_cache_creation_as_input": true,
       "supports_prompt_caching": true
     },
     "glm-5.3-flash": {
@@ -7699,6 +7711,12 @@
       "output_cost_per_token": 2.8e-06,
       "reference": {
         "commit": "f2d7811364193f8d7069f24a299ee465c5519d3c",
+        "dify_corrections": {
+          "input_cost_per_token": {
+            "dify": 8e-07,
+            "official": 8.000000000000001e-07
+          }
+        },
         "dify_sha256": "b1083cb42628c07136722be00a3948229adb9d5806c54d7330cac02986a009a1",
         "dify_source": "https://raw.githubusercontent.com/langgenius/dify-official-plugins/f2d7811364193f8d7069f24a299ee465c5519d3c/models/zhipuai/models/llm/glm-5.3-flash.yaml",
         "official_fields": [
@@ -7712,6 +7730,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.891499+00:00"
       },
+      "site_cache_creation_as_input": true,
       "supports_prompt_caching": true
     },
     "gpt-3.5-turbo": {
@@ -17376,6 +17395,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.466921+00:00"
       },
+      "site_cache_creation_as_input": true,
       "site_context_tiers": [
         {
           "cache_read_input_token_cost": 2e-06,
@@ -17409,6 +17429,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.764860+00:00"
       },
+      "site_cache_creation_as_input": true,
       "supports_prompt_caching": true
     },
     "zai/glm-5.3": {
@@ -17434,6 +17455,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.881096+00:00"
       },
+      "site_cache_creation_as_input": true,
       "supports_prompt_caching": true
     },
     "zai/glm-5.3-flash": {
@@ -17446,6 +17468,12 @@
       "output_cost_per_token": 2.8e-06,
       "reference": {
         "commit": "f2d7811364193f8d7069f24a299ee465c5519d3c",
+        "dify_corrections": {
+          "input_cost_per_token": {
+            "dify": 8e-07,
+            "official": 8.000000000000001e-07
+          }
+        },
         "dify_sha256": "b1083cb42628c07136722be00a3948229adb9d5806c54d7330cac02986a009a1",
         "dify_source": "https://raw.githubusercontent.com/langgenius/dify-official-plugins/f2d7811364193f8d7069f24a299ee465c5519d3c/models/zhipuai/models/llm/glm-5.3-flash.yaml",
         "official_fields": [
@@ -17459,6 +17487,7 @@
         "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
         "verified_at": "2026-10-15T15:09:59.891499+00:00"
       },
+      "site_cache_creation_as_input": true,
       "supports_prompt_caching": true
     }
   },
