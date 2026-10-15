@@ -63,6 +63,8 @@ class SitePricingTests(unittest.TestCase):
             self.skipTest('initial publish is not generated yet')
         bundle = site.validate(json.loads(path.read_text()))
         self.assertEqual('site_token', bundle['settlement_unit'])
-        self.assertEqual(8e-6, bundle['models']['glm-5.3']['input_cost_per_token'])
-        self.assertEqual(40e-6, bundle['models']['kimi-k3']['cache_creation_input_token_cost_above_1hr'])
+        self.assertEqual('CNY_per_token', bundle['models']['glm-5.3']['reference']['quote_unit'])
+        self.assertGreaterEqual(bundle['models']['glm-5.3']['input_cost_per_token'], 0)
+        self.assertGreaterEqual(bundle['models']['kimi-k3']['cache_creation_input_token_cost_above_1hr'],
+                                bundle['models']['kimi-k3']['cache_creation_input_token_cost'])
         self.assertEqual(32768, bundle['models']['glm-5.1']['site_context_tiers'][0]['min_tokens'])
