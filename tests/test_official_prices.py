@@ -32,7 +32,7 @@ class OfficialPricingTests(unittest.TestCase):
         self.assertEqual(20e-6, kimi['cache_creation_input_token_cost'])
         self.assertEqual(40e-6, kimi['cache_creation_input_token_cost_above_1hr'])
         glm = official.official_card('glm', 'glm-5.1', self.bodies['glm'], self.config['calendar'])
-        self.assertEqual(32768, glm['pricing_rules']['context_tiers'][0]['min_tokens'])
+        self.assertEqual(32000, glm['pricing_rules']['context_tiers'][0]['min_tokens'])
         flash = official.official_card('deepseek', 'deepseek-flash', self.bodies['deepseek'], self.config['calendar'])
         self.assertEqual(2, flash['pricing_rules']['time_pricing']['periods'][0]['multiplier'])
 

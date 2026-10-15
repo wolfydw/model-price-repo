@@ -76,7 +76,9 @@ def official_card(kind, model, body, calendar):
         if len(rows) == 2:
             if labels != ['输入长度 [0, 32K)', '输入长度 ≥32K']:
                 raise ValueError('GLM official boundary changed')
-            card['pricing_rules'] = {'context_tiers': [{'min_tokens': 32768, **rows[1]}]}
+            # Use decimal K (1,000 tokens), consistent with the existing catalog.
+            # The official label is 32K; no binary-token boundary is stated.
+            card['pricing_rules'] = {'context_tiers': [{'min_tokens': 32000, **rows[1]}]}
         return card
     if kind == 'kimi':
         match = re.search(r'\["' + re.escape(model) + r'",\s*"1M tokens"([^\n]+)', text)
