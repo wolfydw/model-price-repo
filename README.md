@@ -59,6 +59,26 @@ Aliases create copies of an existing model's pricing under a new key:
 
 If the source model doesn't exist in the filtered data, the alias is skipped with a warning.
 
+### Gemini Developer API keys
+
+This fork includes both legacy `gemini-` keys and Gemini Developer API keys
+under `gemini/`. Prefix filters match the complete upstream key, so `gemini-`
+alone does not include `gemini/gemini-4-argon` or future namespaced models.
+An explicit `gemini-4-argon` alias copies the complete
+`gemini/gemini-4-argon` entry for consumers that use the bare model ID.
+Vertex AI and GitHub Copilot entries are separate channels and are not selected
+by this prefix.
+
+The existing additive policy remains in effect: `update_existing: false`
+preserves existing field values while accepting new models and missing fields.
+Scheduled synchronization does not guarantee that every price is current or
+verified against provider documentation. Changes to existing prices require a
+separate review of the configuration or data.
+
+The synchronization workflow runs the offline regression tests before fetching
+and publishing data. GitHub scheduled runs can be delayed; after creating a
+fork, enable its Actions workflow and trigger the first run manually.
+
 ## Running locally
 
 ```bash

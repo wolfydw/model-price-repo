@@ -8,6 +8,7 @@
     "claude-",
     "gpt-",
     "gemini-",
+    "gemini/",
     "o1-",
     "o3-",
     "o3",
@@ -18,6 +19,10 @@
     "sample_spec"
   ],
   "aliases": {
+    "gemini-4-argon": {
+      "source": "gemini/gemini-4-argon",
+      "description": "Gemini Developer API pricing alias for the unprefixed model ID"
+    },
     "claude-opus-4-6-thinking": {
       "source": "claude-opus-4-6",
       "description": "Thinking variant, same pricing as claude-opus-4-6"
