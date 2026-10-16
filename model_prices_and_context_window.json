@@ -1135,7 +1135,7 @@
     "source": "https://platform.claude.com/docs/en/about-claude/pricing",
     "supports_adaptive_thinking": true,
     "supports_anthropic_compaction": true,
-    "supports_assistant_prefill": true,
+    "supports_assistant_prefill": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_legacy_thinking": true,
@@ -8258,7 +8258,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -8281,7 +8281,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -8304,7 +8304,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -8327,7 +8327,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16808,7 +16808,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16831,7 +16831,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16854,7 +16854,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16877,7 +16877,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "2b20b4b2ef10879ad0bebe610128e0f49df02d4602fd2c64e09964dccb6d68b6",
+      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
