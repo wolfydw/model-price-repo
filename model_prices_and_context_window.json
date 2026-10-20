@@ -2708,6 +2708,11 @@
       "search_context_size_low": 0.035,
       "search_context_size_medium": 0.035
     },
+    "search_free_requests": {
+      "count": 1500,
+      "period": "day",
+      "shared_group": "gemini-2-flash"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -2823,6 +2828,11 @@
       "search_context_size_high": 0.035,
       "search_context_size_low": 0.035,
       "search_context_size_medium": 0.035
+    },
+    "search_free_requests": {
+      "count": 1500,
+      "period": "day",
+      "shared_group": "gemini-2-flash"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -3139,6 +3149,11 @@
       "search_context_size_low": 0.035,
       "search_context_size_medium": 0.035
     },
+    "search_free_requests": {
+      "count": 10000,
+      "period": "day",
+      "shared_group": "gemini-2.5-pro"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -3235,6 +3250,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -3297,6 +3317,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -3353,6 +3378,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -3400,6 +3430,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -3503,6 +3538,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -3546,6 +3586,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -3601,6 +3646,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -3702,6 +3752,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -3830,6 +3885,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -3896,6 +3956,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -3964,6 +4029,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -4026,6 +4096,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -4090,6 +4165,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -4150,6 +4230,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -4208,6 +4293,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -4347,6 +4437,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -4406,6 +4501,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -4467,6 +4567,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -5552,6 +5657,11 @@
       "search_context_size_low": 0.035,
       "search_context_size_medium": 0.035
     },
+    "search_free_requests": {
+      "count": 1500,
+      "period": "day",
+      "shared_group": "gemini-2-flash"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -5667,6 +5777,11 @@
       "search_context_size_high": 0.035,
       "search_context_size_low": 0.035,
       "search_context_size_medium": 0.035
+    },
+    "search_free_requests": {
+      "count": 1500,
+      "period": "day",
+      "shared_group": "gemini-2-flash"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -5844,6 +5959,11 @@
       "search_context_size_low": 0.035,
       "search_context_size_medium": 0.035
     },
+    "search_free_requests": {
+      "count": 10000,
+      "period": "day",
+      "shared_group": "gemini-2.5-pro"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -5940,6 +6060,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -5996,6 +6121,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -6044,6 +6174,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -6086,6 +6221,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -6130,6 +6270,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -6185,6 +6330,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -6286,6 +6436,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -6414,6 +6569,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -6477,6 +6637,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -6537,6 +6702,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -6595,6 +6765,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -6734,6 +6909,11 @@
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
     },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
+    },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
       "/v1/chat/completions",
@@ -6793,6 +6973,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -6854,6 +7039,11 @@
       "search_context_size_high": 0.014,
       "search_context_size_low": 0.014,
       "search_context_size_medium": 0.014
+    },
+    "search_free_requests": {
+      "count": 5000,
+      "period": "month",
+      "shared_group": "gemini-3"
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supported_endpoints": [
@@ -8263,7 +8453,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -8286,7 +8476,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -8309,7 +8499,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -8332,7 +8522,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16818,7 +17008,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16841,7 +17031,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16864,7 +17054,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
@@ -16887,7 +17077,7 @@
       "policy": "official_cny_numeric_as_usd_no_fx",
       "project": "official",
       "published_currency": "USD",
-      "sha256": "e47e492fffffdd7d0cdb3fb6b61f0ed33b2ab829dd3973c9d55e8a1f1c537e4a",
+      "sha256": "5eb6b37526987038ef317506e44f8d0227236cb82308fe5f59fff6defb85c465",
       "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "source_currency": "CNY"
     },
