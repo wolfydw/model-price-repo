@@ -214,6 +214,65 @@ class NativePolicyTests(unittest.TestCase):
                 sync_prices.main()
                 self.assertEqual(card, json.loads(output.read_text())["grok-4.7"])
 
+    def test_configured_gpt_5_6_sol_pricing_overrides_only_that_native_model(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = copy.deepcopy(self.config)
+            config["aliases"] = {}
+            config["namespace_aliases"] = []
+            config["custom_price_override_models"] = ["gpt-5.6-sol"]
+            config["custom_models"] = {
+                "gpt-5.6-sol": {
+                    "input_cost_per_token": 5e-6,
+                    "cache_read_input_token_cost": 0.5e-6,
+                    "cache_creation_input_token_cost": 6.25e-6,
+                    "output_cost_per_token": 30e-6,
+                    "max_input_tokens": 111,
+                },
+                "gpt-5.6-other": {"input_cost_per_token": 99e-6},
+            }
+            (root / "config.json").write_text(json.dumps(config), encoding="utf-8")
+            output = root / config["output_file"]
+            upstream = {
+                "gpt-5.6-sol": {
+                    "litellm_provider": "openai", "input_cost_per_token": 4e-6,
+                    "cache_read_input_token_cost": 0.4e-6,
+                    "cache_creation_input_token_cost": 5e-6,
+                    "output_cost_per_token": 20e-6, "max_input_tokens": 922000,
+                },
+                "gpt-5.6-other": {
+                    "litellm_provider": "openai", "input_cost_per_token": 7e-6,
+                },
+            }
+            arguments = ["sync_prices.py", "--repo-root", temporary]
+            with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy(upstream)), \
+                    patch.object(sync_prices.sys, "argv", arguments), \
+                    patch("builtins.print"):
+                sync_prices.main()
+                first = json.loads(output.read_text())
+                self.assertEqual(5e-6, first["gpt-5.6-sol"]["input_cost_per_token"])
+                self.assertEqual(0.5e-6, first["gpt-5.6-sol"]["cache_read_input_token_cost"])
+                self.assertEqual(6.25e-6, first["gpt-5.6-sol"]["cache_creation_input_token_cost"])
+                self.assertEqual(30e-6, first["gpt-5.6-sol"]["output_cost_per_token"])
+                self.assertEqual(922000, first["gpt-5.6-sol"]["max_input_tokens"])
+                self.assertEqual(7e-6, first["gpt-5.6-other"]["input_cost_per_token"])
+                upstream["gpt-5.6-sol"]["input_cost_per_token"] = 3e-6
+                sync_prices.main()
+                published = json.loads(output.read_text())
+                self.assertEqual(5e-6, published["gpt-5.6-sol"]["input_cost_per_token"])
+                self.assertEqual(7e-6, published["gpt-5.6-other"]["input_cost_per_token"])
+
+    def test_published_gpt_5_6_sol_prices_match_configured_upstream_card(self):
+        config = sync_prices.load_config(str(ROOT / "config.json"))
+        data = json.loads((ROOT / config["output_file"]).read_text())
+        prices = {key: value for key, value in config["custom_models"]["gpt-5.6-sol"].items()
+                  if "cost" in key or "price" in key}
+        for key, value in prices.items():
+            self.assertEqual(value, data["gpt-5.6-sol"][key], key)
+        raw = (ROOT / config["output_file"]).read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                         (ROOT / config["hash_file"]).read_text().strip())
+
     def test_unknown_native_models_do_not_borrow_reseller_or_adjacent_model_prices(self):
         upstream = {
             "together_ai/deepseek-ai/DeepSeek-V4.1-Flash": {"litellm_provider": "together_ai", "input_cost_per_token": 9e-6},

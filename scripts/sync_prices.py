@@ -227,10 +227,17 @@ def apply_native_aliases(data: dict, filtered: dict, prefixes: list) -> set:
     return targets
 
 
-def apply_custom_models(data: dict, custom: dict, protected_models=()) -> dict:
+def apply_custom_models(data: dict, custom: dict, protected_models=(), price_override_models=()) -> dict:
     """Inject custom model definitions (deep merge for existing, full set for new)."""
+    price_override_models = set(price_override_models)
     for key, value in custom.items():
         if key in protected_models:
+            if key in price_override_models and isinstance(data.get(key), dict) and isinstance(value, dict):
+                prices = {name: item for name, item in value.items()
+                          if "cost" in name or "price" in name}
+                data[key].update(copy.deepcopy(prices))
+                log.info("Configured pricing override takes precedence for native model '%s'.", key)
+                continue
             log.info("Native pricing takes precedence over legacy custom model '%s'.", key)
             continue
         if key in data and isinstance(data[key], dict) and isinstance(value, dict):
@@ -413,7 +420,9 @@ def main() -> None:
     # 8. Custom models
     custom = config.get("custom_models", {})
     if custom:
-        merged = apply_custom_models(merged, custom, protected)
+        merged = apply_custom_models(
+            merged, custom, protected, config.get("custom_price_override_models", [])
+        )
 
     # Reviewed gaps are defaults, never a frozen replacement for live native fees.
     fill_official_fields(merged, config.get("official_field_defaults", {}), protected)

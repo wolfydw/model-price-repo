@@ -923,6 +923,9 @@
       "cache_creation_input_token_cost_above_200k_tokens": 4e-06
     }
   },
+  "custom_price_override_models": [
+    "gpt-5.6-sol"
+  ],
   "provider_prefixes": {
     "openai": [
       "gpt-",
