@@ -363,6 +363,15 @@ def main() -> None:
     output_path = os.path.join(repo_root, config["output_file"])
     hash_path = os.path.join(repo_root, config["hash_file"])
 
+    manual_policy = None
+    if config.get("manual_pricing_file"):
+        if args.official_config:
+            raise ValueError("Manual domestic pricing cannot enable official collection")
+        from manual_prices import validate as validate_manual
+        with open(os.path.join(repo_root, config["manual_pricing_file"]), encoding="utf-8") as source:
+            manual_policy = json.load(source)
+        validate_manual(manual_policy)
+
     # 2. Load existing data
     existing = load_existing(output_path)
     old_hash = load_existing_hash(hash_path)
@@ -378,6 +387,10 @@ def main() -> None:
         upstream = {}
 
     # 4. Filter
+    if manual_policy is not None:
+        from manual_prices import managed
+        upstream = {key: card for key, card in upstream.items()
+                    if not managed(key, card, manual_policy)}
     filtered = filter_upstream(upstream, config)
     if not filtered and not (args.official_config and existing):
         raise ValueError("No accepted upstream models; refusing to publish an empty sync")
@@ -439,6 +452,10 @@ def main() -> None:
         fetcher = Fetcher(os.path.join(repo_root, ".cache/official-sources"))
         for warning in apply_official_prices(merged, existing, official_config, fetcher.get):
             print("::warning::" + warning)
+
+    if manual_policy is not None:
+        from manual_prices import apply_manual_prices
+        apply_manual_prices(merged, manual_policy)
 
     # 10. Write output
     changed, new_hash = write_output(merged, output_path, hash_path, old_hash)

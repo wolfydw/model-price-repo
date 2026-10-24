@@ -26,16 +26,10 @@ jobs:
       - name: Test pricing synchronization
         run: |
           python3 -m unittest discover -s tests -v
-      - name: Restore official source cache
-        uses: actions/cache@v4
-        with:
-          path: .cache/official-sources
-          key: official-pricing-sources-${{ github.run_id }}
-          restore-keys: official-pricing-sources-
-      - name: Sync LiteLLM and official into the compatible USD catalog
+      - name: Sync overseas prices and apply owner domestic prices
         id: sync
         run: |
-          python3 scripts/sync_prices.py --config config.json --repo-root . --official-config official-prices.json > sync-result.txt
+          python3 scripts/sync_prices.py --config config.json --repo-root . > sync-result.txt
           cat sync-result.txt
           sed -n 's/^CHANGED=/changed=/p' sync-result.txt >> "$GITHUB_OUTPUT"
       - name: Upload synchronization report
@@ -50,5 +44,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add model_prices_and_context_window.json model_prices_and_context_window.sha256
-          git commit -m "chore: sync LiteLLM and official pricing"
+          git commit -m "chore: sync overseas pricing with fixed owner domestic cards"
           git push

@@ -977,5 +977,6 @@
         "cache_creation_input_token_cost_above_1hr": 6e-06
       }
     }
-  }
+  },
+  "manual_pricing_file": "manual-prices.json"
 }

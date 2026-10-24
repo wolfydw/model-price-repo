@@ -19,6 +19,7 @@ SPEC.loader.exec_module(sync_prices)
 class GeminiPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.config.pop("manual_pricing_file", None)
         self.source = {
             "input_cost_per_token": 2e-6,
             "output_cost_per_token": 1e-5,
@@ -104,6 +105,7 @@ class GeminiPricingTests(unittest.TestCase):
 class XaiPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.config.pop("manual_pricing_file", None)
         self.source = {
             "input_cost_per_token": 2e-6,
             "output_cost_per_token": 6e-6,
@@ -161,6 +163,7 @@ class XaiPricingTests(unittest.TestCase):
 class NativePolicyTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.config.pop("manual_pricing_file", None)
 
     def test_all_seven_native_providers_are_selected_without_reseller_prices(self):
         cards = {
@@ -305,6 +308,7 @@ class NativePolicyTests(unittest.TestCase):
 class DeepSeekOfficialMappingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.config.pop("manual_pricing_file", None)
         self.source = {
             "litellm_provider": "deepseek",
             "source": "https://api-docs.deepseek.com/quick_start/pricing",
@@ -371,18 +375,25 @@ class DeepSeekOfficialMappingTests(unittest.TestCase):
         sync_prices.apply_aliases(data, self.config["aliases"], set(filtered) | bare)
         self.assertEqual(filtered["deepseek/deepseek-v4.1-flash"], data["deepseek-v4.1-flash"])
 
-    def test_published_flash_aliases_and_independent_pro_card(self):
+    def test_published_manual_prices_preserve_distinct_owner_model_cards(self):
         cards = json.loads((ROOT / self.config["output_file"]).read_text())
-        fields = ("input_cost_per_token", "output_cost_per_token", "cache_read_input_token_cost")
-        reference = cards["deepseek-flash"]
-        for key in ["deepseek/deepseek-flash", "deepseek-v4.1-flash", "deepseek-v4-flash", "deepseek-v4-flash-vision-exp"]:
-            self.assertEqual({k: reference[k] for k in fields}, {k: cards[key][k] for k in fields})
-        self.assertNotEqual(reference["input_cost_per_token"], cards["deepseek-v4-pro"]["input_cost_per_token"])
+        manual = json.loads((ROOT / 'manual-prices.json').read_text())
+        from manual_prices import FIELDS
+        from decimal import Decimal
+        for spec in manual['models'].values():
+            for target in spec['targets']:
+                for field, key in FIELDS.items():
+                    if field in spec:
+                        self.assertEqual(float(Decimal(str(spec[field])) / Decimal(1000000)), cards[target][key])
+                self.assertNotIn('pricing_rules', cards[target])
+        self.assertNotEqual(cards['deepseek-v4-flash']['input_cost_per_token'],
+                            cards['deepseek-v4.1-flash']['input_cost_per_token'])
 
 
 class FlatSolPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.config.pop("manual_pricing_file", None)
         fields = (
             "input_cost_per_token", "cache_read_input_token_cost",
             "cache_creation_input_token_cost", "output_cost_per_token",
