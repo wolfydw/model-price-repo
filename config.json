@@ -21,9 +21,6 @@
     "sample_spec"
   ],
   "excluded_model_fields": {
-    "gpt-6.1-sol": [
-      "*_above_272k_tokens*"
-    ],
     "zai/glm-5.1": [
       "cache_creation_input_token_cost"
     ],

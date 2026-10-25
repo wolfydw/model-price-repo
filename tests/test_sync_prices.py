@@ -390,7 +390,7 @@ class DeepSeekOfficialMappingTests(unittest.TestCase):
                             cards['deepseek-v4.1-flash']['input_cost_per_token'])
 
 
-class FlatSolPricingTests(unittest.TestCase):
+class LongContextSolPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.config.pop("manual_pricing_file", None)
@@ -412,7 +412,7 @@ class FlatSolPricingTests(unittest.TestCase):
             for tier in tiers for field in fields
         }
 
-    def test_exclusions_keep_base_prices_time_fields_and_other_models(self):
+    def test_exclusions_preserve_sol_context_tiers_and_other_models(self):
         expected = {
             **self.base,
             "cache_creation_input_token_cost_above_1hr": 4e-6,
@@ -426,21 +426,22 @@ class FlatSolPricingTests(unittest.TestCase):
         removed = sync_prices.remove_excluded_model_fields(
             data, self.config["excluded_model_fields"]
         )
-        self.assertEqual(20, removed)
-        self.assertEqual(expected, data["gpt-6.1-sol"])
+        self.assertEqual(0, removed)
+        self.assertEqual({**expected, **self.premiums}, data["gpt-6.1-sol"])
         self.assertEqual(other, data["gpt-other"])
 
-    def test_repeated_sync_cannot_restore_upstream_or_custom_surcharges(self):
+    def test_repeated_sync_restores_native_context_tiers_over_stale_custom_prices(self):
         upstream = {
-            "gpt-6.1-sol": {**self.base, **self.premiums, "max_input_tokens": 922000},
-            "gpt-other": {**self.base, **self.premiums},
+            "gpt-6.1-sol": {**self.base, **self.premiums, "max_input_tokens": 922000,
+                            "litellm_provider": "openai"},
+            "gpt-other": {**self.base, **self.premiums, "litellm_provider": "openai"},
         }
         for mode in ("additive", "full"):
             with self.subTest(sync_mode=mode), tempfile.TemporaryDirectory() as temporary:
                 root = Path(temporary)
                 config = copy.deepcopy(self.config)
                 config["sync_mode"] = mode
-                config["provider_prefixes"] = {}
+                config["provider_prefixes"] = {"openai": ["gpt-"]}
                 config["namespace_aliases"] = []
                 config["aliases"] = {}
                 config["custom_models"] = {
@@ -448,7 +449,10 @@ class FlatSolPricingTests(unittest.TestCase):
                 }
                 (root / "config.json").write_text(json.dumps(config), encoding="utf-8")
                 output = root / config["output_file"]
-                output.write_text(json.dumps(upstream), encoding="utf-8")
+                existing = copy.deepcopy(upstream)
+                for field in self.premiums:
+                    existing["gpt-6.1-sol"].pop(field)
+                output.write_text(json.dumps(existing), encoding="utf-8")
                 hash_file = root / config["hash_file"]
                 hash_file.write_text(hashlib.sha256(output.read_bytes()).hexdigest() + "\n")
                 arguments = ["sync_prices.py", "--repo-root", temporary]
@@ -459,8 +463,7 @@ class FlatSolPricingTests(unittest.TestCase):
                     sync_prices.main()
                     first = output.read_bytes()
                     published = json.loads(first)
-                    self.assertEqual({**self.base, "max_input_tokens": 922000},
-                                     published["gpt-6.1-sol"])
+                    self.assertEqual(upstream["gpt-6.1-sol"], published["gpt-6.1-sol"])
                     self.assertEqual(upstream["gpt-other"], published["gpt-other"])
                     self.assertEqual(hashlib.sha256(first).hexdigest(),
                                      hash_file.read_text().strip())
@@ -473,7 +476,11 @@ class FlatSolPricingTests(unittest.TestCase):
         entry = json.loads(raw)["gpt-6.1-sol"]
         for field in self.base:
             self.assertGreater(entry[field], 0, field)
-        self.assertFalse(any("_above_272k_tokens" in field for field in entry))
+        for field in self.premiums:
+            self.assertGreater(entry[field], 0, field)
+            base_field = field.replace("_above_272k_tokens", "")
+            multiplier = 1.5 if field.startswith("output_cost_per_token") else 2
+            self.assertAlmostEqual(entry[base_field] * multiplier, entry[field], places=12)
         self.assertEqual(hashlib.sha256(raw).hexdigest(),
                          (ROOT / self.config["hash_file"]).read_text().strip())
 

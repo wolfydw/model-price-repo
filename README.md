@@ -14,7 +14,7 @@ The 2026-10-24 owner table contains eleven exact model cards. Kimi K3.1 Pro cach
 
 ## Overseas automatic pricing
 
-The existing native provider selection, complete-card updates, aliases, GPT pricing overrides and GPT-6.1 Sol flat context policy remain in config.json. The domestic manual layer has final authority; all overseas cards remain under their existing automatic policies.
+The existing native provider selection, complete-card updates, aliases and GPT pricing overrides remain in config.json. As of 2026-10-25, GPT-6.1 Sol again retains its native pricing tiers above 272K prompt tokens: input/cache rates are 2x and output rates are 1.5x their corresponding base tier, including Standard, Batch, Flex, Priority and Ultrafast. The domestic manual layer has final authority over domestic cards; overseas cards continue automatic synchronization. This change affects future billing after the existing production hot reload and does not recalculate historical charges.
 
 ## Publish and verify
 
