@@ -4543,6 +4543,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_computer_use": true,
+    "supports_continuation": true,
     "supports_function_calling": true,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
@@ -6953,6 +6954,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_computer_use": true,
+    "supports_continuation": true,
     "supports_function_calling": true,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
@@ -14008,7 +14010,9 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_web_search": true
+    "supports_web_search": true,
+    "token_count_framing": 185,
+    "token_count_tool_framing": 214
   },
   "grok-4.3-latest": {
     "cache_read_input_token_cost": 2e-07,
@@ -16817,7 +16821,9 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_web_search": true
+    "supports_web_search": true,
+    "token_count_framing": 185,
+    "token_count_tool_framing": 214
   },
   "xai/grok-4.3-latest": {
     "cache_read_input_token_cost": 2e-07,
