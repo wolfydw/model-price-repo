@@ -4533,6 +4533,7 @@
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supports_audio_input": true,
+    "supports_audio_output": true,
     "supports_function_calling": true,
     "supports_reasoning": true,
     "supports_response_schema": false,
@@ -4559,6 +4560,7 @@
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supports_audio_input": true,
+    "supports_audio_output": true,
     "supports_function_calling": true,
     "supports_reasoning": true,
     "supports_response_schema": false,
@@ -5025,17 +5027,20 @@
     "web_search_billing_unit": "per_query"
   },
   "gemini-omni-1.1-flash": {
+    "deprecation_date": "2026-12-03",
+    "deprecation_source": "https://ai.google.dev/gemini-api/docs/deprecations",
     "input_cost_per_audio_token": 1.5e-06,
     "input_cost_per_token": 1.5e-06,
     "litellm_provider": "gemini",
-    "max_input_tokens": 1048576,
+    "max_input_tokens": 131072,
     "max_output_tokens": 65536,
     "mode": "chat",
     "output_cost_per_reasoning_token": 9e-06,
     "output_cost_per_token": 9e-06,
     "output_cost_per_video_token": 1.75e-05,
     "rpm": 2000,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_endpoints": [
       "/v1beta/interactions"
     ],
@@ -5056,6 +5061,38 @@
     "supports_vision": true,
     "tpm": 800000
   },
+  "gemini-omni-1.2-flash": {
+    "input_cost_per_image_token": 1.5e-06,
+    "input_cost_per_token": 1.5e-06,
+    "input_cost_per_video_token": 1.5e-06,
+    "litellm_provider": "gemini",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 65536,
+    "mode": "chat",
+    "output_cost_per_reasoning_token": 9e-06,
+    "output_cost_per_token": 9e-06,
+    "output_cost_per_video_token": 1.2e-05,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1beta/interactions"
+    ],
+    "supported_modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "video",
+      "audio"
+    ],
+    "supports_audio_input": false,
+    "supports_audio_output": true,
+    "supports_reasoning": true,
+    "supports_system_messages": false,
+    "supports_video_input": true,
+    "supports_vision": true
+  },
   "gemini-omni-flash-preview": {
     "deprecation_date": "2026-10-22",
     "deprecation_source": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -5069,8 +5106,8 @@
     "output_cost_per_token": 9e-06,
     "output_cost_per_video_token": 1.75e-05,
     "rpm": 2000,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_endpoints": [
       "/v1beta/interactions"
     ],
@@ -7004,6 +7041,7 @@
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supports_audio_input": true,
+    "supports_audio_output": true,
     "supports_function_calling": true,
     "supports_reasoning": true,
     "supports_response_schema": false,
@@ -7030,6 +7068,7 @@
     },
     "source": "https://ai.google.dev/gemini-api/docs/pricing",
     "supports_audio_input": true,
+    "supports_audio_output": true,
     "supports_function_calling": true,
     "supports_reasoning": true,
     "supports_response_schema": false,
@@ -7436,17 +7475,20 @@
     "web_search_billing_unit": "per_query"
   },
   "gemini/gemini-omni-1.1-flash": {
+    "deprecation_date": "2026-12-03",
+    "deprecation_source": "https://ai.google.dev/gemini-api/docs/deprecations",
     "input_cost_per_audio_token": 1.5e-06,
     "input_cost_per_token": 1.5e-06,
     "litellm_provider": "gemini",
-    "max_input_tokens": 1048576,
+    "max_input_tokens": 131072,
     "max_output_tokens": 65536,
     "mode": "chat",
     "output_cost_per_reasoning_token": 9e-06,
     "output_cost_per_token": 9e-06,
     "output_cost_per_video_token": 1.75e-05,
     "rpm": 2000,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_endpoints": [
       "/v1beta/interactions"
     ],
@@ -7467,6 +7509,38 @@
     "supports_vision": true,
     "tpm": 800000
   },
+  "gemini/gemini-omni-1.2-flash": {
+    "input_cost_per_image_token": 1.5e-06,
+    "input_cost_per_token": 1.5e-06,
+    "input_cost_per_video_token": 1.5e-06,
+    "litellm_provider": "gemini",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 65536,
+    "mode": "chat",
+    "output_cost_per_reasoning_token": 9e-06,
+    "output_cost_per_token": 9e-06,
+    "output_cost_per_video_token": 1.2e-05,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1beta/interactions"
+    ],
+    "supported_modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "video",
+      "audio"
+    ],
+    "supports_audio_input": false,
+    "supports_audio_output": true,
+    "supports_reasoning": true,
+    "supports_system_messages": false,
+    "supports_video_input": true,
+    "supports_vision": true
+  },
   "gemini/gemini-omni-flash-preview": {
     "deprecation_date": "2026-10-22",
     "deprecation_source": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -7480,8 +7554,8 @@
     "output_cost_per_token": 9e-06,
     "output_cost_per_video_token": 1.75e-05,
     "rpm": 2000,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_endpoints": [
       "/v1beta/interactions"
     ],
@@ -7955,8 +8029,8 @@
     "output_cost_per_second": 0.1,
     "output_cost_per_second_1080p": 0.12,
     "output_cost_per_second_4k": 0.3,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_modalities": [
       "text"
     ],
@@ -7986,8 +8060,8 @@
     "mode": "video_generation",
     "output_cost_per_second": 0.4,
     "output_cost_per_second_4k": 0.6,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_modalities": [
       "text"
     ],
@@ -8003,8 +8077,8 @@
     "mode": "video_generation",
     "output_cost_per_second": 0.05,
     "output_cost_per_second_1080p": 0.08,
-    "source": "https://ai.google.dev/gemini-api/docs/video",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_modalities": [
       "text"
     ],
@@ -11552,6 +11626,8 @@
   },
   "gpt-5.5-cyber-preview": {
     "cache_read_input_token_cost": 1.25e-06,
+    "deprecation_date": "2027-02-01",
+    "deprecation_source": "https://developers.openai.com/api/docs/deprecations",
     "fedramp_uplift_multiplier": 1.1,
     "input_cost_per_token": 1.25e-05,
     "litellm_provider": "openai",
@@ -12246,6 +12322,39 @@
     "supports_vision": true,
     "supports_web_search": true,
     "supports_xhigh_reasoning_effort": true
+  },
+  "gpt-6-cyber": {
+    "cache_creation_input_token_cost": 2.5e-05,
+    "cache_creation_input_token_cost_above_12hr": 5e-05,
+    "cache_read_input_token_cost": 2e-06,
+    "input_cost_per_token": 2e-05,
+    "litellm_provider": "openai",
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "output_cost_per_token": 0.0001,
+    "source": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_computer_use": true,
+    "supports_function_calling": true,
+    "supports_native_streaming": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_tool_search": true,
+    "supports_vision": true,
+    "supports_web_search": true
   },
   "gpt-6-luna": {
     "cache_creation_input_token_cost": 1.25e-07,
@@ -16470,8 +16579,8 @@
     "output_cost_per_second": 0.1,
     "output_cost_per_second_1080p": 0.12,
     "output_cost_per_second_4k": 0.3,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_modalities": [
       "text"
     ],
@@ -16501,8 +16610,8 @@
     "mode": "video_generation",
     "output_cost_per_second": 0.4,
     "output_cost_per_second_4k": 0.6,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_modalities": [
       "text"
     ],
@@ -16518,8 +16627,8 @@
     "mode": "video_generation",
     "output_cost_per_second": 0.05,
     "output_cost_per_second_1080p": 0.08,
-    "source": "https://ai.google.dev/gemini-api/docs/video",
-    "successor_model": "gemini/gemini-omni-1.1-flash",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-omni-1.2-flash",
     "supported_modalities": [
       "text"
     ],
