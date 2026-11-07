@@ -3029,7 +3029,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.6-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -3100,7 +3101,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.6-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -3321,7 +3323,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-nano-banana-2.1",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/images/generations",
@@ -4046,7 +4049,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.6-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -4315,7 +4319,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.8-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -5940,7 +5945,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.6-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -6102,7 +6108,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-nano-banana-2.1",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/images/generations",
@@ -6603,7 +6610,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.6-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -6872,7 +6880,8 @@
       "period": "month",
       "shared_group": "gemini-3"
     },
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/gemini-3.8-flash",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/completions",
@@ -7848,7 +7857,8 @@
     "mode": "chat",
     "output_cost_per_image": 0.08,
     "output_cost_per_token": 0,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/lyria-3.5",
     "supported_modalities": [
       "text"
     ],
@@ -15351,7 +15361,8 @@
     "mode": "chat",
     "output_cost_per_image": 0.08,
     "output_cost_per_token": 0,
-    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "successor_model": "gemini/lyria-3.5",
     "supported_modalities": [
       "text"
     ],
