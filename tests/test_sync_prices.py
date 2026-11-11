@@ -40,12 +40,55 @@ class UpstreamGPT62PricingTests(unittest.TestCase):
             self.assertNotIn(name, self.config.get("custom_price_override_models", []))
             self.assertNotIn(name, self.config.get("aliases", {}))
 
+        sol = self.catalog["gpt-6.2-sol"]
+        self.assertEqual(4e-6, sol["input_cost_per_token_above_272k_tokens"])
+        self.assertEqual(1.5e-5, sol["output_cost_per_token_above_272k_tokens"])
+        self.assertEqual(2e-7, sol["cache_read_input_token_cost_above_272k_tokens"])
+        self.assertEqual(
+            {
+                "input_cost_per_token_above_272k_tokens": 4e-6,
+                "output_cost_per_token_above_272k_tokens": 1.5e-5,
+                "cache_read_input_token_cost_above_272k_tokens": 2e-7,
+            },
+            self.config["official_field_defaults"]["gpt-6.2-sol"]["fields"],
+        )
+
+    def test_long_context_defaults_fill_custom_card_gaps_only(self):
+        card = self.catalog["gpt-6.2-sol"]
+        data = {"gpt-6.2-sol": {"input_cost_per_token": 2e-6}}
+        sync_prices.fill_official_fields(
+            data, {"gpt-6.2-sol": self.config["official_field_defaults"]["gpt-6.2-sol"]}, set()
+        )
+        self.assertEqual(2e-6, data["gpt-6.2-sol"]["input_cost_per_token"])
+        unreviewed = {"custom-model": {"input_cost_per_token": 1e-6}}
+        sync_prices.fill_official_fields(
+            unreviewed,
+            {"custom-model": {"fields": {"input_cost_per_token_above_272k_tokens": 4e-6}}},
+            set(),
+        )
+        self.assertNotIn("input_cost_per_token_above_272k_tokens", unreviewed["custom-model"])
+        for field in (
+            "input_cost_per_token_above_272k_tokens",
+            "output_cost_per_token_above_272k_tokens",
+            "cache_read_input_token_cost_above_272k_tokens",
+        ):
+            self.assertEqual(card[field], data["gpt-6.2-sol"][field])
+
+        native_value = 9e-6
+        data["gpt-6.2-sol"]["input_cost_per_token_above_272k_tokens"] = native_value
+        sync_prices.fill_official_fields(
+            data, {"gpt-6.2-sol": self.config["official_field_defaults"]["gpt-6.2-sol"]}, set()
+        )
+        self.assertEqual(native_value, data["gpt-6.2-sol"]["input_cost_per_token_above_272k_tokens"])
+
     def test_repeat_publication_and_future_native_non_write_updates(self):
         config = copy.deepcopy(self.config)
         config.pop("manual_pricing_file", None)
         config["custom_models"] = {name: config["custom_models"][name] for name in self.sources}
         config["aliases"] = {}
-        config["official_field_defaults"] = {}
+        config["official_field_defaults"] = {
+            "gpt-6.2-sol": copy.deepcopy(self.config["official_field_defaults"]["gpt-6.2-sol"])
+        }
         baseline = {source: copy.deepcopy(self.catalog[source]) for source in self.sources.values()}
         baseline["gpt-unrelated"] = {"litellm_provider": "openai", "input_cost_per_token": 7e-6}
         with tempfile.TemporaryDirectory() as temporary:
@@ -75,6 +118,9 @@ class UpstreamGPT62PricingTests(unittest.TestCase):
                 self.assertEqual(native["input_cost_per_token"], published["gpt-6.2-sol"]["input_cost_per_token"])
                 self.assertEqual(native["output_cost_per_token"], published["gpt-6.2-sol"]["output_cost_per_token"])
                 self.assertEqual(native["cache_read_input_token_cost"], published["gpt-6.2-sol"]["cache_read_input_token_cost"])
+                self.assertEqual(4e-6, published["gpt-6.2-sol"]["input_cost_per_token_above_272k_tokens"])
+                self.assertEqual(1.5e-5, published["gpt-6.2-sol"]["output_cost_per_token_above_272k_tokens"])
+                self.assertEqual(2e-7, published["gpt-6.2-sol"]["cache_read_input_token_cost_above_272k_tokens"])
                 self.assertNotIn(self.stem + "_above_999k_tokens", published["gpt-6.2-sol"])
 
     def test_missing_invalid_donor_and_chains_fail_closed(self):

@@ -123,13 +123,16 @@
   },
   "custom_models": {
     "gpt-6.2-sol": {
-      "_comment": "Input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). All cache-write fees inherit the owner-selected previous generation through cache_write_price_sources. Future native cards may update non-write fees.",
+      "_comment": "Input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). The upstream usage ledger confirmed long-context pricing above 272K: input/cache read 2x and output 1.5x. All cache-write fees inherit the owner-selected previous generation through cache_write_price_sources.",
       "source": "https://kedaya.ai/v1/models",
       "litellm_provider": "openai",
       "mode": "chat",
       "input_cost_per_token": 2e-06,
+      "input_cost_per_token_above_272k_tokens": 4e-06,
       "output_cost_per_token": 1e-05,
-      "cache_read_input_token_cost": 1e-07
+      "output_cost_per_token_above_272k_tokens": 1.5e-05,
+      "cache_read_input_token_cost": 1e-07,
+      "cache_read_input_token_cost_above_272k_tokens": 2e-07
     },
     "gpt-6.2-astra": {
       "_comment": "Input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). All cache-write fees inherit the owner-selected previous generation through cache_write_price_sources. Future native cards may update non-write fees.",
@@ -976,6 +979,15 @@
     "moonshot/"
   ],
   "official_field_defaults": {
+    "gpt-6.2-sol": {
+      "source": "Observed upstream billed gpt-6.2-sol usage above 272K on 2026-11-12",
+      "apply_to_custom_models": true,
+      "fields": {
+        "input_cost_per_token_above_272k_tokens": 4e-06,
+        "output_cost_per_token_above_272k_tokens": 1.5e-05,
+        "cache_read_input_token_cost_above_272k_tokens": 2e-07
+      }
+    },
     "kimi-k3": {
       "source": "https://platform.kimi.ai/docs/pricing/chat.md",
       "reviewed_on": "2026-10-15",

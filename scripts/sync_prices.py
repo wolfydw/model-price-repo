@@ -279,7 +279,7 @@ def inherit_cache_write_prices(data: dict, sources: dict) -> None:
 def fill_official_fields(data: dict, defaults: dict, protected_models: set) -> None:
     """Fill only reviewed missing fees, leaving future upstream values authoritative."""
     for key, rule in defaults.items():
-        if key not in protected_models or key not in data:
+        if key not in data or (key not in protected_models and not rule.get("apply_to_custom_models", False)):
             continue
         if not rule.get("source"):
             raise ValueError(f"Official field defaults require a source URL: {key}")
