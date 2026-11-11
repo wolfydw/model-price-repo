@@ -123,24 +123,22 @@
   },
   "custom_models": {
     "gpt-6.2-sol": {
-      "_comment": "Imported from the upstream /v1/models pricing response on 2026-11-12 (USD/1M tokens converted to USD/token). Cache write is explicitly zero. Missing TTL and context tiers are not inferred. Future native LiteLLM cards take precedence.",
+      "_comment": "Input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). All cache-write fees inherit the owner-selected previous generation through cache_write_price_sources. Future native cards may update non-write fees.",
       "source": "https://kedaya.ai/v1/models",
       "litellm_provider": "openai",
       "mode": "chat",
-      "input_cost_per_token": 0.000002,
-      "output_cost_per_token": 0.00001,
-      "cache_read_input_token_cost": 0.0000001,
-      "cache_creation_input_token_cost": 0
+      "input_cost_per_token": 2e-06,
+      "output_cost_per_token": 1e-05,
+      "cache_read_input_token_cost": 1e-07
     },
     "gpt-6.2-astra": {
-      "_comment": "Imported from the upstream /v1/models pricing response on 2026-11-12 (USD/1M tokens converted to USD/token). Cache write is explicitly zero. Missing TTL and context tiers are not inferred. Future native LiteLLM cards take precedence.",
+      "_comment": "Input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). All cache-write fees inherit the owner-selected previous generation through cache_write_price_sources. Future native cards may update non-write fees.",
       "source": "https://kedaya.ai/v1/models",
       "litellm_provider": "openai",
       "mode": "chat",
-      "input_cost_per_token": 0.00001,
-      "output_cost_per_token": 0.00005,
-      "cache_read_input_token_cost": 0.000001,
-      "cache_creation_input_token_cost": 0
+      "input_cost_per_token": 1e-05,
+      "output_cost_per_token": 5e-05,
+      "cache_read_input_token_cost": 1e-06
     },
     "claude-sonnet-5": {
       "_comment": "Per platform.claude.com/docs/en/about-claude/pricing: 'The $2/$10 per million input/output token pricing for Claude Sonnet 5 ... is now the standard price. The previously scheduled increase to $3/$15 ... on September 1, 2026 will not occur.' This is the permanent standard price; do NOT remove this override on 2026-09-01.",
@@ -995,5 +993,9 @@
       }
     }
   },
-  "manual_pricing_file": "manual-prices.json"
+  "manual_pricing_file": "manual-prices.json",
+  "cache_write_price_sources": {
+    "gpt-6.2-sol": "gpt-6.1-sol",
+    "gpt-6.2-astra": "gpt-6-astra"
+  }
 }

@@ -19,63 +19,87 @@ SPEC.loader.exec_module(sync_prices)
 class UpstreamGPT62PricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
-        self.names = ("gpt-6.2-sol", "gpt-6.2-astra")
+        self.sources = {"gpt-6.2-sol": "gpt-6.1-sol", "gpt-6.2-astra": "gpt-6-astra"}
+        self.stem = "cache_creation_input_token_cost"
+        self.catalog = json.loads((ROOT / self.config["output_file"]).read_text())
 
-    def test_imported_fees_keep_explicit_zero_and_do_not_infer_missing_tiers(self):
-        fees = {
-            "gpt-6.2-sol": (2e-6, 1e-5, 1e-7),
-            "gpt-6.2-astra": (1e-5, 5e-5, 1e-6),
-        }
-        for name, expected in fees.items():
-            card = self.config["custom_models"][name]
-            self.assertEqual(expected, tuple(card[field] for field in (
+    def fees(self, card):
+        return {key: value for key, value in card.items()
+                if key == self.stem or key.startswith(self.stem + "_")}
+
+    def test_published_all_write_fees_match_previous_generation_only(self):
+        self.assertEqual(self.sources, self.config["cache_write_price_sources"])
+        expected = {"gpt-6.2-sol": (2e-6, 1e-5, 1e-7), "gpt-6.2-astra": (1e-5, 5e-5, 1e-6)}
+        for name, source in self.sources.items():
+            card = self.catalog[name]
+            self.assertEqual(expected[name], tuple(card[field] for field in (
                 "input_cost_per_token", "output_cost_per_token", "cache_read_input_token_cost")))
-            self.assertEqual(0, card["cache_creation_input_token_cost"])
-            self.assertEqual("https://kedaya.ai/v1/models", card["source"])
-            self.assertFalse(any("above_" in field or "priority" in field for field in card))
+            self.assertEqual(self.fees(self.catalog[source]), self.fees(card))
+            self.assertEqual(20, len(self.fees(card)))
+            self.assertEqual(source, card["cache_write_pricing_source"])
             self.assertNotIn(name, self.config.get("custom_price_override_models", []))
             self.assertNotIn(name, self.config.get("aliases", {}))
 
-    def test_repeat_publication_and_future_native_replacement(self):
+    def test_repeat_publication_and_future_native_non_write_updates(self):
         config = copy.deepcopy(self.config)
         config.pop("manual_pricing_file", None)
-        config["custom_models"] = {name: config["custom_models"][name] for name in self.names}
+        config["custom_models"] = {name: config["custom_models"][name] for name in self.sources}
         config["aliases"] = {}
         config["official_field_defaults"] = {}
-        baseline = {"gpt-6.1-sol": {
-            "litellm_provider": "openai", "input_cost_per_token": 2e-6,
-            "output_cost_per_token": 1e-5,
-        }}
+        baseline = {source: copy.deepcopy(self.catalog[source]) for source in self.sources.values()}
+        baseline["gpt-unrelated"] = {"litellm_provider": "openai", "input_cost_per_token": 7e-6}
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary)
             (target / "config.json").write_text(json.dumps(config), encoding="utf-8")
             arguments = ["sync_prices.py", "--repo-root", temporary]
             with patch.object(sync_prices.sys, "argv", arguments), patch("builtins.print"):
-                with patch.object(sync_prices, "fetch_upstream", return_value=baseline):
+                with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy(baseline)):
                     sync_prices.main()
                     output = target / config["output_file"]
                     first = output.read_bytes()
-                    self.assertEqual({**baseline, **config["custom_models"]}, json.loads(first))
                     sync_prices.main()
                     self.assertEqual(first, output.read_bytes())
                     self.assertEqual(hashlib.sha256(first).hexdigest(),
                                      (target / config["hash_file"]).read_text().strip())
-                native = {
-                    "litellm_provider": "openai", "mode": "chat",
-                    "input_cost_per_token": 3e-6, "output_cost_per_token": 18e-6,
-                    "cache_read_input_token_cost": 2e-7,
-                }
-                with patch.object(sync_prices, "fetch_upstream", return_value={**baseline, self.names[0]: native}):
+                native = {"litellm_provider": "openai", "mode": "chat",
+                          "input_cost_per_token": 3e-6, "output_cost_per_token": 18e-6,
+                          "cache_read_input_token_cost": 2e-7, self.stem: 0,
+                          self.stem + "_above_999k_tokens": 999}
+                baseline["gpt-6.1-sol"][self.stem + "_above_12hr_priority"] = 17e-6
+                with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy({**baseline, "gpt-6.2-sol": native})):
                     sync_prices.main()
                 published = json.loads(output.read_bytes())
-                self.assertEqual(native, published[self.names[0]])
-                self.assertEqual(config["custom_models"][self.names[1]], published[self.names[1]])
+                self.assertEqual(baseline["gpt-unrelated"], published["gpt-unrelated"])
+                for name, source in self.sources.items():
+                    self.assertEqual(self.fees(baseline[source]), self.fees(published[name]))
+                self.assertEqual(native["input_cost_per_token"], published["gpt-6.2-sol"]["input_cost_per_token"])
+                self.assertEqual(native["output_cost_per_token"], published["gpt-6.2-sol"]["output_cost_per_token"])
+                self.assertEqual(native["cache_read_input_token_cost"], published["gpt-6.2-sol"]["cache_read_input_token_cost"])
+                self.assertNotIn(self.stem + "_above_999k_tokens", published["gpt-6.2-sol"])
+
+    def test_missing_invalid_donor_and_chains_fail_closed(self):
+        for fee in (None, -1, float("nan"), True, "0"):
+            data = {"gpt-6.2-sol": {"litellm_provider": "openai"},
+                    "gpt-6.1-sol": {"litellm_provider": "openai", self.stem: fee}}
+            with self.assertRaises(ValueError):
+                sync_prices.inherit_cache_write_prices(data, {"gpt-6.2-sol": "gpt-6.1-sol"})
+        with self.assertRaises(ValueError):
+            sync_prices.inherit_cache_write_prices({"gpt-6.2-sol": {}}, {"gpt-6.2-sol": "missing"})
+        with self.assertRaises(ValueError):
+            sync_prices.inherit_cache_write_prices(self.catalog, {"gpt-6.2-sol": "gpt-6.2-astra", "gpt-6.2-astra": "gpt-6-astra"})
+
+    def test_zero_donor_write_prices_are_preserved(self):
+        data = {"gpt-6.2-sol": {"litellm_provider": "openai"},
+                "gpt-6.1-sol": {"litellm_provider": "openai", self.stem: 0}}
+        sync_prices.inherit_cache_write_prices(data, {"gpt-6.2-sol": "gpt-6.1-sol"})
+        self.assertEqual(0, data["gpt-6.2-sol"][self.stem])
 
 
 class GeminiPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.config.pop("manual_pricing_file", None)
+        self.config.pop("cache_write_price_sources", None)
         self.source = {
             "input_cost_per_token": 2e-6,
             "output_cost_per_token": 1e-5,
@@ -162,6 +186,7 @@ class XaiPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.config.pop("manual_pricing_file", None)
+        self.config.pop("cache_write_price_sources", None)
         self.source = {
             "input_cost_per_token": 2e-6,
             "output_cost_per_token": 6e-6,
@@ -220,6 +245,7 @@ class NativePolicyTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.config.pop("manual_pricing_file", None)
+        self.config.pop("cache_write_price_sources", None)
 
     def test_all_seven_native_providers_are_selected_without_reseller_prices(self):
         cards = {
@@ -365,6 +391,7 @@ class DeepSeekOfficialMappingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.config.pop("manual_pricing_file", None)
+        self.config.pop("cache_write_price_sources", None)
         self.source = {
             "litellm_provider": "deepseek",
             "source": "https://api-docs.deepseek.com/quick_start/pricing",
@@ -450,6 +477,7 @@ class LongContextSolPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.config.pop("manual_pricing_file", None)
+        self.config.pop("cache_write_price_sources", None)
         fields = (
             "input_cost_per_token", "cache_read_input_token_cost",
             "cache_creation_input_token_cost", "output_cost_per_token",

@@ -13,6 +13,7 @@ from fnmatch import fnmatchcase
 import hashlib
 import json
 import logging
+import math
 import os
 import sys
 import urllib.error
@@ -249,6 +250,32 @@ def apply_custom_models(data: dict, custom: dict, protected_models=(), price_ove
     return data
 
 
+def inherit_cache_write_prices(data: dict, sources: dict) -> None:
+    """Apply owner-selected write fees after native merging, without freezing other fees."""
+    stem = "cache_creation_input_token_cost"
+    for target, source in sources.items():
+        if target not in data:
+            continue
+        if source in sources or source == target:
+            raise ValueError(f"Cache-write inheritance cannot chain: {target}")
+        donor, card = data.get(source), data[target]
+        if not isinstance(donor, dict) or not isinstance(card, dict):
+            raise ValueError(f"Missing cache-write source for {target}: {source}")
+        if donor.get("litellm_provider") != "openai" or card.get("litellm_provider") != "openai":
+            raise ValueError(f"Cache-write inheritance requires OpenAI cards: {target}")
+        fees = {key: copy.deepcopy(value) for key, value in donor.items()
+                if key == stem or key.startswith(stem + "_")}
+        if stem not in fees or any(isinstance(value, bool) or not isinstance(value, (int, float))
+                                  or not math.isfinite(value) or value < 0 for value in fees.values()):
+            raise ValueError(f"Invalid cache-write source fees for {target}: {source}")
+        for key in list(card):
+            if key == stem or key.startswith(stem + "_"):
+                del card[key]
+        card.update(fees)
+        card["cache_write_pricing_source"] = source
+        log.info("Model '%s': inherited %d cache-write fields from '%s'.", target, len(fees), source)
+
+
 def fill_official_fields(data: dict, defaults: dict, protected_models: set) -> None:
     """Fill only reviewed missing fees, leaving future upstream values authoritative."""
     for key, rule in defaults.items():
@@ -439,6 +466,8 @@ def main() -> None:
 
     # Reviewed gaps are defaults, never a frozen replacement for live native fees.
     fill_official_fields(merged, config.get("official_field_defaults", {}), protected)
+
+    inherit_cache_write_prices(merged, config.get("cache_write_price_sources", {}))
 
     # 9. Apply field exclusions last so upstream and overrides cannot restore them
     excluded_count = remove_excluded_model_fields(
