@@ -16,6 +16,62 @@ sync_prices = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(sync_prices)
 
 
+class UpstreamGPT62PricingTests(unittest.TestCase):
+    def setUp(self):
+        self.config = sync_prices.load_config(str(ROOT / "config.json"))
+        self.names = ("gpt-6.2-sol", "gpt-6.2-astra")
+
+    def test_imported_fees_keep_explicit_zero_and_do_not_infer_missing_tiers(self):
+        fees = {
+            "gpt-6.2-sol": (2e-6, 1e-5, 1e-7),
+            "gpt-6.2-astra": (1e-5, 5e-5, 1e-6),
+        }
+        for name, expected in fees.items():
+            card = self.config["custom_models"][name]
+            self.assertEqual(expected, tuple(card[field] for field in (
+                "input_cost_per_token", "output_cost_per_token", "cache_read_input_token_cost")))
+            self.assertEqual(0, card["cache_creation_input_token_cost"])
+            self.assertEqual("https://kedaya.ai/v1/models", card["source"])
+            self.assertFalse(any("above_" in field or "priority" in field for field in card))
+            self.assertNotIn(name, self.config.get("custom_price_override_models", []))
+            self.assertNotIn(name, self.config.get("aliases", {}))
+
+    def test_repeat_publication_and_future_native_replacement(self):
+        config = copy.deepcopy(self.config)
+        config.pop("manual_pricing_file", None)
+        config["custom_models"] = {name: config["custom_models"][name] for name in self.names}
+        config["aliases"] = {}
+        config["official_field_defaults"] = {}
+        baseline = {"gpt-6.1-sol": {
+            "litellm_provider": "openai", "input_cost_per_token": 2e-6,
+            "output_cost_per_token": 1e-5,
+        }}
+        with tempfile.TemporaryDirectory() as temporary:
+            target = Path(temporary)
+            (target / "config.json").write_text(json.dumps(config), encoding="utf-8")
+            arguments = ["sync_prices.py", "--repo-root", temporary]
+            with patch.object(sync_prices.sys, "argv", arguments), patch("builtins.print"):
+                with patch.object(sync_prices, "fetch_upstream", return_value=baseline):
+                    sync_prices.main()
+                    output = target / config["output_file"]
+                    first = output.read_bytes()
+                    self.assertEqual({**baseline, **config["custom_models"]}, json.loads(first))
+                    sync_prices.main()
+                    self.assertEqual(first, output.read_bytes())
+                    self.assertEqual(hashlib.sha256(first).hexdigest(),
+                                     (target / config["hash_file"]).read_text().strip())
+                native = {
+                    "litellm_provider": "openai", "mode": "chat",
+                    "input_cost_per_token": 3e-6, "output_cost_per_token": 18e-6,
+                    "cache_read_input_token_cost": 2e-7,
+                }
+                with patch.object(sync_prices, "fetch_upstream", return_value={**baseline, self.names[0]: native}):
+                    sync_prices.main()
+                published = json.loads(output.read_bytes())
+                self.assertEqual(native, published[self.names[0]])
+                self.assertEqual(config["custom_models"][self.names[1]], published[self.names[1]])
+
+
 class GeminiPricingTests(unittest.TestCase):
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))

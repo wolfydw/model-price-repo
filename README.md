@@ -18,6 +18,15 @@ The existing native provider selection, complete-card updates, aliases and GPT p
 
 ## Publish and verify
 
+GPT-6.2 Sol and Astra were imported on 2026-11-12 from the upstream
+`https://kedaya.ai/v1/models` pricing response, using its USD per million token
+values without group multipliers. Sol is 2 / 10 / 0.1 and Astra is 10 / 50 / 1
+for input / output / cache read; both responses explicitly set cache write to
+zero. The two fallback cards live in `config.json`; they do not infer missing
+cache TTL or long context fees and do not claim independent official pricing.
+Existing native LiteLLM synchronization replaces them when exact native cards
+become available. The domestic manual policy remains authoritative.
+
 Run the existing publisher:
 
     python3 scripts/sync_prices.py --config config.json --repo-root .

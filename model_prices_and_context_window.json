@@ -13065,6 +13065,26 @@
     "supports_web_search": true,
     "supports_xhigh_reasoning_effort": true
   },
+  "gpt-6.2-astra": {
+    "_comment": "Imported from the upstream /v1/models pricing response on 2026-11-12 (USD/1M tokens converted to USD/token). Cache write is explicitly zero. Missing TTL and context tiers are not inferred. Future native LiteLLM cards take precedence.",
+    "cache_creation_input_token_cost": 0,
+    "cache_read_input_token_cost": 1e-06,
+    "input_cost_per_token": 1e-05,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "output_cost_per_token": 5e-05,
+    "source": "https://kedaya.ai/v1/models"
+  },
+  "gpt-6.2-sol": {
+    "_comment": "Imported from the upstream /v1/models pricing response on 2026-11-12 (USD/1M tokens converted to USD/token). Cache write is explicitly zero. Missing TTL and context tiers are not inferred. Future native LiteLLM cards take precedence.",
+    "cache_creation_input_token_cost": 0,
+    "cache_read_input_token_cost": 1e-07,
+    "input_cost_per_token": 2e-06,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "output_cost_per_token": 1e-05,
+    "source": "https://kedaya.ai/v1/models"
+  },
   "gpt-audio": {
     "deprecation_date": "2027-01-20",
     "deprecation_source": "https://developers.openai.com/api/docs/deprecations",
