@@ -4806,6 +4806,39 @@
     "tpm": 800000.0,
     "web_search_billing_unit": "per_query"
   },
+  "gemini-decision-1": {
+    "input_cost_per_token": 1e-07,
+    "litellm_provider": "gemini",
+    "max_input_tokens": 262144,
+    "mode": "decisions",
+    "output_cost_per_token": 0.0,
+    "rpm": 1500,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1/decisions"
+    ],
+    "supported_modalities": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
+    "supports_audio_input": true,
+    "supports_audio_output": false,
+    "supports_computer_use": false,
+    "supports_function_calling": false,
+    "supports_parallel_function_calling": false,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": false,
+    "supports_reasoning": false,
+    "supports_response_schema": false,
+    "supports_tool_choice": false,
+    "supports_url_context": false,
+    "supports_video_input": true,
+    "supports_vision": true,
+    "supports_web_search": false,
+    "tpm": 1000000
+  },
   "gemini-embedding-001": {
     "deprecation_date": "2028-05-14",
     "deprecation_source": "https://ai.google.dev/gemini-api/docs/deprecations",
@@ -7400,6 +7433,39 @@
     "supports_web_search": true,
     "tpm": 800000.0,
     "web_search_billing_unit": "per_query"
+  },
+  "gemini/gemini-decision-1": {
+    "input_cost_per_token": 1e-07,
+    "litellm_provider": "gemini",
+    "max_input_tokens": 262144,
+    "mode": "decisions",
+    "output_cost_per_token": 0.0,
+    "rpm": 1500,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1/decisions"
+    ],
+    "supported_modalities": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
+    "supports_audio_input": true,
+    "supports_audio_output": false,
+    "supports_computer_use": false,
+    "supports_function_calling": false,
+    "supports_parallel_function_calling": false,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": false,
+    "supports_reasoning": false,
+    "supports_response_schema": false,
+    "supports_tool_choice": false,
+    "supports_url_context": false,
+    "supports_video_input": true,
+    "supports_vision": true,
+    "supports_web_search": false,
+    "tpm": 1000000
   },
   "gemini/gemini-embedding-001": {
     "deprecation_date": "2028-05-14",
