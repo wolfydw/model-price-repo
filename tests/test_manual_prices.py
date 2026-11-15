@@ -22,7 +22,8 @@ class ManualPricingTests(unittest.TestCase):
 
     def test_owner_table_is_exact_and_has_no_automatic_fee_rules(self):
         expected = {'deepseek-v4-flash': (3,9,1,.1), 'deepseek-v4-pro': (9,27,4.5,.3),
-                    'deepseek-v4.1-flash': (2,8,1,.04), 'glm-5.2': (8,28,8,2),
+                    'deepseek-v4.1-flash': (2,8,1,.04),
+                    'deepseek-v4.1-flash-1017': (2,8,1,.04), 'glm-5.2': (8,28,8,2),
                     'glm-5.3': (8,28,8,2), 'glm-5.3-flash': (.8,2.8,.8,.23),
                     'hy3': (1,4,1,.25), 'hy4': (6,18,6,.3),
                     'minimax-m3': (2.1,8.4,2.1,.42), 'kimi-k3-1': (20,100,20,2),

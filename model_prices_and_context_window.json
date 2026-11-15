@@ -1540,7 +1540,7 @@
     "mode": "chat",
     "output_cost_per_token": 4.2e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1569,7 +1569,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.8e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1594,9 +1594,9 @@
       "model": "deepseek-v4.1-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -1624,7 +1624,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.19e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1647,7 +1647,7 @@
     "mode": "chat",
     "output_cost_per_token": 4.2e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1678,7 +1678,7 @@
     "mode": "chat",
     "output_cost_per_token": 1.1e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1697,7 +1697,7 @@
     "mode": "chat",
     "output_cost_per_token": 0.0,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1719,7 +1719,7 @@
     "mode": "chat",
     "output_cost_per_token": 4e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1745,9 +1745,9 @@
       "model": "deepseek-v4-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -1830,7 +1830,7 @@
       }
     },
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": {
         "policy": "official_cny_numeric_as_usd_no_fx",
@@ -1872,9 +1872,9 @@
       "model": "deepseek-v4-pro",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -1906,9 +1906,9 @@
       "model": "deepseek-v4.1-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -1925,6 +1925,23 @@
     "supports_tool_choice": true,
     "supports_vision": true
   },
+  "deepseek-v4.1-flash-1017": {
+    "cache_creation_input_token_cost": 1e-06,
+    "cache_read_input_token_cost": 4e-08,
+    "currency": "USD",
+    "input_cost_per_token": 2e-06,
+    "litellm_provider": "deepseek",
+    "mode": "chat",
+    "output_cost_per_token": 8e-06,
+    "pricing_source": {
+      "model": "deepseek-v4.1-flash-1017",
+      "policy": "owner_manual_numeric_as_usd_no_fx",
+      "project": "owner_manual",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
+      "source_unit": "per_million_tokens",
+      "updated_on": "2026-11-15"
+    }
+  },
   "deepseek/deepseek-chat": {
     "cache_creation_input_token_cost": 0.0,
     "cache_read_input_token_cost": 2.8e-08,
@@ -1938,7 +1955,7 @@
     "mode": "chat",
     "output_cost_per_token": 4.2e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1967,7 +1984,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.8e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -1992,9 +2009,9 @@
       "model": "deepseek-v4.1-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -2022,7 +2039,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.19e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -2045,7 +2062,7 @@
     "mode": "chat",
     "output_cost_per_token": 4.2e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -2076,7 +2093,7 @@
     "mode": "chat",
     "output_cost_per_token": 1.1e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -2097,7 +2114,7 @@
     "mode": "chat",
     "output_cost_per_token": 4e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -2123,9 +2140,9 @@
       "model": "deepseek-v4-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -2208,7 +2225,7 @@
       }
     },
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": {
         "policy": "official_cny_numeric_as_usd_no_fx",
@@ -2250,9 +2267,9 @@
       "model": "deepseek-v4-pro",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -2284,9 +2301,9 @@
       "model": "deepseek-v4.1-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://api-docs.deepseek.com/quick_start/pricing",
     "supported_endpoints": [
@@ -2303,12 +2320,29 @@
     "supports_tool_choice": true,
     "supports_vision": true
   },
+  "deepseek/deepseek-v4.1-flash-1017": {
+    "cache_creation_input_token_cost": 1e-06,
+    "cache_read_input_token_cost": 4e-08,
+    "currency": "USD",
+    "input_cost_per_token": 2e-06,
+    "litellm_provider": "deepseek",
+    "mode": "chat",
+    "output_cost_per_token": 8e-06,
+    "pricing_source": {
+      "model": "deepseek-v4.1-flash-1017",
+      "policy": "owner_manual_numeric_as_usd_no_fx",
+      "project": "owner_manual",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
+      "source_unit": "per_million_tokens",
+      "updated_on": "2026-11-15"
+    }
+  },
   "deepseek/search": {
     "input_cost_per_query": 0.00075,
     "litellm_provider": "deepseek",
     "mode": "search",
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8607,7 +8641,7 @@
     "mode": "chat",
     "output_cost_per_token": 1e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8624,7 +8658,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8641,7 +8675,7 @@
     "mode": "chat",
     "output_cost_per_token": 1.1e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8658,7 +8692,7 @@
     "mode": "chat",
     "output_cost_per_token": 4.5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8675,7 +8709,7 @@
     "mode": "chat",
     "output_cost_per_token": 0,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8692,7 +8726,7 @@
     "mode": "chat",
     "output_cost_per_token": 8.9e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8709,7 +8743,7 @@
     "mode": "chat",
     "output_cost_per_token": 1.8e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8729,7 +8763,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8750,7 +8784,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8771,7 +8805,7 @@
     "mode": "chat",
     "output_cost_per_token": 0,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8792,7 +8826,7 @@
     "mode": "chat",
     "output_cost_per_token": 3.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8813,7 +8847,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8842,7 +8876,7 @@
     "multi_vendor": true,
     "output_cost_per_token": 3.242876726463348e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -8907,7 +8941,7 @@
       ]
     },
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": {
         "policy": "official_cny_numeric_as_usd_no_fx",
@@ -8939,9 +8973,9 @@
       "model": "glm-5.2",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
@@ -8963,9 +8997,9 @@
       "model": "glm-5.3",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
@@ -8987,9 +9021,9 @@
       "model": "glm-5.3-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
@@ -15634,9 +15668,9 @@
       "model": "hy3",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "hunyuan/hy4": {
@@ -15651,9 +15685,9 @@
       "model": "hy4",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "hy3": {
@@ -15668,9 +15702,9 @@
       "model": "hy3",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "hy4": {
@@ -15685,9 +15719,9 @@
       "model": "hy4",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "imagen-3.0-fast-generate-001": {
@@ -15712,7 +15746,7 @@
     "mode": "chat",
     "output_cost_per_token": 3e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -15735,7 +15769,7 @@
     "mode": "chat",
     "output_cost_per_token": 4e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -15758,7 +15792,7 @@
     "mode": "chat",
     "output_cost_per_token": 4e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -15785,7 +15819,7 @@
     "mode": "chat",
     "output_cost_per_token": 0.0001,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": {
         "policy": "official_cny_numeric_as_usd_no_fx",
@@ -15822,9 +15856,9 @@
       "model": "kimi-k3-1",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "kimi-k3.1-pro": {
@@ -15840,9 +15874,9 @@
       "model": "kimi-k3.1-pro",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "learnlm-1.5-pro-experimental": {
@@ -16029,7 +16063,7 @@
     "multi_vendor": true,
     "output_cost_per_token": 1.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16060,9 +16094,9 @@
       "model": "minimax-m3",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "minimax/minimax-m3": {
@@ -16077,9 +16111,9 @@
       "model": "minimax-m3",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "moonshot-v1-128k": {
@@ -16091,7 +16125,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16110,7 +16144,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16130,7 +16164,7 @@
     "mode": "chat",
     "output_cost_per_token": 3e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16149,7 +16183,7 @@
     "mode": "chat",
     "output_cost_per_token": 3e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16169,7 +16203,7 @@
     "mode": "chat",
     "output_cost_per_token": 2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16188,7 +16222,7 @@
     "mode": "chat",
     "output_cost_per_token": 2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16208,7 +16242,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16228,7 +16262,7 @@
     "mode": "chat",
     "output_cost_per_token": 3e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16251,7 +16285,7 @@
     "mode": "chat",
     "output_cost_per_token": 4e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16274,7 +16308,7 @@
     "mode": "chat",
     "output_cost_per_token": 4e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16301,7 +16335,7 @@
     "mode": "chat",
     "output_cost_per_token": 0.0001,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": {
         "policy": "official_cny_numeric_as_usd_no_fx",
@@ -16338,9 +16372,9 @@
       "model": "kimi-k3-1",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "moonshot/kimi-k3.1-pro": {
@@ -16356,9 +16390,9 @@
       "model": "kimi-k3.1-pro",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     }
   },
   "moonshot/moonshot-v1-128k": {
@@ -16370,7 +16404,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16389,7 +16423,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16409,7 +16443,7 @@
     "mode": "chat",
     "output_cost_per_token": 3e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16428,7 +16462,7 @@
     "mode": "chat",
     "output_cost_per_token": 3e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16448,7 +16482,7 @@
     "mode": "chat",
     "output_cost_per_token": 2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16467,7 +16501,7 @@
     "mode": "chat",
     "output_cost_per_token": 2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -16487,7 +16521,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -17104,7 +17138,7 @@
     "litellm_provider": "deepseek",
     "mode": "search",
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18516,7 +18550,7 @@
     "mode": "chat",
     "output_cost_per_token": 1e-07,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18533,7 +18567,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18550,7 +18584,7 @@
     "mode": "chat",
     "output_cost_per_token": 1.1e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18567,7 +18601,7 @@
     "mode": "chat",
     "output_cost_per_token": 4.5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18584,7 +18618,7 @@
     "mode": "chat",
     "output_cost_per_token": 0,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18601,7 +18635,7 @@
     "mode": "chat",
     "output_cost_per_token": 8.9e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18618,7 +18652,7 @@
     "mode": "chat",
     "output_cost_per_token": 1.8e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18638,7 +18672,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18659,7 +18693,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18680,7 +18714,7 @@
     "mode": "chat",
     "output_cost_per_token": 0,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18701,7 +18735,7 @@
     "mode": "chat",
     "output_cost_per_token": 3.2e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18722,7 +18756,7 @@
     "mode": "chat",
     "output_cost_per_token": 5e-06,
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": null,
       "source": "Existing price frozen pending an owner supplied replacement"
@@ -18753,7 +18787,7 @@
       ]
     },
     "pricing_source": {
-      "frozen_on": "2026-10-24",
+      "frozen_on": "2026-11-15",
       "policy": "frozen_pending_owner_manual",
       "previous_source": {
         "policy": "official_cny_numeric_as_usd_no_fx",
@@ -18785,9 +18819,9 @@
       "model": "glm-5.2",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
@@ -18809,9 +18843,9 @@
       "model": "glm-5.3",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,
@@ -18833,9 +18867,9 @@
       "model": "glm-5.3-flash",
       "policy": "owner_manual_numeric_as_usd_no_fx",
       "project": "owner_manual",
-      "source": "Owner supplied price table in this chat on 2026-10-24",
+      "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
       "source_unit": "per_million_tokens",
-      "updated_on": "2026-10-24"
+      "updated_on": "2026-11-15"
     },
     "source": "https://docs.z.ai/guides/overview/pricing",
     "supports_function_calling": true,

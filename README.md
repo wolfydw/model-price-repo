@@ -12,6 +12,8 @@ Unprovided existing domestic cards are frozen in the same file, marked frozen_pe
 
 The 2026-10-24 owner table contains eleven exact model cards. Kimi K3.1 Pro cache write 13/26 is recorded as default/one-hour TTL. DeepSeek V4 Flash and V4.1 Flash have distinct owner prices, without automatic manufacturer peak multipliers.
 
+On 2026-11-15 the owner approved a twelfth exact card, `deepseek-v4.1-flash-1017`, using the current `deepseek-flash` input / output / cache-write / cache-read prices of 2 / 8 / 1 / 0.04 USD per million tokens. Its bare and `deepseek/` keys use an independent numeric manual entry. Future changes to `deepseek-flash` do not update this snapshot; no automatic inheritance logic was added.
+
 ## Overseas automatic pricing
 
 The existing native provider selection, complete-card updates, aliases and GPT pricing overrides remain in config.json. As of 2026-10-25, GPT-6.1 Sol again retains its native pricing tiers above 272K prompt tokens: input/cache rates are 2x and output rates are 1.5x their corresponding base tier, including Standard, Batch, Flex, Priority and Ultrafast. The domestic manual layer has final authority over domestic cards; overseas cards continue automatic synchronization. This change affects future billing after the existing production hot reload and does not recalculate historical charges.

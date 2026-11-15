@@ -1,7 +1,7 @@
 {
   "policy": "owner_manual_numeric_as_usd_no_fx",
-  "updated_on": "2026-10-24",
-  "source": "Owner supplied price table in this chat on 2026-10-24",
+  "updated_on": "2026-11-15",
+  "source": "Owner supplied price table on 2026-10-24; owner approved copying current deepseek-flash prices to deepseek-v4.1-flash-1017 on 2026-11-15",
   "unit": "per_million_tokens",
   "currency": "USD",
   "automatic_collection": false,
@@ -34,7 +34,8 @@
   "notes": [
     "Exact model names remain distinct; kimi-k3 is not inferred to mean kimi-k3-1.",
     "Kimi K3.1 Pro cache write 13/26 is recorded as default/1-hour TTL.",
-    "Unprovided existing models are frozen pending an owner supplied replacement; model allowlists are not changed."
+    "Unprovided existing models are frozen pending an owner supplied replacement; model allowlists are not changed.",
+    "DeepSeek V4.1 Flash 1017 has an independent numeric snapshot of deepseek-flash prices approved on 2026-11-15; no automatic price inheritance is configured."
   ],
   "models": {
     "deepseek-v4-flash": {
@@ -66,6 +67,17 @@
         "deepseek/deepseek-v4.1-flash",
         "deepseek-flash",
         "deepseek/deepseek-flash"
+      ],
+      "input": 2,
+      "output": 8,
+      "cache_write": 1,
+      "cache_read": 0.04
+    },
+    "deepseek-v4.1-flash-1017": {
+      "provider": "deepseek",
+      "targets": [
+        "deepseek-v4.1-flash-1017",
+        "deepseek/deepseek-v4.1-flash-1017"
       ],
       "input": 2,
       "output": 8,
