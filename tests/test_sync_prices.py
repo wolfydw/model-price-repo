@@ -3,6 +3,7 @@
 import copy
 import hashlib
 import importlib.util
+from io import BytesIO
 import json
 from pathlib import Path
 import tempfile
@@ -16,7 +17,23 @@ sync_prices = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(sync_prices)
 
 
+class UpstreamDownloadTests(unittest.TestCase):
+    def test_accepts_catalog_beyond_old_four_mib_limit(self):
+        raw = b'{"gpt-6.2-astra": {}}'.ljust(4 * 1024 * 1024 + 1)
+        with patch.object(sync_prices.urllib.request, "urlopen", return_value=BytesIO(raw)):
+            self.assertEqual({"gpt-6.2-astra": {}}, sync_prices.fetch_upstream("https://example.com/prices"))
+
+    def test_rejects_catalog_beyond_configured_read_limit(self):
+        with patch.object(sync_prices, "MAX_UPSTREAM_BYTES", 2), \
+                patch.object(sync_prices.urllib.request, "urlopen", return_value=BytesIO(b'{} ')):
+            with self.assertRaisesRegex(RuntimeError, "LiteLLM source unavailable"):
+                sync_prices.fetch_upstream("https://example.com/prices")
+
+
 class UpstreamGPT62PricingTests(unittest.TestCase):
+    standard_fields = {"input_cost_per_token": 2, "output_cost_per_token": 1.5,
+                       "cache_read_input_token_cost": 2}
+
     def setUp(self):
         self.config = sync_prices.load_config(str(ROOT / "config.json"))
         self.sources = {"gpt-6.2-sol": "gpt-6.1-sol", "gpt-6.2-astra": "gpt-6-astra"}
@@ -27,39 +44,38 @@ class UpstreamGPT62PricingTests(unittest.TestCase):
         return {key: value for key, value in card.items()
                 if key == self.stem or key.startswith(self.stem + "_")}
 
-    def test_published_all_write_fees_match_previous_generation_only(self):
+    def assert_standard_long_context(self, card):
+        for field, ratio in self.standard_fields.items():
+            self.assertGreater(card[field], 0, field)
+            self.assertAlmostEqual(ratio, card[field + "_above_272k_tokens"] / card[field])
+
+    def test_published_long_context_and_inherited_cache_write_fees(self):
         self.assertEqual(self.sources, self.config["cache_write_price_sources"])
-        expected = {"gpt-6.2-sol": (2e-6, 1e-5, 1e-7), "gpt-6.2-astra": (1e-5, 5e-5, 1e-6)}
         for name, source in self.sources.items():
-            card = self.catalog[name]
-            self.assertEqual(expected[name], tuple(card[field] for field in (
-                "input_cost_per_token", "output_cost_per_token", "cache_read_input_token_cost")))
-            self.assertEqual(self.fees(self.catalog[source]), self.fees(card))
-            self.assertEqual(20, len(self.fees(card)))
-            self.assertEqual(source, card["cache_write_pricing_source"])
-            self.assertNotIn(name, self.config.get("custom_price_override_models", []))
-            self.assertNotIn(name, self.config.get("aliases", {}))
+            with self.subTest(model=name):
+                card = self.catalog[name]
+                self.assert_standard_long_context(card)
+                self.assertEqual(self.fees(self.catalog[source]), self.fees(card))
+                self.assertEqual(20, len(self.fees(card)))
+                self.assertEqual(source, card["cache_write_pricing_source"])
+                self.assertNotIn(name, self.config.get("custom_price_override_models", []))
+                self.assertNotIn(name, self.config.get("aliases", {}))
 
-        sol = self.catalog["gpt-6.2-sol"]
-        self.assertEqual(4e-6, sol["input_cost_per_token_above_272k_tokens"])
-        self.assertEqual(1.5e-5, sol["output_cost_per_token_above_272k_tokens"])
-        self.assertEqual(2e-7, sol["cache_read_input_token_cost_above_272k_tokens"])
-        self.assertEqual(
-            {
-                "input_cost_per_token_above_272k_tokens": 4e-6,
-                "output_cost_per_token_above_272k_tokens": 1.5e-5,
-                "cache_read_input_token_cost_above_272k_tokens": 2e-7,
-            },
-            self.config["official_field_defaults"]["gpt-6.2-sol"]["fields"],
-        )
+    def test_existing_native_long_context_fee_is_not_overridden(self):
+        field = "input_cost_per_token_above_272k_tokens"
+        data = {name: {**self.config["custom_models"][name], field: 9e-6} for name in self.sources}
+        sync_prices.fill_official_fields(data, self.config["official_field_defaults"], set(self.sources))
+        for name in self.sources:
+            self.assertEqual(9e-6, data[name][field])
 
-    def test_long_context_defaults_fill_custom_card_gaps_only(self):
-        card = self.catalog["gpt-6.2-sol"]
-        data = {"gpt-6.2-sol": {"input_cost_per_token": 2e-6}}
-        sync_prices.fill_official_fields(
-            data, {"gpt-6.2-sol": self.config["official_field_defaults"]["gpt-6.2-sol"]}, set()
-        )
-        self.assertEqual(2e-6, data["gpt-6.2-sol"]["input_cost_per_token"])
+    def test_relative_defaults_require_valid_base(self):
+        name = "gpt-6.2-astra"
+        for invalid in (None, True, -1, float("nan")):
+            data = {name: {"input_cost_per_token": invalid}}
+            with self.assertRaisesRegex(ValueError, "Invalid base price"):
+                sync_prices.fill_official_fields(data, self.config["official_field_defaults"], {name})
+
+    def test_unreviewed_custom_card_is_not_modified(self):
         unreviewed = {"custom-model": {"input_cost_per_token": 1e-6}}
         sync_prices.fill_official_fields(
             unreviewed,
@@ -67,19 +83,6 @@ class UpstreamGPT62PricingTests(unittest.TestCase):
             set(),
         )
         self.assertNotIn("input_cost_per_token_above_272k_tokens", unreviewed["custom-model"])
-        for field in (
-            "input_cost_per_token_above_272k_tokens",
-            "output_cost_per_token_above_272k_tokens",
-            "cache_read_input_token_cost_above_272k_tokens",
-        ):
-            self.assertEqual(card[field], data["gpt-6.2-sol"][field])
-
-        native_value = 9e-6
-        data["gpt-6.2-sol"]["input_cost_per_token_above_272k_tokens"] = native_value
-        sync_prices.fill_official_fields(
-            data, {"gpt-6.2-sol": self.config["official_field_defaults"]["gpt-6.2-sol"]}, set()
-        )
-        self.assertEqual(native_value, data["gpt-6.2-sol"]["input_cost_per_token_above_272k_tokens"])
 
     def test_repeat_publication_and_future_native_non_write_updates(self):
         config = copy.deepcopy(self.config)
@@ -87,7 +90,7 @@ class UpstreamGPT62PricingTests(unittest.TestCase):
         config["custom_models"] = {name: config["custom_models"][name] for name in self.sources}
         config["aliases"] = {}
         config["official_field_defaults"] = {
-            "gpt-6.2-sol": copy.deepcopy(self.config["official_field_defaults"]["gpt-6.2-sol"])
+            name: config["official_field_defaults"][name] for name in self.sources
         }
         baseline = {source: copy.deepcopy(self.catalog[source]) for source in self.sources.values()}
         baseline["gpt-unrelated"] = {"litellm_provider": "openai", "input_cost_per_token": 7e-6}
@@ -100,28 +103,29 @@ class UpstreamGPT62PricingTests(unittest.TestCase):
                     sync_prices.main()
                     output = target / config["output_file"]
                     first = output.read_bytes()
+                    fallback = json.loads(first)
+                    for name in self.sources:
+                        self.assert_standard_long_context(fallback[name])
+                        for field in self.standard_fields:
+                            self.assertEqual(config["custom_models"][name][field], fallback[name][field])
                     sync_prices.main()
                     self.assertEqual(first, output.read_bytes())
                     self.assertEqual(hashlib.sha256(first).hexdigest(),
                                      (target / config["hash_file"]).read_text().strip())
-                native = {"litellm_provider": "openai", "mode": "chat",
-                          "input_cost_per_token": 3e-6, "output_cost_per_token": 18e-6,
-                          "cache_read_input_token_cost": 2e-7, self.stem: 0,
-                          self.stem + "_above_999k_tokens": 999}
+                for name, rates in (("gpt-6.2-sol", (3e-6, 18e-6, 2e-7)), ("gpt-6.2-astra", (8e-6, 40e-6, 4e-7))):
+                    baseline[name] = {"litellm_provider": "openai", "mode": "chat", self.stem: 0,
+                                      self.stem + "_above_999k_tokens": 999,
+                                      **dict(zip(self.standard_fields, rates))}
                 baseline["gpt-6.1-sol"][self.stem + "_above_12hr_priority"] = 17e-6
-                with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy({**baseline, "gpt-6.2-sol": native})):
+                with patch.object(sync_prices, "fetch_upstream", side_effect=lambda url: copy.deepcopy(baseline)):
                     sync_prices.main()
                 published = json.loads(output.read_bytes())
                 self.assertEqual(baseline["gpt-unrelated"], published["gpt-unrelated"])
                 for name, source in self.sources.items():
                     self.assertEqual(self.fees(baseline[source]), self.fees(published[name]))
-                self.assertEqual(native["input_cost_per_token"], published["gpt-6.2-sol"]["input_cost_per_token"])
-                self.assertEqual(native["output_cost_per_token"], published["gpt-6.2-sol"]["output_cost_per_token"])
-                self.assertEqual(native["cache_read_input_token_cost"], published["gpt-6.2-sol"]["cache_read_input_token_cost"])
-                self.assertEqual(4e-6, published["gpt-6.2-sol"]["input_cost_per_token_above_272k_tokens"])
-                self.assertEqual(1.5e-5, published["gpt-6.2-sol"]["output_cost_per_token_above_272k_tokens"])
-                self.assertEqual(2e-7, published["gpt-6.2-sol"]["cache_read_input_token_cost_above_272k_tokens"])
-                self.assertNotIn(self.stem + "_above_999k_tokens", published["gpt-6.2-sol"])
+                    self.assert_standard_long_context(published[name])
+                    for field in self.standard_fields:
+                        self.assertEqual(baseline[name][field], published[name][field])
 
     def test_missing_invalid_donor_and_chains_fail_closed(self):
         for fee in (None, -1, float("nan"), True, "0"):

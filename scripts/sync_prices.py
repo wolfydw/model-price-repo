@@ -83,15 +83,18 @@ def load_existing_hash(path: str) -> str:
 # ---------------------------------------------------------------------------
 
 
+MAX_UPSTREAM_BYTES = 8 * 1024 * 1024
+
+
 def fetch_upstream(url: str) -> dict:
     """Download the full upstream pricing JSON."""
     log.info("Fetching upstream: %s", url)
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "model-price-repo/1.0"})
         with urllib.request.urlopen(req, timeout=20) as resp:
-            raw = resp.read(4 * 1024 * 1024 + 1)
-            if len(raw) > 4 * 1024 * 1024:
-                raise OSError('LiteLLM source exceeds 4 MiB')
+            raw = resp.read(MAX_UPSTREAM_BYTES + 1)
+            if len(raw) > MAX_UPSTREAM_BYTES:
+                raise OSError(f'LiteLLM source exceeds {MAX_UPSTREAM_BYTES // (1024 * 1024)} MiB')
     except (urllib.error.URLError, OSError) as exc:
         log.error("Failed to fetch upstream: %s", exc)
         raise RuntimeError("LiteLLM source unavailable") from exc
@@ -283,8 +286,22 @@ def fill_official_fields(data: dict, defaults: dict, protected_models: set) -> N
             continue
         if not rule.get("source"):
             raise ValueError(f"Official field defaults require a source URL: {key}")
+        card = data[key]
         for field, value in rule.get("fields", {}).items():
-            data[key].setdefault(field, copy.deepcopy(value))
+            if field in card:
+                continue
+            if isinstance(value, dict):
+                base_field = value["base_field"]
+                price = card.get(base_field)
+                multiplier = value["multiplier"]
+                if (isinstance(price, bool) or not isinstance(price, (int, float))
+                        or not math.isfinite(price) or price < 0):
+                    raise ValueError(f"Invalid base price for {key}.{field}: {base_field}")
+                if (isinstance(multiplier, bool) or not isinstance(multiplier, (int, float))
+                        or not math.isfinite(multiplier) or multiplier <= 0):
+                    raise ValueError(f"Invalid default price multiplier for {key}.{field}")
+                value = float(Decimal(str(price)) * Decimal(str(multiplier)))
+            card[field] = copy.deepcopy(value)
 
 
 def remove_excluded_model_fields(data: dict, exclusions: dict) -> int:

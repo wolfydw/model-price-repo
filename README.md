@@ -20,9 +20,12 @@ The existing native provider selection, complete-card updates, aliases and GPT p
 
 ## Publish and verify
 
-GPT-6.2 input / output / cache-read prices were imported on 2026-11-12
-from `https://kedaya.ai/v1/models`: Sol is 2 / 10 / 0.1 and Astra is
-10 / 50 / 1 USD per million tokens, without group multipliers.
+GPT-6.2 input / output / cache-read prices prefer the native OpenAI cards:
+Sol is 2 / 10 / 0.1 and Astra is 8 / 40 / 0.4 USD per million tokens,
+without group multipliers. The initial relay quotes remain fallback cards.
+Strictly above 272,000 input tokens, the whole request uses 2x input/cache
+and 1.5x output prices. When a native text or cache-read tier is missing,
+reviewed defaults use the current base rate without overriding published tiers.
 The owner subsequently set **all cache-write fees to the previous generation**:
 `gpt-6.2-sol` inherits `gpt-6.1-sol`, and `gpt-6.2-astra` inherits `gpt-6-astra`.
 `cache_write_price_sources` copies the entire cache-write field family on every
