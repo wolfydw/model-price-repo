@@ -122,24 +122,6 @@
     }
   },
   "custom_models": {
-    "gpt-6.2-sol": {
-      "_comment": "Fallback input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). Long-context defaults use official_field_defaults. Cache-write fees inherit the owner-selected previous generation.",
-      "source": "https://kedaya.ai/v1/models",
-      "litellm_provider": "openai",
-      "mode": "chat",
-      "input_cost_per_token": 2e-06,
-      "output_cost_per_token": 1e-05,
-      "cache_read_input_token_cost": 1e-07
-    },
-    "gpt-6.2-astra": {
-      "_comment": "Fallback input/output/cache-read imported from upstream /v1/models on 2026-11-12 (USD/1M tokens converted to USD/token). Long-context defaults use official_field_defaults. Cache-write fees inherit the owner-selected previous generation.",
-      "source": "https://kedaya.ai/v1/models",
-      "litellm_provider": "openai",
-      "mode": "chat",
-      "input_cost_per_token": 1e-05,
-      "output_cost_per_token": 5e-05,
-      "cache_read_input_token_cost": 1e-06
-    },
     "claude-sonnet-5": {
       "_comment": "Per platform.claude.com/docs/en/about-claude/pricing: 'The $2/$10 per million input/output token pricing for Claude Sonnet 5 ... is now the standard price. The previously scheduled increase to $3/$15 ... on September 1, 2026 will not occur.' This is the permanent standard price; do NOT remove this override on 2026-09-01.",
       "cache_creation_input_token_cost": 2.5e-06,
@@ -978,7 +960,6 @@
   "official_field_defaults": {
     "gpt-6.2-sol": {
       "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
-      "apply_to_custom_models": true,
       "fields": {
         "input_cost_per_token_above_272k_tokens": {"base_field": "input_cost_per_token", "multiplier": 2},
         "output_cost_per_token_above_272k_tokens": {"base_field": "output_cost_per_token", "multiplier": 1.5},
@@ -987,7 +968,6 @@
     },
     "gpt-6.2-astra": {
       "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
-      "apply_to_custom_models": true,
       "fields": {
         "input_cost_per_token_above_272k_tokens": {"base_field": "input_cost_per_token", "multiplier": 2},
         "output_cost_per_token_above_272k_tokens": {"base_field": "output_cost_per_token", "multiplier": 1.5},
@@ -1011,9 +991,5 @@
       }
     }
   },
-  "manual_pricing_file": "manual-prices.json",
-  "cache_write_price_sources": {
-    "gpt-6.2-sol": "gpt-6.1-sol",
-    "gpt-6.2-astra": "gpt-6-astra"
-  }
+  "manual_pricing_file": "manual-prices.json"
 }

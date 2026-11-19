@@ -22,20 +22,15 @@ The existing native provider selection, complete-card updates, aliases and GPT p
 
 GPT-6.2 input / output / cache-read prices prefer the native OpenAI cards:
 Sol is 2 / 10 / 0.1 and Astra is 8 / 40 / 0.4 USD per million tokens,
-without group multipliers. The initial relay quotes remain fallback cards.
+without group multipliers. The initial relay quotes are no longer used.
 Strictly above 272,000 input tokens, the whole request uses 2x input/cache
 and 1.5x output prices. When a native text or cache-read tier is missing,
 reviewed defaults use the current base rate without overriding published tiers.
-The owner subsequently set **all cache-write fees to the previous generation**:
-`gpt-6.2-sol` inherits `gpt-6.1-sol`, and `gpt-6.2-astra` inherits `gpt-6-astra`.
-`cache_write_price_sources` copies the entire cache-write field family on every
-sync, including 12h, Batch/Flex/Priority/Ultrafast and above-272K tiers, removes
-stale write fields and records `cache_write_pricing_source` for runtime billing.
-Standard short / 12h writes are 2.5 / 5 for Sol and 12.5 / 25 for Astra,
-in USD per million tokens. This owner policy overrides the initial relay zero
-and future native write fees; native input/output/read fees continue updating.
-Missing/invalid donor fees fail publication. Domestic manual prices retain final
-authority. Existing explicit group/channel/interval prices retain precedence.
+Cache writes also use the native generation's prices, without inheriting fields
+from GPT-6.1 Sol or GPT-6 Astra. Standard short / 12h writes are 2.5 / 5 for Sol
+and 10 / 20 for Astra, in USD per million tokens. Sub2API applies the default
+Ultra Fast promotional multiplier and its expiration at request time, retaining
+explicit channel overrides. Domestic manual prices retain final authority.
 
 Run the existing publisher:
 
