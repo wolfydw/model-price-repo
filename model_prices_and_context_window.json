@@ -8471,6 +8471,39 @@
     "supports_tool_choice": true,
     "supports_vision": true
   },
+  "gemini/genie-4": {
+    "input_cost_per_image_token": 1.5e-06,
+    "input_cost_per_token": 1.5e-06,
+    "litellm_provider": "gemini",
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 65536,
+    "mode": "chat",
+    "output_cost_per_token": 9e-06,
+    "output_cost_per_video_token": 1.75e-05,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1beta/interactions"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "video",
+      "audio"
+    ],
+    "supports_audio_input": false,
+    "supports_audio_output": true,
+    "supports_function_calling": false,
+    "supports_prompt_caching": false,
+    "supports_reasoning": false,
+    "supports_response_schema": false,
+    "supports_system_messages": false,
+    "supports_url_context": false,
+    "supports_video_input": false,
+    "supports_vision": true,
+    "supports_web_search": false
+  },
   "gemini/imagen-3.0-fast-generate-001": {
     "litellm_provider": "gemini",
     "mode": "image_generation",
@@ -8838,6 +8871,39 @@
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_vision": true
+  },
+  "genie-4": {
+    "input_cost_per_image_token": 1.5e-06,
+    "input_cost_per_token": 1.5e-06,
+    "litellm_provider": "gemini",
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 65536,
+    "mode": "chat",
+    "output_cost_per_token": 9e-06,
+    "output_cost_per_video_token": 1.75e-05,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing",
+    "supported_endpoints": [
+      "/v1beta/interactions"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "video",
+      "audio"
+    ],
+    "supports_audio_input": false,
+    "supports_audio_output": true,
+    "supports_function_calling": false,
+    "supports_prompt_caching": false,
+    "supports_reasoning": false,
+    "supports_response_schema": false,
+    "supports_system_messages": false,
+    "supports_url_context": false,
+    "supports_video_input": false,
+    "supports_vision": true,
+    "supports_web_search": false
   },
   "glm-4-32b-0414-128k": {
     "input_cost_per_token": 1e-07,
@@ -14299,6 +14365,23 @@
     "supports_vision": true
   },
   "gpt-live-1": {
+    "input_cost_per_second": 0.000833333333333,
+    "litellm_provider": "openai",
+    "mode": "realtime",
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "supported_modalities": [
+      "text",
+      "audio"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "audio"
+    ],
+    "supports_audio_input": true,
+    "supports_audio_output": true,
+    "supports_function_calling": true
+  },
+  "gpt-live-1.1": {
     "input_cost_per_second": 0.000833333333333,
     "litellm_provider": "openai",
     "mode": "realtime",
