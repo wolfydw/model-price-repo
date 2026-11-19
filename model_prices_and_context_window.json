@@ -2676,6 +2676,7 @@
     "supports_audio_output": false,
     "supports_function_calling": false,
     "supports_image_size": false,
+    "supports_logprobs": false,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -3180,6 +3181,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -3252,6 +3254,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -3309,6 +3312,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": false,
     "supports_reasoning": true,
     "supports_response_schema": false,
@@ -3363,6 +3367,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": false,
@@ -3526,6 +3531,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": false,
@@ -3594,6 +3600,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -3638,6 +3645,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_pdf_input": true,
     "supports_prompt_caching": false,
     "supports_reasoning": true,
@@ -3701,6 +3709,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -3842,6 +3851,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -3919,6 +3929,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -3996,6 +4007,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -4069,6 +4081,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -4142,6 +4155,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -4208,6 +4222,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -4272,6 +4287,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -4412,6 +4428,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -4478,6 +4495,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
@@ -4545,6 +4563,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
@@ -5167,6 +5186,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -5225,6 +5245,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -5567,6 +5588,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -5653,6 +5675,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -5990,6 +6013,7 @@
     "supports_audio_output": false,
     "supports_function_calling": false,
     "supports_image_size": false,
+    "supports_logprobs": false,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -6355,6 +6379,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -6412,6 +6437,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": false,
     "supports_reasoning": true,
     "supports_response_schema": false,
@@ -6466,6 +6492,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": false,
@@ -6570,6 +6597,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": false,
@@ -6638,6 +6666,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -6682,6 +6711,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_pdf_input": true,
     "supports_prompt_caching": false,
     "supports_reasoning": true,
@@ -6745,6 +6775,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -6886,6 +6917,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -6959,6 +6991,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -7025,6 +7058,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -7089,6 +7123,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -7229,6 +7264,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -7295,6 +7331,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
@@ -7362,6 +7399,7 @@
     "supports_audio_output": false,
     "supports_computer_use": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
@@ -7922,6 +7960,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -7980,6 +8019,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -8275,6 +8315,7 @@
     ],
     "supports_audio_input": true,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_native_streaming": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -8325,6 +8366,7 @@
     "supports_audio_input": true,
     "supports_audio_output": false,
     "supports_function_calling": true,
+    "supports_logprobs": false,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -8649,6 +8691,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": true,
@@ -9262,6 +9305,7 @@
     "max_output_tokens": 4096,
     "mode": "chat",
     "output_cost_per_token": 4e-06,
+    "successor_model": "gpt-6.1-terra",
     "supports_prompt_caching": true,
     "supports_system_messages": true,
     "supports_tool_choice": true
@@ -12289,6 +12333,7 @@
     "mode": "chat",
     "output_cost_per_token": 7.5e-05,
     "source": "https://developers.openai.com/api/docs/pricing",
+    "successor_model": "gpt-6-cyber",
     "supports_reasoning": true
   },
   "gpt-5.5-pro": {
@@ -15133,7 +15178,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -15163,7 +15208,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -15211,7 +15256,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -15235,7 +15280,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -15259,7 +15304,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -15289,7 +15334,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -16922,6 +16967,7 @@
       "image"
     ],
     "supports_function_calling": false,
+    "supports_logprobs": false,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": true,
@@ -18019,7 +18065,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -18049,7 +18095,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -18097,7 +18143,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -18121,7 +18167,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -18145,7 +18191,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
@@ -18175,7 +18221,7 @@
     "supported_endpoints": [
       "/v1/responses"
     ],
-    "supports_function_calling": false,
+    "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
