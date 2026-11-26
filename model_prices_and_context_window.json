@@ -10988,6 +10988,9 @@
       "auto",
       "current_turn"
     ],
+    "reasoning_effort_levels": [
+      "high"
+    ],
     "reasoning_modes": [
       "pro"
     ],
@@ -11010,7 +11013,8 @@
       "text"
     ],
     "supports_function_calling": true,
-    "supports_minimal_reasoning_effort": true,
+    "supports_low_reasoning_effort": false,
+    "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": false,
     "supports_none_reasoning_effort": false,
     "supports_parallel_function_calling": true,
@@ -11040,6 +11044,9 @@
       "auto",
       "current_turn"
     ],
+    "reasoning_effort_levels": [
+      "high"
+    ],
     "reasoning_modes": [
       "pro"
     ],
@@ -11062,7 +11069,8 @@
       "text"
     ],
     "supports_function_calling": true,
-    "supports_minimal_reasoning_effort": true,
+    "supports_low_reasoning_effort": false,
+    "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": false,
     "supports_none_reasoning_effort": false,
     "supports_parallel_function_calling": true,
@@ -11615,7 +11623,8 @@
       "text"
     ],
     "supports_function_calling": true,
-    "supports_minimal_reasoning_effort": true,
+    "supports_low_reasoning_effort": false,
+    "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_none_reasoning_effort": false,
     "supports_parallel_function_calling": true,
@@ -11664,7 +11673,8 @@
       "text"
     ],
     "supports_function_calling": true,
-    "supports_minimal_reasoning_effort": true,
+    "supports_low_reasoning_effort": false,
+    "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_none_reasoning_effort": false,
     "supports_parallel_function_calling": true,
@@ -12248,6 +12258,7 @@
       "text"
     ],
     "supports_function_calling": true,
+    "supports_low_reasoning_effort": false,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_none_reasoning_effort": false,
@@ -12309,6 +12320,7 @@
       "text"
     ],
     "supports_function_calling": true,
+    "supports_low_reasoning_effort": false,
     "supports_minimal_reasoning_effort": false,
     "supports_native_streaming": true,
     "supports_none_reasoning_effort": false,
